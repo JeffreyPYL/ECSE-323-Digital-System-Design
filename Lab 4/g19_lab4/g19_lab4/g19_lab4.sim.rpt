@@ -1,0 +1,515 @@
+Simulator report for g19_lab4
+Fri Nov 08 17:24:27 2013
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 20.0 ms      ;
+; Simulation Netlist Size     ; 215 nodes    ;
+; Simulation Coverage         ;      57.59 % ;
+; Total Number of Transitions ; 19326703     ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                           ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                                     ; Setting         ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
+; Simulation mode                                                                            ; Timing          ; Timing        ;
+; Start time                                                                                 ; 0 ns            ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF            ;               ;
+; Vector input source                                                                        ; squareWave1.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On              ; On            ;
+; Check outputs                                                                              ; Off             ; Off           ;
+; Report simulation coverage                                                                 ; On              ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On              ; On            ;
+; Display missing 1-value coverage report                                                    ; On              ; On            ;
+; Display missing 0-value coverage report                                                    ; On              ; On            ;
+; Detect setup and hold time violations                                                      ; Off             ; Off           ;
+; Detect glitches                                                                            ; Off             ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off             ; Off           ;
+; Generate Signal Activity File                                                              ; Off             ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off             ; Off           ;
+; Group bus channels in simulation results                                                   ; Off             ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On              ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE      ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off             ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On              ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto            ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      57.59 % ;
+; Total nodes checked                                 ; 215          ;
+; Total output ports checked                          ; 257          ;
+; Total output ports with complete 1/0-value coverage ; 148          ;
+; Total output ports with no 1/0-value coverage       ; 93           ;
+; Total output ports with no 1-value coverage         ; 100          ;
+; Total output ports with no 0-value coverage         ; 102          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                ;
++----------------------------------------------------+----------------------------------------------------+------------------+
+; Node Name                                          ; Output Port Name                                   ; Output Port Type ;
++----------------------------------------------------+----------------------------------------------------+------------------+
+; |g19_square_wave|Add1~3                            ; |g19_square_wave|Add1~3                            ; combout          ;
+; |g19_square_wave|Add1~3                            ; |g19_square_wave|Add1~4                            ; cout             ;
+; |g19_square_wave|Add1~5                            ; |g19_square_wave|Add1~5                            ; combout          ;
+; |g19_square_wave|Add1~7                            ; |g19_square_wave|Add1~7                            ; combout          ;
+; |g19_square_wave|Add1~9                            ; |g19_square_wave|Add1~9                            ; combout          ;
+; |g19_square_wave|Add1~11                           ; |g19_square_wave|Add1~11                           ; combout          ;
+; |g19_square_wave|Add1~13                           ; |g19_square_wave|Add1~13                           ; combout          ;
+; |g19_square_wave|Add1~15                           ; |g19_square_wave|Add1~15                           ; combout          ;
+; |g19_square_wave|Add1~17                           ; |g19_square_wave|Add1~17                           ; combout          ;
+; |g19_square_wave|Add1~19                           ; |g19_square_wave|Add1~19                           ; combout          ;
+; |g19_square_wave|Add1~21                           ; |g19_square_wave|Add1~21                           ; combout          ;
+; |g19_square_wave|Add1~23                           ; |g19_square_wave|Add1~23                           ; combout          ;
+; |g19_square_wave|Add1~25                           ; |g19_square_wave|Add1~25                           ; combout          ;
+; |g19_square_wave|Add1~27                           ; |g19_square_wave|Add1~27                           ; combout          ;
+; |g19_square_wave|Add1~29                           ; |g19_square_wave|Add1~29                           ; combout          ;
+; |g19_square_wave|Add1~31                           ; |g19_square_wave|Add1~31                           ; combout          ;
+; |g19_square_wave|Add1~33                           ; |g19_square_wave|Add1~33                           ; combout          ;
+; |g19_square_wave|Add1~35                           ; |g19_square_wave|Add1~35                           ; combout          ;
+; |g19_square_wave|Add1~37                           ; |g19_square_wave|Add1~37                           ; combout          ;
+; |g19_square_wave|Add1~39                           ; |g19_square_wave|Add1~39                           ; combout          ;
+; |g19_square_wave|Add1~41                           ; |g19_square_wave|Add1~41                           ; combout          ;
+; |g19_square_wave|Add1~43                           ; |g19_square_wave|Add1~43                           ; combout          ;
+; |g19_square_wave|Add1~45                           ; |g19_square_wave|Add1~45                           ; combout          ;
+; |g19_square_wave|Add1~47                           ; |g19_square_wave|Add1~47                           ; combout          ;
+; |g19_square_wave|Add1~49                           ; |g19_square_wave|Add1~49                           ; combout          ;
+; |g19_square_wave|data[6]                           ; |g19_square_wave|data[6]                           ; regout           ;
+; |g19_square_wave|data[5]                           ; |g19_square_wave|data[5]                           ; regout           ;
+; |g19_square_wave|data[4]                           ; |g19_square_wave|data[4]                           ; regout           ;
+; |g19_square_wave|data[1]                           ; |g19_square_wave|data[1]                           ; regout           ;
+; |g19_square_wave|data[17]                          ; |g19_square_wave|data[17]                          ; regout           ;
+; |g19_square_wave|data[16]                          ; |g19_square_wave|data[16]                          ; regout           ;
+; |g19_square_wave|data[15]                          ; |g19_square_wave|data[15]                          ; regout           ;
+; |g19_square_wave|data[14]                          ; |g19_square_wave|data[14]                          ; regout           ;
+; |g19_square_wave|data[13]                          ; |g19_square_wave|data[13]                          ; regout           ;
+; |g19_square_wave|data[12]                          ; |g19_square_wave|data[12]                          ; regout           ;
+; |g19_square_wave|data[11]                          ; |g19_square_wave|data[11]                          ; regout           ;
+; |g19_square_wave|data[10]                          ; |g19_square_wave|data[10]                          ; regout           ;
+; |g19_square_wave|data[9]                           ; |g19_square_wave|data[9]                           ; regout           ;
+; |g19_square_wave|data[8]                           ; |g19_square_wave|data[8]                           ; regout           ;
+; |g19_square_wave|data[7]                           ; |g19_square_wave|data[7]                           ; regout           ;
+; |g19_square_wave|Add0~0                            ; |g19_square_wave|Add0~0                            ; combout          ;
+; |g19_square_wave|Add0~0                            ; |g19_square_wave|Add0~1                            ; cout             ;
+; |g19_square_wave|Add0~2                            ; |g19_square_wave|Add0~2                            ; combout          ;
+; |g19_square_wave|Add0~2                            ; |g19_square_wave|Add0~3                            ; cout             ;
+; |g19_square_wave|Add0~4                            ; |g19_square_wave|Add0~4                            ; combout          ;
+; |g19_square_wave|Add0~4                            ; |g19_square_wave|Add0~5                            ; cout             ;
+; |g19_square_wave|Add0~6                            ; |g19_square_wave|Add0~6                            ; combout          ;
+; |g19_square_wave|Add0~6                            ; |g19_square_wave|Add0~7                            ; cout             ;
+; |g19_square_wave|Add0~8                            ; |g19_square_wave|Add0~8                            ; combout          ;
+; |g19_square_wave|Add0~8                            ; |g19_square_wave|Add0~9                            ; cout             ;
+; |g19_square_wave|Add0~10                           ; |g19_square_wave|Add0~10                           ; combout          ;
+; |g19_square_wave|Add0~10                           ; |g19_square_wave|Add0~11                           ; cout             ;
+; |g19_square_wave|Add0~12                           ; |g19_square_wave|Add0~12                           ; combout          ;
+; |g19_square_wave|Add0~12                           ; |g19_square_wave|Add0~13                           ; cout             ;
+; |g19_square_wave|Add0~14                           ; |g19_square_wave|Add0~14                           ; combout          ;
+; |g19_square_wave|Add0~14                           ; |g19_square_wave|Add0~15                           ; cout             ;
+; |g19_square_wave|Add0~16                           ; |g19_square_wave|Add0~16                           ; combout          ;
+; |g19_square_wave|Add0~16                           ; |g19_square_wave|Add0~17                           ; cout             ;
+; |g19_square_wave|Add0~18                           ; |g19_square_wave|Add0~18                           ; combout          ;
+; |g19_square_wave|Add0~18                           ; |g19_square_wave|Add0~19                           ; cout             ;
+; |g19_square_wave|Add0~20                           ; |g19_square_wave|Add0~20                           ; combout          ;
+; |g19_square_wave|Add0~20                           ; |g19_square_wave|Add0~21                           ; cout             ;
+; |g19_square_wave|Add0~22                           ; |g19_square_wave|Add0~22                           ; combout          ;
+; |g19_square_wave|Add0~22                           ; |g19_square_wave|Add0~23                           ; cout             ;
+; |g19_square_wave|Add0~24                           ; |g19_square_wave|Add0~24                           ; combout          ;
+; |g19_square_wave|Add0~24                           ; |g19_square_wave|Add0~25                           ; cout             ;
+; |g19_square_wave|Add0~26                           ; |g19_square_wave|Add0~26                           ; combout          ;
+; |g19_square_wave|Add0~26                           ; |g19_square_wave|Add0~27                           ; cout             ;
+; |g19_square_wave|Add0~28                           ; |g19_square_wave|Add0~28                           ; combout          ;
+; |g19_square_wave|Add0~28                           ; |g19_square_wave|Add0~29                           ; cout             ;
+; |g19_square_wave|Add0~30                           ; |g19_square_wave|Add0~30                           ; combout          ;
+; |g19_square_wave|Add0~30                           ; |g19_square_wave|Add0~31                           ; cout             ;
+; |g19_square_wave|Add0~32                           ; |g19_square_wave|Add0~32                           ; combout          ;
+; |g19_square_wave|Add0~32                           ; |g19_square_wave|Add0~33                           ; cout             ;
+; |g19_square_wave|Add0~34                           ; |g19_square_wave|Add0~34                           ; combout          ;
+; |g19_square_wave|Add0~34                           ; |g19_square_wave|Add0~35                           ; cout             ;
+; |g19_square_wave|Add0~36                           ; |g19_square_wave|Add0~36                           ; combout          ;
+; |g19_square_wave|Add0~36                           ; |g19_square_wave|Add0~37                           ; cout             ;
+; |g19_square_wave|Add0~38                           ; |g19_square_wave|Add0~38                           ; combout          ;
+; |g19_square_wave|data[17]~0                        ; |g19_square_wave|data[17]~0                        ; combout          ;
+; |g19_square_wave|data[15]~2                        ; |g19_square_wave|data[15]~2                        ; combout          ;
+; |g19_square_wave|data[14]~3                        ; |g19_square_wave|data[14]~3                        ; combout          ;
+; |g19_square_wave|data[13]~4                        ; |g19_square_wave|data[13]~4                        ; combout          ;
+; |g19_square_wave|data[12]~5                        ; |g19_square_wave|data[12]~5                        ; combout          ;
+; |g19_square_wave|data[10]~7                        ; |g19_square_wave|data[10]~7                        ; combout          ;
+; |g19_square_wave|data[9]~8                         ; |g19_square_wave|data[9]~8                         ; combout          ;
+; |g19_square_wave|data[7]~10                        ; |g19_square_wave|data[7]~10                        ; combout          ;
+; |g19_square_wave|lpm_ff:lpm_ff_component|dffs[0]   ; |g19_square_wave|lpm_ff:lpm_ff_component|dffs[0]   ; regout           ;
+; |g19_square_wave|Add1~2                            ; |g19_square_wave|Add1~2                            ; combout          ;
+; |g19_square_wave|load~0                            ; |g19_square_wave|load~0                            ; combout          ;
+; |g19_square_wave|data[3]                           ; |g19_square_wave|data[3]                           ; regout           ;
+; |g19_square_wave|data[2]                           ; |g19_square_wave|data[2]                           ; regout           ;
+; |g19_square_wave|load~1                            ; |g19_square_wave|load~1                            ; combout          ;
+; |g19_square_wave|data[0]                           ; |g19_square_wave|data[0]                           ; regout           ;
+; |g19_square_wave|load~2                            ; |g19_square_wave|load~2                            ; combout          ;
+; |g19_square_wave|load~3                            ; |g19_square_wave|load~3                            ; combout          ;
+; |g19_square_wave|load~4                            ; |g19_square_wave|load~4                            ; combout          ;
+; |g19_square_wave|load~5                            ; |g19_square_wave|load~5                            ; combout          ;
+; |g19_square_wave|load~6                            ; |g19_square_wave|load~6                            ; combout          ;
+; |g19_square_wave|ShiftRight0~3                     ; |g19_square_wave|ShiftRight0~3                     ; combout          ;
+; |g19_square_wave|ShiftRight0~16                    ; |g19_square_wave|ShiftRight0~16                    ; combout          ;
+; |g19_square_wave|ShiftRight0~17                    ; |g19_square_wave|ShiftRight0~17                    ; combout          ;
+; |g19_square_wave|data[19]~15                       ; |g19_square_wave|data[19]~15                       ; combout          ;
+; |g19_square_wave|data~16                           ; |g19_square_wave|data~16                           ; combout          ;
+; |g19_square_wave|data~17                           ; |g19_square_wave|data~17                           ; combout          ;
+; |g19_square_wave|data[3]~18                        ; |g19_square_wave|data[3]~18                        ; combout          ;
+; |g19_square_wave|data~19                           ; |g19_square_wave|data~19                           ; combout          ;
+; |g19_square_wave|data~20                           ; |g19_square_wave|data~20                           ; combout          ;
+; |g19_square_wave|data~21                           ; |g19_square_wave|data~21                           ; combout          ;
+; |g19_square_wave|data~22                           ; |g19_square_wave|data~22                           ; combout          ;
+; |g19_square_wave|data~23                           ; |g19_square_wave|data~23                           ; combout          ;
+; |g19_square_wave|data~24                           ; |g19_square_wave|data~24                           ; combout          ;
+; |g19_square_wave|data~26                           ; |g19_square_wave|data~26                           ; combout          ;
+; |g19_square_wave|data~27                           ; |g19_square_wave|data~27                           ; combout          ;
+; |g19_square_wave|ShiftRight0~22                    ; |g19_square_wave|ShiftRight0~22                    ; combout          ;
+; |g19_square_wave|ShiftRight0~29                    ; |g19_square_wave|ShiftRight0~29                    ; combout          ;
+; |g19_square_wave|ShiftRight0~31                    ; |g19_square_wave|ShiftRight0~31                    ; combout          ;
+; |g19_square_wave|ShiftRight0~33                    ; |g19_square_wave|ShiftRight0~33                    ; combout          ;
+; |g19_square_wave|ShiftRight0~34                    ; |g19_square_wave|ShiftRight0~34                    ; combout          ;
+; |g19_square_wave|ShiftRight0~35                    ; |g19_square_wave|ShiftRight0~35                    ; combout          ;
+; |g19_square_wave|lpm_ff:lpm_ff_component|dffs[0]~0 ; |g19_square_wave|lpm_ff:lpm_ff_component|dffs[0]~0 ; combout          ;
+; |g19_square_wave|square[0]                         ; |g19_square_wave|square[0]                         ; padio            ;
+; |g19_square_wave|square[1]                         ; |g19_square_wave|square[1]                         ; padio            ;
+; |g19_square_wave|square[2]                         ; |g19_square_wave|square[2]                         ; padio            ;
+; |g19_square_wave|square[3]                         ; |g19_square_wave|square[3]                         ; padio            ;
+; |g19_square_wave|square[4]                         ; |g19_square_wave|square[4]                         ; padio            ;
+; |g19_square_wave|square[5]                         ; |g19_square_wave|square[5]                         ; padio            ;
+; |g19_square_wave|square[6]                         ; |g19_square_wave|square[6]                         ; padio            ;
+; |g19_square_wave|square[7]                         ; |g19_square_wave|square[7]                         ; padio            ;
+; |g19_square_wave|square[8]                         ; |g19_square_wave|square[8]                         ; padio            ;
+; |g19_square_wave|square[9]                         ; |g19_square_wave|square[9]                         ; padio            ;
+; |g19_square_wave|square[10]                        ; |g19_square_wave|square[10]                        ; padio            ;
+; |g19_square_wave|square[11]                        ; |g19_square_wave|square[11]                        ; padio            ;
+; |g19_square_wave|square[12]                        ; |g19_square_wave|square[12]                        ; padio            ;
+; |g19_square_wave|square[13]                        ; |g19_square_wave|square[13]                        ; padio            ;
+; |g19_square_wave|square[14]                        ; |g19_square_wave|square[14]                        ; padio            ;
+; |g19_square_wave|square[15]                        ; |g19_square_wave|square[15]                        ; padio            ;
+; |g19_square_wave|square[16]                        ; |g19_square_wave|square[16]                        ; padio            ;
+; |g19_square_wave|square[17]                        ; |g19_square_wave|square[17]                        ; padio            ;
+; |g19_square_wave|square[18]                        ; |g19_square_wave|square[18]                        ; padio            ;
+; |g19_square_wave|square[19]                        ; |g19_square_wave|square[19]                        ; padio            ;
+; |g19_square_wave|square[20]                        ; |g19_square_wave|square[20]                        ; padio            ;
+; |g19_square_wave|square[21]                        ; |g19_square_wave|square[21]                        ; padio            ;
+; |g19_square_wave|square[22]                        ; |g19_square_wave|square[22]                        ; padio            ;
+; |g19_square_wave|square[23]                        ; |g19_square_wave|square[23]                        ; padio            ;
+; |g19_square_wave|clk                               ; |g19_square_wave|clk~corein                        ; combout          ;
+; |g19_square_wave|octave[0]                         ; |g19_square_wave|octave[0]~corein                  ; combout          ;
+; |g19_square_wave|clk~clkctrl                       ; |g19_square_wave|clk~clkctrl                       ; outclk           ;
++----------------------------------------------------+----------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                    ;
++---------------------------------+----------------------------------------+------------------+
+; Node Name                       ; Output Port Name                       ; Output Port Type ;
++---------------------------------+----------------------------------------+------------------+
+; |g19_square_wave|Add1~5         ; |g19_square_wave|Add1~6                ; cout             ;
+; |g19_square_wave|Add1~7         ; |g19_square_wave|Add1~8                ; cout             ;
+; |g19_square_wave|Add1~9         ; |g19_square_wave|Add1~10               ; cout             ;
+; |g19_square_wave|Add1~11        ; |g19_square_wave|Add1~12               ; cout             ;
+; |g19_square_wave|Add1~13        ; |g19_square_wave|Add1~14               ; cout             ;
+; |g19_square_wave|Add1~15        ; |g19_square_wave|Add1~16               ; cout             ;
+; |g19_square_wave|Add1~17        ; |g19_square_wave|Add1~18               ; cout             ;
+; |g19_square_wave|Add1~19        ; |g19_square_wave|Add1~20               ; cout             ;
+; |g19_square_wave|Add1~21        ; |g19_square_wave|Add1~22               ; cout             ;
+; |g19_square_wave|Add1~23        ; |g19_square_wave|Add1~24               ; cout             ;
+; |g19_square_wave|Add1~25        ; |g19_square_wave|Add1~26               ; cout             ;
+; |g19_square_wave|Add1~27        ; |g19_square_wave|Add1~28               ; cout             ;
+; |g19_square_wave|Add1~29        ; |g19_square_wave|Add1~30               ; cout             ;
+; |g19_square_wave|Add1~31        ; |g19_square_wave|Add1~32               ; cout             ;
+; |g19_square_wave|Add1~33        ; |g19_square_wave|Add1~34               ; cout             ;
+; |g19_square_wave|Add1~35        ; |g19_square_wave|Add1~36               ; cout             ;
+; |g19_square_wave|Add1~37        ; |g19_square_wave|Add1~38               ; cout             ;
+; |g19_square_wave|Add1~39        ; |g19_square_wave|Add1~40               ; cout             ;
+; |g19_square_wave|Add1~41        ; |g19_square_wave|Add1~42               ; cout             ;
+; |g19_square_wave|Add1~43        ; |g19_square_wave|Add1~44               ; cout             ;
+; |g19_square_wave|Add1~45        ; |g19_square_wave|Add1~46               ; cout             ;
+; |g19_square_wave|Add1~47        ; |g19_square_wave|Add1~48               ; cout             ;
+; |g19_square_wave|data[6]~11     ; |g19_square_wave|data[6]~11            ; combout          ;
+; |g19_square_wave|data[5]~12     ; |g19_square_wave|data[5]~12            ; combout          ;
+; |g19_square_wave|data[4]~13     ; |g19_square_wave|data[4]~13            ; combout          ;
+; |g19_square_wave|data[1]~14     ; |g19_square_wave|data[1]~14            ; combout          ;
+; |g19_square_wave|data[16]~1     ; |g19_square_wave|data[16]~1            ; combout          ;
+; |g19_square_wave|data[11]~6     ; |g19_square_wave|data[11]~6            ; combout          ;
+; |g19_square_wave|data[8]~9      ; |g19_square_wave|data[8]~9             ; combout          ;
+; |g19_square_wave|data[19]       ; |g19_square_wave|data[19]              ; regout           ;
+; |g19_square_wave|data[18]       ; |g19_square_wave|data[18]              ; regout           ;
+; |g19_square_wave|Mux12~0        ; |g19_square_wave|Mux12~0               ; combout          ;
+; |g19_square_wave|Mux10~0        ; |g19_square_wave|Mux10~0               ; combout          ;
+; |g19_square_wave|Mux13~0        ; |g19_square_wave|Mux13~0               ; combout          ;
+; |g19_square_wave|Mux11~0        ; |g19_square_wave|Mux11~0               ; combout          ;
+; |g19_square_wave|ShiftRight0~0  ; |g19_square_wave|ShiftRight0~0         ; combout          ;
+; |g19_square_wave|ShiftRight0~1  ; |g19_square_wave|ShiftRight0~1         ; combout          ;
+; |g19_square_wave|Mux7~0         ; |g19_square_wave|Mux7~0                ; combout          ;
+; |g19_square_wave|Mux9~0         ; |g19_square_wave|Mux9~0                ; combout          ;
+; |g19_square_wave|Mux6~0         ; |g19_square_wave|Mux6~0                ; combout          ;
+; |g19_square_wave|Mux8~0         ; |g19_square_wave|Mux8~0                ; combout          ;
+; |g19_square_wave|ShiftRight0~2  ; |g19_square_wave|ShiftRight0~2         ; combout          ;
+; |g19_square_wave|ShiftRight0~4  ; |g19_square_wave|ShiftRight0~4         ; combout          ;
+; |g19_square_wave|Mux14~0        ; |g19_square_wave|Mux14~0               ; combout          ;
+; |g19_square_wave|ShiftRight0~5  ; |g19_square_wave|ShiftRight0~5         ; combout          ;
+; |g19_square_wave|ShiftRight0~6  ; |g19_square_wave|ShiftRight0~6         ; combout          ;
+; |g19_square_wave|ShiftRight0~8  ; |g19_square_wave|ShiftRight0~8         ; combout          ;
+; |g19_square_wave|ShiftRight0~9  ; |g19_square_wave|ShiftRight0~9         ; combout          ;
+; |g19_square_wave|Mux15~0        ; |g19_square_wave|Mux15~0               ; combout          ;
+; |g19_square_wave|ShiftRight0~10 ; |g19_square_wave|ShiftRight0~10        ; combout          ;
+; |g19_square_wave|ShiftRight0~11 ; |g19_square_wave|ShiftRight0~11        ; combout          ;
+; |g19_square_wave|ShiftRight0~12 ; |g19_square_wave|ShiftRight0~12        ; combout          ;
+; |g19_square_wave|ShiftRight0~13 ; |g19_square_wave|ShiftRight0~13        ; combout          ;
+; |g19_square_wave|Mux17~0        ; |g19_square_wave|Mux17~0               ; combout          ;
+; |g19_square_wave|Mux18~0        ; |g19_square_wave|Mux18~0               ; combout          ;
+; |g19_square_wave|Mux16~0        ; |g19_square_wave|Mux16~0               ; combout          ;
+; |g19_square_wave|ShiftRight0~15 ; |g19_square_wave|ShiftRight0~15        ; combout          ;
+; |g19_square_wave|Mux0~0         ; |g19_square_wave|Mux0~0                ; combout          ;
+; |g19_square_wave|Mux1~0         ; |g19_square_wave|Mux1~0                ; combout          ;
+; |g19_square_wave|ShiftRight0~20 ; |g19_square_wave|ShiftRight0~20        ; combout          ;
+; |g19_square_wave|ShiftRight0~21 ; |g19_square_wave|ShiftRight0~21        ; combout          ;
+; |g19_square_wave|Mux19~0        ; |g19_square_wave|Mux19~0               ; combout          ;
+; |g19_square_wave|Mux2~0         ; |g19_square_wave|Mux2~0                ; combout          ;
+; |g19_square_wave|ShiftRight0~23 ; |g19_square_wave|ShiftRight0~23        ; combout          ;
+; |g19_square_wave|Mux3~0         ; |g19_square_wave|Mux3~0                ; combout          ;
+; |g19_square_wave|ShiftRight0~24 ; |g19_square_wave|ShiftRight0~24        ; combout          ;
+; |g19_square_wave|ShiftRight0~25 ; |g19_square_wave|ShiftRight0~25        ; combout          ;
+; |g19_square_wave|Mux4~0         ; |g19_square_wave|Mux4~0                ; combout          ;
+; |g19_square_wave|ShiftRight0~26 ; |g19_square_wave|ShiftRight0~26        ; combout          ;
+; |g19_square_wave|ShiftRight0~27 ; |g19_square_wave|ShiftRight0~27        ; combout          ;
+; |g19_square_wave|Mux5~0         ; |g19_square_wave|Mux5~0                ; combout          ;
+; |g19_square_wave|ShiftRight0~32 ; |g19_square_wave|ShiftRight0~32        ; combout          ;
+; |g19_square_wave|volume[0]      ; |g19_square_wave|volume[0]~corein      ; combout          ;
+; |g19_square_wave|volume[1]      ; |g19_square_wave|volume[1]~corein      ; combout          ;
+; |g19_square_wave|volume[2]      ; |g19_square_wave|volume[2]~corein      ; combout          ;
+; |g19_square_wave|volume[3]      ; |g19_square_wave|volume[3]~corein      ; combout          ;
+; |g19_square_wave|volume[4]      ; |g19_square_wave|volume[4]~corein      ; combout          ;
+; |g19_square_wave|volume[5]      ; |g19_square_wave|volume[5]~corein      ; combout          ;
+; |g19_square_wave|volume[6]      ; |g19_square_wave|volume[6]~corein      ; combout          ;
+; |g19_square_wave|volume[7]      ; |g19_square_wave|volume[7]~corein      ; combout          ;
+; |g19_square_wave|volume[8]      ; |g19_square_wave|volume[8]~corein      ; combout          ;
+; |g19_square_wave|volume[9]      ; |g19_square_wave|volume[9]~corein      ; combout          ;
+; |g19_square_wave|volume[10]     ; |g19_square_wave|volume[10]~corein     ; combout          ;
+; |g19_square_wave|volume[11]     ; |g19_square_wave|volume[11]~corein     ; combout          ;
+; |g19_square_wave|volume[12]     ; |g19_square_wave|volume[12]~corein     ; combout          ;
+; |g19_square_wave|volume[13]     ; |g19_square_wave|volume[13]~corein     ; combout          ;
+; |g19_square_wave|volume[14]     ; |g19_square_wave|volume[14]~corein     ; combout          ;
+; |g19_square_wave|volume[15]     ; |g19_square_wave|volume[15]~corein     ; combout          ;
+; |g19_square_wave|volume[16]     ; |g19_square_wave|volume[16]~corein     ; combout          ;
+; |g19_square_wave|volume[17]     ; |g19_square_wave|volume[17]~corein     ; combout          ;
+; |g19_square_wave|volume[18]     ; |g19_square_wave|volume[18]~corein     ; combout          ;
+; |g19_square_wave|volume[19]     ; |g19_square_wave|volume[19]~corein     ; combout          ;
+; |g19_square_wave|volume[20]     ; |g19_square_wave|volume[20]~corein     ; combout          ;
+; |g19_square_wave|volume[21]     ; |g19_square_wave|volume[21]~corein     ; combout          ;
+; |g19_square_wave|volume[22]     ; |g19_square_wave|volume[22]~corein     ; combout          ;
+; |g19_square_wave|reset          ; |g19_square_wave|reset~corein          ; combout          ;
+; |g19_square_wave|note_number[1] ; |g19_square_wave|note_number[1]~corein ; combout          ;
+; |g19_square_wave|note_number[2] ; |g19_square_wave|note_number[2]~corein ; combout          ;
+; |g19_square_wave|note_number[3] ; |g19_square_wave|note_number[3]~corein ; combout          ;
+; |g19_square_wave|octave[1]      ; |g19_square_wave|octave[1]~corein      ; combout          ;
++---------------------------------+----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                    ;
++---------------------------------+----------------------------------------+------------------+
+; Node Name                       ; Output Port Name                       ; Output Port Type ;
++---------------------------------+----------------------------------------+------------------+
+; |g19_square_wave|Add1~5         ; |g19_square_wave|Add1~6                ; cout             ;
+; |g19_square_wave|Add1~7         ; |g19_square_wave|Add1~8                ; cout             ;
+; |g19_square_wave|Add1~9         ; |g19_square_wave|Add1~10               ; cout             ;
+; |g19_square_wave|Add1~11        ; |g19_square_wave|Add1~12               ; cout             ;
+; |g19_square_wave|Add1~13        ; |g19_square_wave|Add1~14               ; cout             ;
+; |g19_square_wave|Add1~15        ; |g19_square_wave|Add1~16               ; cout             ;
+; |g19_square_wave|Add1~17        ; |g19_square_wave|Add1~18               ; cout             ;
+; |g19_square_wave|Add1~19        ; |g19_square_wave|Add1~20               ; cout             ;
+; |g19_square_wave|Add1~21        ; |g19_square_wave|Add1~22               ; cout             ;
+; |g19_square_wave|Add1~23        ; |g19_square_wave|Add1~24               ; cout             ;
+; |g19_square_wave|Add1~25        ; |g19_square_wave|Add1~26               ; cout             ;
+; |g19_square_wave|Add1~27        ; |g19_square_wave|Add1~28               ; cout             ;
+; |g19_square_wave|Add1~29        ; |g19_square_wave|Add1~30               ; cout             ;
+; |g19_square_wave|Add1~31        ; |g19_square_wave|Add1~32               ; cout             ;
+; |g19_square_wave|Add1~33        ; |g19_square_wave|Add1~34               ; cout             ;
+; |g19_square_wave|Add1~35        ; |g19_square_wave|Add1~36               ; cout             ;
+; |g19_square_wave|Add1~37        ; |g19_square_wave|Add1~38               ; cout             ;
+; |g19_square_wave|Add1~39        ; |g19_square_wave|Add1~40               ; cout             ;
+; |g19_square_wave|Add1~41        ; |g19_square_wave|Add1~42               ; cout             ;
+; |g19_square_wave|Add1~43        ; |g19_square_wave|Add1~44               ; cout             ;
+; |g19_square_wave|Add1~45        ; |g19_square_wave|Add1~46               ; cout             ;
+; |g19_square_wave|Add1~47        ; |g19_square_wave|Add1~48               ; cout             ;
+; |g19_square_wave|data[6]~11     ; |g19_square_wave|data[6]~11            ; combout          ;
+; |g19_square_wave|data[5]~12     ; |g19_square_wave|data[5]~12            ; combout          ;
+; |g19_square_wave|data[4]~13     ; |g19_square_wave|data[4]~13            ; combout          ;
+; |g19_square_wave|data[1]~14     ; |g19_square_wave|data[1]~14            ; combout          ;
+; |g19_square_wave|data[16]~1     ; |g19_square_wave|data[16]~1            ; combout          ;
+; |g19_square_wave|data[11]~6     ; |g19_square_wave|data[11]~6            ; combout          ;
+; |g19_square_wave|data[8]~9      ; |g19_square_wave|data[8]~9             ; combout          ;
+; |g19_square_wave|data[19]       ; |g19_square_wave|data[19]              ; regout           ;
+; |g19_square_wave|data[18]       ; |g19_square_wave|data[18]              ; regout           ;
+; |g19_square_wave|Mux12~0        ; |g19_square_wave|Mux12~0               ; combout          ;
+; |g19_square_wave|Mux10~0        ; |g19_square_wave|Mux10~0               ; combout          ;
+; |g19_square_wave|Mux13~0        ; |g19_square_wave|Mux13~0               ; combout          ;
+; |g19_square_wave|Mux11~0        ; |g19_square_wave|Mux11~0               ; combout          ;
+; |g19_square_wave|ShiftRight0~1  ; |g19_square_wave|ShiftRight0~1         ; combout          ;
+; |g19_square_wave|Mux7~0         ; |g19_square_wave|Mux7~0                ; combout          ;
+; |g19_square_wave|Mux9~0         ; |g19_square_wave|Mux9~0                ; combout          ;
+; |g19_square_wave|Mux6~0         ; |g19_square_wave|Mux6~0                ; combout          ;
+; |g19_square_wave|Mux8~0         ; |g19_square_wave|Mux8~0                ; combout          ;
+; |g19_square_wave|Mux14~0        ; |g19_square_wave|Mux14~0               ; combout          ;
+; |g19_square_wave|ShiftRight0~5  ; |g19_square_wave|ShiftRight0~5         ; combout          ;
+; |g19_square_wave|ShiftRight0~6  ; |g19_square_wave|ShiftRight0~6         ; combout          ;
+; |g19_square_wave|ShiftRight0~7  ; |g19_square_wave|ShiftRight0~7         ; combout          ;
+; |g19_square_wave|ShiftRight0~8  ; |g19_square_wave|ShiftRight0~8         ; combout          ;
+; |g19_square_wave|Mux15~0        ; |g19_square_wave|Mux15~0               ; combout          ;
+; |g19_square_wave|ShiftRight0~10 ; |g19_square_wave|ShiftRight0~10        ; combout          ;
+; |g19_square_wave|ShiftRight0~11 ; |g19_square_wave|ShiftRight0~11        ; combout          ;
+; |g19_square_wave|ShiftRight0~13 ; |g19_square_wave|ShiftRight0~13        ; combout          ;
+; |g19_square_wave|Mux17~0        ; |g19_square_wave|Mux17~0               ; combout          ;
+; |g19_square_wave|Mux18~0        ; |g19_square_wave|Mux18~0               ; combout          ;
+; |g19_square_wave|ShiftRight0~14 ; |g19_square_wave|ShiftRight0~14        ; combout          ;
+; |g19_square_wave|Mux16~0        ; |g19_square_wave|Mux16~0               ; combout          ;
+; |g19_square_wave|ShiftRight0~15 ; |g19_square_wave|ShiftRight0~15        ; combout          ;
+; |g19_square_wave|Mux0~0         ; |g19_square_wave|Mux0~0                ; combout          ;
+; |g19_square_wave|Mux1~0         ; |g19_square_wave|Mux1~0                ; combout          ;
+; |g19_square_wave|ShiftRight0~18 ; |g19_square_wave|ShiftRight0~18        ; combout          ;
+; |g19_square_wave|ShiftRight0~19 ; |g19_square_wave|ShiftRight0~19        ; combout          ;
+; |g19_square_wave|ShiftRight0~20 ; |g19_square_wave|ShiftRight0~20        ; combout          ;
+; |g19_square_wave|ShiftRight0~21 ; |g19_square_wave|ShiftRight0~21        ; combout          ;
+; |g19_square_wave|Mux19~0        ; |g19_square_wave|Mux19~0               ; combout          ;
+; |g19_square_wave|data~25        ; |g19_square_wave|data~25               ; combout          ;
+; |g19_square_wave|Mux2~0         ; |g19_square_wave|Mux2~0                ; combout          ;
+; |g19_square_wave|ShiftRight0~23 ; |g19_square_wave|ShiftRight0~23        ; combout          ;
+; |g19_square_wave|Mux3~0         ; |g19_square_wave|Mux3~0                ; combout          ;
+; |g19_square_wave|ShiftRight0~24 ; |g19_square_wave|ShiftRight0~24        ; combout          ;
+; |g19_square_wave|ShiftRight0~25 ; |g19_square_wave|ShiftRight0~25        ; combout          ;
+; |g19_square_wave|Mux4~0         ; |g19_square_wave|Mux4~0                ; combout          ;
+; |g19_square_wave|ShiftRight0~26 ; |g19_square_wave|ShiftRight0~26        ; combout          ;
+; |g19_square_wave|ShiftRight0~27 ; |g19_square_wave|ShiftRight0~27        ; combout          ;
+; |g19_square_wave|Mux5~0         ; |g19_square_wave|Mux5~0                ; combout          ;
+; |g19_square_wave|ShiftRight0~28 ; |g19_square_wave|ShiftRight0~28        ; combout          ;
+; |g19_square_wave|ShiftRight0~30 ; |g19_square_wave|ShiftRight0~30        ; combout          ;
+; |g19_square_wave|volume[0]      ; |g19_square_wave|volume[0]~corein      ; combout          ;
+; |g19_square_wave|volume[1]      ; |g19_square_wave|volume[1]~corein      ; combout          ;
+; |g19_square_wave|volume[2]      ; |g19_square_wave|volume[2]~corein      ; combout          ;
+; |g19_square_wave|volume[3]      ; |g19_square_wave|volume[3]~corein      ; combout          ;
+; |g19_square_wave|volume[4]      ; |g19_square_wave|volume[4]~corein      ; combout          ;
+; |g19_square_wave|volume[5]      ; |g19_square_wave|volume[5]~corein      ; combout          ;
+; |g19_square_wave|volume[6]      ; |g19_square_wave|volume[6]~corein      ; combout          ;
+; |g19_square_wave|volume[7]      ; |g19_square_wave|volume[7]~corein      ; combout          ;
+; |g19_square_wave|volume[8]      ; |g19_square_wave|volume[8]~corein      ; combout          ;
+; |g19_square_wave|volume[9]      ; |g19_square_wave|volume[9]~corein      ; combout          ;
+; |g19_square_wave|volume[10]     ; |g19_square_wave|volume[10]~corein     ; combout          ;
+; |g19_square_wave|volume[11]     ; |g19_square_wave|volume[11]~corein     ; combout          ;
+; |g19_square_wave|volume[12]     ; |g19_square_wave|volume[12]~corein     ; combout          ;
+; |g19_square_wave|volume[13]     ; |g19_square_wave|volume[13]~corein     ; combout          ;
+; |g19_square_wave|volume[14]     ; |g19_square_wave|volume[14]~corein     ; combout          ;
+; |g19_square_wave|volume[15]     ; |g19_square_wave|volume[15]~corein     ; combout          ;
+; |g19_square_wave|volume[16]     ; |g19_square_wave|volume[16]~corein     ; combout          ;
+; |g19_square_wave|volume[17]     ; |g19_square_wave|volume[17]~corein     ; combout          ;
+; |g19_square_wave|volume[18]     ; |g19_square_wave|volume[18]~corein     ; combout          ;
+; |g19_square_wave|volume[19]     ; |g19_square_wave|volume[19]~corein     ; combout          ;
+; |g19_square_wave|volume[20]     ; |g19_square_wave|volume[20]~corein     ; combout          ;
+; |g19_square_wave|volume[21]     ; |g19_square_wave|volume[21]~corein     ; combout          ;
+; |g19_square_wave|volume[22]     ; |g19_square_wave|volume[22]~corein     ; combout          ;
+; |g19_square_wave|reset          ; |g19_square_wave|reset~corein          ; combout          ;
+; |g19_square_wave|note_number[0] ; |g19_square_wave|note_number[0]~corein ; combout          ;
+; |g19_square_wave|note_number[1] ; |g19_square_wave|note_number[1]~corein ; combout          ;
+; |g19_square_wave|note_number[2] ; |g19_square_wave|note_number[2]~corein ; combout          ;
+; |g19_square_wave|note_number[3] ; |g19_square_wave|note_number[3]~corein ; combout          ;
+; |g19_square_wave|octave[2]      ; |g19_square_wave|octave[2]~corein      ; combout          ;
++---------------------------------+----------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Nov 08 17:23:19 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off g19_lab4 -c g19_lab4
+Info: Using vector source file "F:/g19_lab4/squareWave1.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of squareWave1.vwf called g19_lab4.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      57.59 %
+Info: Number of transitions in simulation is 19326703
+Info: Vector file squareWave1.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 188 megabytes
+    Info: Processing ended: Fri Nov 08 17:24:30 2013
+    Info: Elapsed time: 00:01:11
+    Info: Total CPU time (on all processors): 00:01:05
+
+

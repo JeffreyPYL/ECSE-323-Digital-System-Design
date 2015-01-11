@@ -1,0 +1,50 @@
+MED
+C:\Users\jleung35\Downloads\g19_lab4\g19_lab4\g19_lab3.mif
+
+	Undo Commands
+	     1.	Change Memory Radix
+
+
+GED
+
+	Undo Commands
+	     1.	Resize
+	     2.	Insert Symbol
+	     3.	Delete
+	     4.	Delete
+	     5.	Insert Node
+	     6.	Delete
+	     7.	Insert Bus
+	     8.	Delete
+	     9.	Delete
+	    10.	Resize
+	    11.	Delete
+	    12.	Insert Node
+	    13.	Insert Node
+	    14.	Insert Symbol
+	    15.	Delete
+	    16.	Properties
+	    17.	Properties
+	    18.	Properties
+	    19.	Properties
+	    20.	Properties
+	    21.	Properties
+	    22.	Properties
+	    23.	Properties
+	    24.	Properties
+	    25.	Properties
+	    26.	Properties
+	    27.	Properties
+	    28.	Properties
+	    29.	Properties
+	    30.	Properties
+	    31.	Insert Bus
+	    32.	Insert Symbol
+
+
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+
+

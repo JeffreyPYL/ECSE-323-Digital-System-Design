@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="Reset" source="Pin Planner" >
+		</pin>
+		<pin name="Audio_Init" source="Pin Planner" >
+		</pin>
+		<pin name="volume[22]" source="Pin Planner" >
+		</pin>
+		<pin name="volume[21]" source="Pin Planner" >
+		</pin>
+		<pin name="volume[20]" source="Pin Planner" >
+		</pin>
+		<pin name="octave[2]" source="Pin Planner" >
+		</pin>
+		<pin name="octave[1]" source="Pin Planner" >
+		</pin>
+		<pin name="octave[0]" source="Pin Planner" >
+		</pin>
+		<pin name="note_number[3]" source="Pin Planner" >
+		</pin>
+		<pin name="note_number[2]" source="Pin Planner" >
+		</pin>
+		<pin name="note_number[1]" source="Pin Planner" >
+		</pin>
+		<pin name="note_number[0]" source="Pin Planner" >
+		</pin>
+		<pin name="clk24" source="Pin Planner" >
+		</pin>
+		<pin name="aud_daclrck" source="Pin Planner" >
+		</pin>
+		<pin name="aud_dacdat" source="Pin Planner" >
+		</pin>
+		<pin name="aud_bclk" source="Pin Planner" >
+		</pin>
+		<pin name="aud_xck" source="Pin Planner" >
+		</pin>
+		<pin name="i2c_sclk" source="Pin Planner" >
+		</pin>
+		<pin name="i2c_sdat" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

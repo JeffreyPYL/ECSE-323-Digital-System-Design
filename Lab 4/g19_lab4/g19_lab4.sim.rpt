@@ -1,0 +1,451 @@
+Simulator report for g19_lab4
+Fri Nov 15 12:09:05 2013
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 ms       ;
+; Simulation Netlist Size     ; 148 nodes    ;
+; Simulation Coverage         ;      49.74 % ;
+; Total Number of Transitions ; 1457872      ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Option                                                                                     ; Setting        ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Simulation mode                                                                            ; Timing         ; Timing        ;
+; Start time                                                                                 ; 0 ns           ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF           ;               ;
+; Vector input source                                                                        ; noteTiming.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On             ; On            ;
+; Check outputs                                                                              ; Off            ; Off           ;
+; Report simulation coverage                                                                 ; On             ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On             ; On            ;
+; Display missing 1-value coverage report                                                    ; On             ; On            ;
+; Display missing 0-value coverage report                                                    ; On             ; On            ;
+; Detect setup and hold time violations                                                      ; Off            ; Off           ;
+; Detect glitches                                                                            ; Off            ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off            ; Off           ;
+; Generate Signal Activity File                                                              ; Off            ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off            ; Off           ;
+; Group bus channels in simulation results                                                   ; Off            ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On             ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE     ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off            ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On             ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto           ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      49.74 % ;
+; Total nodes checked                                 ; 148          ;
+; Total output ports checked                          ; 189          ;
+; Total output ports with complete 1/0-value coverage ; 94           ;
+; Total output ports with no 1/0-value coverage       ; 95           ;
+; Total output ports with no 1-value coverage         ; 95           ;
+; Total output ports with no 0-value coverage         ; 95           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                   ;
++----------------------------------+-----------------------------------------+------------------+
+; Node Name                        ; Output Port Name                        ; Output Port Type ;
++----------------------------------+-----------------------------------------+------------------+
+; |g19_note_timer|n[5]             ; |g19_note_timer|n[5]                    ; regout           ;
+; |g19_note_timer|n[4]             ; |g19_note_timer|n[4]                    ; regout           ;
+; |g19_note_timer|n[3]             ; |g19_note_timer|n[3]                    ; regout           ;
+; |g19_note_timer|n[2]             ; |g19_note_timer|n[2]                    ; regout           ;
+; |g19_note_timer|n[1]             ; |g19_note_timer|n[1]                    ; regout           ;
+; |g19_note_timer|n[0]             ; |g19_note_timer|n[0]                    ; regout           ;
+; |g19_note_timer|LessThan1~1      ; |g19_note_timer|LessThan1~1             ; cout             ;
+; |g19_note_timer|LessThan1~3      ; |g19_note_timer|LessThan1~3             ; cout             ;
+; |g19_note_timer|LessThan1~5      ; |g19_note_timer|LessThan1~5             ; cout             ;
+; |g19_note_timer|LessThan1~7      ; |g19_note_timer|LessThan1~7             ; cout             ;
+; |g19_note_timer|LessThan1~9      ; |g19_note_timer|LessThan1~9             ; cout             ;
+; |g19_note_timer|LessThan1~11     ; |g19_note_timer|LessThan1~11            ; cout             ;
+; |g19_note_timer|LessThan1~13     ; |g19_note_timer|LessThan1~13            ; cout             ;
+; |g19_note_timer|LessThan1~14     ; |g19_note_timer|LessThan1~14            ; combout          ;
+; |g19_note_timer|Add2~2           ; |g19_note_timer|Add2~2                  ; combout          ;
+; |g19_note_timer|Add2~2           ; |g19_note_timer|Add2~3                  ; cout             ;
+; |g19_note_timer|Add2~4           ; |g19_note_timer|Add2~4                  ; combout          ;
+; |g19_note_timer|Add2~4           ; |g19_note_timer|Add2~5                  ; cout             ;
+; |g19_note_timer|Add2~6           ; |g19_note_timer|Add2~6                  ; combout          ;
+; |g19_note_timer|Add2~6           ; |g19_note_timer|Add2~7                  ; cout             ;
+; |g19_note_timer|Add2~8           ; |g19_note_timer|Add2~8                  ; combout          ;
+; |g19_note_timer|Add2~8           ; |g19_note_timer|Add2~9                  ; cout             ;
+; |g19_note_timer|Add2~10          ; |g19_note_timer|Add2~10                 ; combout          ;
+; |g19_note_timer|Add2~10          ; |g19_note_timer|Add2~11                 ; cout             ;
+; |g19_note_timer|Add2~12          ; |g19_note_timer|Add2~12                 ; combout          ;
+; |g19_note_timer|Add2~12          ; |g19_note_timer|Add2~13                 ; cout             ;
+; |g19_note_timer|Add2~14          ; |g19_note_timer|Add2~14                 ; combout          ;
+; |g19_note_timer|Add2~14          ; |g19_note_timer|Add2~15                 ; cout             ;
+; |g19_note_timer|Add2~16          ; |g19_note_timer|Add2~16                 ; combout          ;
+; |g19_note_timer|Add2~16          ; |g19_note_timer|Add2~17                 ; cout             ;
+; |g19_note_timer|Add2~18          ; |g19_note_timer|Add2~18                 ; combout          ;
+; |g19_note_timer|Add2~18          ; |g19_note_timer|Add2~19                 ; cout             ;
+; |g19_note_timer|Add2~20          ; |g19_note_timer|Add2~20                 ; combout          ;
+; |g19_note_timer|n[0]~32          ; |g19_note_timer|n[0]~32                 ; combout          ;
+; |g19_note_timer|n[0]~32          ; |g19_note_timer|n[0]~33                 ; cout             ;
+; |g19_note_timer|n[1]~34          ; |g19_note_timer|n[1]~34                 ; combout          ;
+; |g19_note_timer|n[1]~34          ; |g19_note_timer|n[1]~35                 ; cout             ;
+; |g19_note_timer|n[2]~36          ; |g19_note_timer|n[2]~36                 ; combout          ;
+; |g19_note_timer|n[2]~36          ; |g19_note_timer|n[2]~37                 ; cout             ;
+; |g19_note_timer|n[3]~38          ; |g19_note_timer|n[3]~38                 ; combout          ;
+; |g19_note_timer|n[3]~38          ; |g19_note_timer|n[3]~39                 ; cout             ;
+; |g19_note_timer|n[4]~40          ; |g19_note_timer|n[4]~40                 ; combout          ;
+; |g19_note_timer|n[4]~40          ; |g19_note_timer|n[4]~41                 ; cout             ;
+; |g19_note_timer|n[5]~42          ; |g19_note_timer|n[5]~42                 ; combout          ;
+; |g19_note_timer|n[5]~42          ; |g19_note_timer|n[5]~43                 ; cout             ;
+; |g19_note_timer|n[6]~44          ; |g19_note_timer|n[6]~44                 ; combout          ;
+; |g19_note_timer|GATE~reg0        ; |g19_note_timer|GATE~reg0               ; regout           ;
+; |g19_note_timer|count[8]~0       ; |g19_note_timer|count[8]~0              ; combout          ;
+; |g19_note_timer|count[7]~1       ; |g19_note_timer|count[7]~1              ; combout          ;
+; |g19_note_timer|count[6]~2       ; |g19_note_timer|count[6]~2              ; combout          ;
+; |g19_note_timer|count[5]~3       ; |g19_note_timer|count[5]~3              ; combout          ;
+; |g19_note_timer|count[4]~4       ; |g19_note_timer|count[4]~4              ; combout          ;
+; |g19_note_timer|count[3]~5       ; |g19_note_timer|count[3]~5              ; combout          ;
+; |g19_note_timer|count[2]~6       ; |g19_note_timer|count[2]~6              ; combout          ;
+; |g19_note_timer|count[1]~7       ; |g19_note_timer|count[1]~7              ; combout          ;
+; |g19_note_timer|LessThan1~16     ; |g19_note_timer|LessThan1~16            ; combout          ;
+; |g19_note_timer|LessThan1~20     ; |g19_note_timer|LessThan1~20            ; combout          ;
+; |g19_note_timer|count[8]~8       ; |g19_note_timer|count[8]~8              ; combout          ;
+; |g19_note_timer|count[7]~9       ; |g19_note_timer|count[7]~9              ; combout          ;
+; |g19_note_timer|count[5]~10      ; |g19_note_timer|count[5]~10             ; combout          ;
+; |g19_note_timer|count[5]~11      ; |g19_note_timer|count[5]~11             ; combout          ;
+; |g19_note_timer|Equal7~0         ; |g19_note_timer|Equal7~0                ; combout          ;
+; |g19_note_timer|count[3]~12      ; |g19_note_timer|count[3]~12             ; combout          ;
+; |g19_note_timer|LessThan0~4      ; |g19_note_timer|LessThan0~4             ; combout          ;
+; |g19_note_timer|LessThan0~5      ; |g19_note_timer|LessThan0~5             ; combout          ;
+; |g19_note_timer|LessThan0~6      ; |g19_note_timer|LessThan0~6             ; combout          ;
+; |g19_note_timer|LessThan0~7      ; |g19_note_timer|LessThan0~7             ; combout          ;
+; |g19_note_timer|LessThan0~8      ; |g19_note_timer|LessThan0~8             ; combout          ;
+; |g19_note_timer|LessThan0~9      ; |g19_note_timer|LessThan0~9             ; combout          ;
+; |g19_note_timer|LessThan0~10     ; |g19_note_timer|LessThan0~10            ; combout          ;
+; |g19_note_timer|LessThan0~12     ; |g19_note_timer|LessThan0~12            ; combout          ;
+; |g19_note_timer|LessThan0~14     ; |g19_note_timer|LessThan0~14            ; combout          ;
+; |g19_note_timer|LessThan0~15     ; |g19_note_timer|LessThan0~15            ; combout          ;
+; |g19_note_timer|LessThan0~16     ; |g19_note_timer|LessThan0~16            ; combout          ;
+; |g19_note_timer|LessThan0~17     ; |g19_note_timer|LessThan0~17            ; combout          ;
+; |g19_note_timer|LessThan0~18     ; |g19_note_timer|LessThan0~18            ; combout          ;
+; |g19_note_timer|LessThan0~19     ; |g19_note_timer|LessThan0~19            ; combout          ;
+; |g19_note_timer|LessThan0~20     ; |g19_note_timer|LessThan0~20            ; combout          ;
+; |g19_note_timer|LessThan0~21     ; |g19_note_timer|LessThan0~21            ; combout          ;
+; |g19_note_timer|LessThan0~23     ; |g19_note_timer|LessThan0~23            ; combout          ;
+; |g19_note_timer|LessThan0~24     ; |g19_note_timer|LessThan0~24            ; combout          ;
+; |g19_note_timer|LessThan0~25     ; |g19_note_timer|LessThan0~25            ; combout          ;
+; |g19_note_timer|LessThan0~28     ; |g19_note_timer|LessThan0~28            ; combout          ;
+; |g19_note_timer|GATE~0           ; |g19_note_timer|GATE~0                  ; combout          ;
+; |g19_note_timer|LessThan0~29     ; |g19_note_timer|LessThan0~29            ; combout          ;
+; |g19_note_timer|LessThan0~30     ; |g19_note_timer|LessThan0~30            ; combout          ;
+; |g19_note_timer|LessThan0~31     ; |g19_note_timer|LessThan0~31            ; combout          ;
+; |g19_note_timer|GATE             ; |g19_note_timer|GATE                    ; padio            ;
+; |g19_note_timer|note_duration[0] ; |g19_note_timer|note_duration[0]~corein ; combout          ;
+; |g19_note_timer|note_duration[1] ; |g19_note_timer|note_duration[1]~corein ; combout          ;
+; |g19_note_timer|note_duration[2] ; |g19_note_timer|note_duration[2]~corein ; combout          ;
+; |g19_note_timer|clk              ; |g19_note_timer|clk~corein              ; combout          ;
+; |g19_note_timer|tempo_enable     ; |g19_note_timer|tempo_enable~corein     ; combout          ;
+; |g19_note_timer|clk~clkctrl      ; |g19_note_timer|clk~clkctrl             ; outclk           ;
++----------------------------------+-----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                          ;
++-------------------------------+--------------------------------+------------------+
+; Node Name                     ; Output Port Name               ; Output Port Type ;
++-------------------------------+--------------------------------+------------------+
+; |g19_note_timer|n[31]         ; |g19_note_timer|n[31]          ; regout           ;
+; |g19_note_timer|n[7]          ; |g19_note_timer|n[7]           ; regout           ;
+; |g19_note_timer|n[6]          ; |g19_note_timer|n[6]           ; regout           ;
+; |g19_note_timer|n[8]          ; |g19_note_timer|n[8]           ; regout           ;
+; |g19_note_timer|n[9]          ; |g19_note_timer|n[9]           ; regout           ;
+; |g19_note_timer|n[10]         ; |g19_note_timer|n[10]          ; regout           ;
+; |g19_note_timer|n[13]         ; |g19_note_timer|n[13]          ; regout           ;
+; |g19_note_timer|n[14]         ; |g19_note_timer|n[14]          ; regout           ;
+; |g19_note_timer|n[11]         ; |g19_note_timer|n[11]          ; regout           ;
+; |g19_note_timer|n[12]         ; |g19_note_timer|n[12]          ; regout           ;
+; |g19_note_timer|n[15]         ; |g19_note_timer|n[15]          ; regout           ;
+; |g19_note_timer|n[16]         ; |g19_note_timer|n[16]          ; regout           ;
+; |g19_note_timer|n[17]         ; |g19_note_timer|n[17]          ; regout           ;
+; |g19_note_timer|n[18]         ; |g19_note_timer|n[18]          ; regout           ;
+; |g19_note_timer|n[22]         ; |g19_note_timer|n[22]          ; regout           ;
+; |g19_note_timer|n[19]         ; |g19_note_timer|n[19]          ; regout           ;
+; |g19_note_timer|n[20]         ; |g19_note_timer|n[20]          ; regout           ;
+; |g19_note_timer|n[21]         ; |g19_note_timer|n[21]          ; regout           ;
+; |g19_note_timer|n[23]         ; |g19_note_timer|n[23]          ; regout           ;
+; |g19_note_timer|n[24]         ; |g19_note_timer|n[24]          ; regout           ;
+; |g19_note_timer|n[29]         ; |g19_note_timer|n[29]          ; regout           ;
+; |g19_note_timer|n[30]         ; |g19_note_timer|n[30]          ; regout           ;
+; |g19_note_timer|n[27]         ; |g19_note_timer|n[27]          ; regout           ;
+; |g19_note_timer|n[28]         ; |g19_note_timer|n[28]          ; regout           ;
+; |g19_note_timer|n[25]         ; |g19_note_timer|n[25]          ; regout           ;
+; |g19_note_timer|n[26]         ; |g19_note_timer|n[26]          ; regout           ;
+; |g19_note_timer|Add2~0        ; |g19_note_timer|Add2~0         ; combout          ;
+; |g19_note_timer|Add2~0        ; |g19_note_timer|Add2~1         ; cout             ;
+; |g19_note_timer|n[6]~44       ; |g19_note_timer|n[6]~45        ; cout             ;
+; |g19_note_timer|n[7]~46       ; |g19_note_timer|n[7]~46        ; combout          ;
+; |g19_note_timer|n[7]~46       ; |g19_note_timer|n[7]~47        ; cout             ;
+; |g19_note_timer|n[8]~48       ; |g19_note_timer|n[8]~48        ; combout          ;
+; |g19_note_timer|n[8]~48       ; |g19_note_timer|n[8]~49        ; cout             ;
+; |g19_note_timer|n[9]~50       ; |g19_note_timer|n[9]~50        ; combout          ;
+; |g19_note_timer|n[9]~50       ; |g19_note_timer|n[9]~51        ; cout             ;
+; |g19_note_timer|n[10]~52      ; |g19_note_timer|n[10]~52       ; combout          ;
+; |g19_note_timer|n[10]~52      ; |g19_note_timer|n[10]~53       ; cout             ;
+; |g19_note_timer|n[11]~54      ; |g19_note_timer|n[11]~54       ; combout          ;
+; |g19_note_timer|n[11]~54      ; |g19_note_timer|n[11]~55       ; cout             ;
+; |g19_note_timer|n[12]~56      ; |g19_note_timer|n[12]~56       ; combout          ;
+; |g19_note_timer|n[12]~56      ; |g19_note_timer|n[12]~57       ; cout             ;
+; |g19_note_timer|n[13]~58      ; |g19_note_timer|n[13]~58       ; combout          ;
+; |g19_note_timer|n[13]~58      ; |g19_note_timer|n[13]~59       ; cout             ;
+; |g19_note_timer|n[14]~60      ; |g19_note_timer|n[14]~60       ; combout          ;
+; |g19_note_timer|n[14]~60      ; |g19_note_timer|n[14]~61       ; cout             ;
+; |g19_note_timer|n[15]~62      ; |g19_note_timer|n[15]~62       ; combout          ;
+; |g19_note_timer|n[15]~62      ; |g19_note_timer|n[15]~63       ; cout             ;
+; |g19_note_timer|n[16]~64      ; |g19_note_timer|n[16]~64       ; combout          ;
+; |g19_note_timer|n[16]~64      ; |g19_note_timer|n[16]~65       ; cout             ;
+; |g19_note_timer|n[17]~66      ; |g19_note_timer|n[17]~66       ; combout          ;
+; |g19_note_timer|n[17]~66      ; |g19_note_timer|n[17]~67       ; cout             ;
+; |g19_note_timer|n[18]~68      ; |g19_note_timer|n[18]~68       ; combout          ;
+; |g19_note_timer|n[18]~68      ; |g19_note_timer|n[18]~69       ; cout             ;
+; |g19_note_timer|n[19]~70      ; |g19_note_timer|n[19]~70       ; combout          ;
+; |g19_note_timer|n[19]~70      ; |g19_note_timer|n[19]~71       ; cout             ;
+; |g19_note_timer|n[20]~72      ; |g19_note_timer|n[20]~72       ; combout          ;
+; |g19_note_timer|n[20]~72      ; |g19_note_timer|n[20]~73       ; cout             ;
+; |g19_note_timer|n[21]~74      ; |g19_note_timer|n[21]~74       ; combout          ;
+; |g19_note_timer|n[21]~74      ; |g19_note_timer|n[21]~75       ; cout             ;
+; |g19_note_timer|n[22]~76      ; |g19_note_timer|n[22]~76       ; combout          ;
+; |g19_note_timer|n[22]~76      ; |g19_note_timer|n[22]~77       ; cout             ;
+; |g19_note_timer|n[23]~78      ; |g19_note_timer|n[23]~78       ; combout          ;
+; |g19_note_timer|n[23]~78      ; |g19_note_timer|n[23]~79       ; cout             ;
+; |g19_note_timer|n[24]~80      ; |g19_note_timer|n[24]~80       ; combout          ;
+; |g19_note_timer|n[24]~80      ; |g19_note_timer|n[24]~81       ; cout             ;
+; |g19_note_timer|n[25]~82      ; |g19_note_timer|n[25]~82       ; combout          ;
+; |g19_note_timer|n[25]~82      ; |g19_note_timer|n[25]~83       ; cout             ;
+; |g19_note_timer|n[26]~84      ; |g19_note_timer|n[26]~84       ; combout          ;
+; |g19_note_timer|n[26]~84      ; |g19_note_timer|n[26]~85       ; cout             ;
+; |g19_note_timer|n[27]~86      ; |g19_note_timer|n[27]~86       ; combout          ;
+; |g19_note_timer|n[27]~86      ; |g19_note_timer|n[27]~87       ; cout             ;
+; |g19_note_timer|n[28]~88      ; |g19_note_timer|n[28]~88       ; combout          ;
+; |g19_note_timer|n[28]~88      ; |g19_note_timer|n[28]~89       ; cout             ;
+; |g19_note_timer|n[29]~90      ; |g19_note_timer|n[29]~90       ; combout          ;
+; |g19_note_timer|n[29]~90      ; |g19_note_timer|n[29]~91       ; cout             ;
+; |g19_note_timer|n[30]~92      ; |g19_note_timer|n[30]~92       ; combout          ;
+; |g19_note_timer|n[30]~92      ; |g19_note_timer|n[30]~93       ; cout             ;
+; |g19_note_timer|n[31]~94      ; |g19_note_timer|n[31]~94       ; combout          ;
+; |g19_note_timer|LessThan1~17  ; |g19_note_timer|LessThan1~17   ; combout          ;
+; |g19_note_timer|LessThan1~18  ; |g19_note_timer|LessThan1~18   ; combout          ;
+; |g19_note_timer|LessThan1~19  ; |g19_note_timer|LessThan1~19   ; combout          ;
+; |g19_note_timer|LessThan1~21  ; |g19_note_timer|LessThan1~21   ; combout          ;
+; |g19_note_timer|LessThan1~22  ; |g19_note_timer|LessThan1~22   ; combout          ;
+; |g19_note_timer|LessThan1~23  ; |g19_note_timer|LessThan1~23   ; combout          ;
+; |g19_note_timer|comb~0        ; |g19_note_timer|comb~0         ; combout          ;
+; |g19_note_timer|LessThan0~2   ; |g19_note_timer|LessThan0~2    ; combout          ;
+; |g19_note_timer|LessThan0~3   ; |g19_note_timer|LessThan0~3    ; combout          ;
+; |g19_note_timer|LessThan0~11  ; |g19_note_timer|LessThan0~11   ; combout          ;
+; |g19_note_timer|LessThan0~13  ; |g19_note_timer|LessThan0~13   ; combout          ;
+; |g19_note_timer|LessThan0~22  ; |g19_note_timer|LessThan0~22   ; combout          ;
+; |g19_note_timer|LessThan0~26  ; |g19_note_timer|LessThan0~26   ; combout          ;
+; |g19_note_timer|LessThan0~27  ; |g19_note_timer|LessThan0~27   ; combout          ;
+; |g19_note_timer|triplet       ; |g19_note_timer|triplet~corein ; combout          ;
+; |g19_note_timer|reset         ; |g19_note_timer|reset~corein   ; combout          ;
+; |g19_note_timer|reset~clkctrl ; |g19_note_timer|reset~clkctrl  ; outclk           ;
++-------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                          ;
++-------------------------------+--------------------------------+------------------+
+; Node Name                     ; Output Port Name               ; Output Port Type ;
++-------------------------------+--------------------------------+------------------+
+; |g19_note_timer|n[31]         ; |g19_note_timer|n[31]          ; regout           ;
+; |g19_note_timer|n[7]          ; |g19_note_timer|n[7]           ; regout           ;
+; |g19_note_timer|n[6]          ; |g19_note_timer|n[6]           ; regout           ;
+; |g19_note_timer|n[8]          ; |g19_note_timer|n[8]           ; regout           ;
+; |g19_note_timer|n[9]          ; |g19_note_timer|n[9]           ; regout           ;
+; |g19_note_timer|n[10]         ; |g19_note_timer|n[10]          ; regout           ;
+; |g19_note_timer|n[13]         ; |g19_note_timer|n[13]          ; regout           ;
+; |g19_note_timer|n[14]         ; |g19_note_timer|n[14]          ; regout           ;
+; |g19_note_timer|n[11]         ; |g19_note_timer|n[11]          ; regout           ;
+; |g19_note_timer|n[12]         ; |g19_note_timer|n[12]          ; regout           ;
+; |g19_note_timer|n[15]         ; |g19_note_timer|n[15]          ; regout           ;
+; |g19_note_timer|n[16]         ; |g19_note_timer|n[16]          ; regout           ;
+; |g19_note_timer|n[17]         ; |g19_note_timer|n[17]          ; regout           ;
+; |g19_note_timer|n[18]         ; |g19_note_timer|n[18]          ; regout           ;
+; |g19_note_timer|n[22]         ; |g19_note_timer|n[22]          ; regout           ;
+; |g19_note_timer|n[19]         ; |g19_note_timer|n[19]          ; regout           ;
+; |g19_note_timer|n[20]         ; |g19_note_timer|n[20]          ; regout           ;
+; |g19_note_timer|n[21]         ; |g19_note_timer|n[21]          ; regout           ;
+; |g19_note_timer|n[23]         ; |g19_note_timer|n[23]          ; regout           ;
+; |g19_note_timer|n[24]         ; |g19_note_timer|n[24]          ; regout           ;
+; |g19_note_timer|n[29]         ; |g19_note_timer|n[29]          ; regout           ;
+; |g19_note_timer|n[30]         ; |g19_note_timer|n[30]          ; regout           ;
+; |g19_note_timer|n[27]         ; |g19_note_timer|n[27]          ; regout           ;
+; |g19_note_timer|n[28]         ; |g19_note_timer|n[28]          ; regout           ;
+; |g19_note_timer|n[25]         ; |g19_note_timer|n[25]          ; regout           ;
+; |g19_note_timer|n[26]         ; |g19_note_timer|n[26]          ; regout           ;
+; |g19_note_timer|Add2~0        ; |g19_note_timer|Add2~0         ; combout          ;
+; |g19_note_timer|Add2~0        ; |g19_note_timer|Add2~1         ; cout             ;
+; |g19_note_timer|n[6]~44       ; |g19_note_timer|n[6]~45        ; cout             ;
+; |g19_note_timer|n[7]~46       ; |g19_note_timer|n[7]~46        ; combout          ;
+; |g19_note_timer|n[7]~46       ; |g19_note_timer|n[7]~47        ; cout             ;
+; |g19_note_timer|n[8]~48       ; |g19_note_timer|n[8]~48        ; combout          ;
+; |g19_note_timer|n[8]~48       ; |g19_note_timer|n[8]~49        ; cout             ;
+; |g19_note_timer|n[9]~50       ; |g19_note_timer|n[9]~50        ; combout          ;
+; |g19_note_timer|n[9]~50       ; |g19_note_timer|n[9]~51        ; cout             ;
+; |g19_note_timer|n[10]~52      ; |g19_note_timer|n[10]~52       ; combout          ;
+; |g19_note_timer|n[10]~52      ; |g19_note_timer|n[10]~53       ; cout             ;
+; |g19_note_timer|n[11]~54      ; |g19_note_timer|n[11]~54       ; combout          ;
+; |g19_note_timer|n[11]~54      ; |g19_note_timer|n[11]~55       ; cout             ;
+; |g19_note_timer|n[12]~56      ; |g19_note_timer|n[12]~56       ; combout          ;
+; |g19_note_timer|n[12]~56      ; |g19_note_timer|n[12]~57       ; cout             ;
+; |g19_note_timer|n[13]~58      ; |g19_note_timer|n[13]~58       ; combout          ;
+; |g19_note_timer|n[13]~58      ; |g19_note_timer|n[13]~59       ; cout             ;
+; |g19_note_timer|n[14]~60      ; |g19_note_timer|n[14]~60       ; combout          ;
+; |g19_note_timer|n[14]~60      ; |g19_note_timer|n[14]~61       ; cout             ;
+; |g19_note_timer|n[15]~62      ; |g19_note_timer|n[15]~62       ; combout          ;
+; |g19_note_timer|n[15]~62      ; |g19_note_timer|n[15]~63       ; cout             ;
+; |g19_note_timer|n[16]~64      ; |g19_note_timer|n[16]~64       ; combout          ;
+; |g19_note_timer|n[16]~64      ; |g19_note_timer|n[16]~65       ; cout             ;
+; |g19_note_timer|n[17]~66      ; |g19_note_timer|n[17]~66       ; combout          ;
+; |g19_note_timer|n[17]~66      ; |g19_note_timer|n[17]~67       ; cout             ;
+; |g19_note_timer|n[18]~68      ; |g19_note_timer|n[18]~68       ; combout          ;
+; |g19_note_timer|n[18]~68      ; |g19_note_timer|n[18]~69       ; cout             ;
+; |g19_note_timer|n[19]~70      ; |g19_note_timer|n[19]~70       ; combout          ;
+; |g19_note_timer|n[19]~70      ; |g19_note_timer|n[19]~71       ; cout             ;
+; |g19_note_timer|n[20]~72      ; |g19_note_timer|n[20]~72       ; combout          ;
+; |g19_note_timer|n[20]~72      ; |g19_note_timer|n[20]~73       ; cout             ;
+; |g19_note_timer|n[21]~74      ; |g19_note_timer|n[21]~74       ; combout          ;
+; |g19_note_timer|n[21]~74      ; |g19_note_timer|n[21]~75       ; cout             ;
+; |g19_note_timer|n[22]~76      ; |g19_note_timer|n[22]~76       ; combout          ;
+; |g19_note_timer|n[22]~76      ; |g19_note_timer|n[22]~77       ; cout             ;
+; |g19_note_timer|n[23]~78      ; |g19_note_timer|n[23]~78       ; combout          ;
+; |g19_note_timer|n[23]~78      ; |g19_note_timer|n[23]~79       ; cout             ;
+; |g19_note_timer|n[24]~80      ; |g19_note_timer|n[24]~80       ; combout          ;
+; |g19_note_timer|n[24]~80      ; |g19_note_timer|n[24]~81       ; cout             ;
+; |g19_note_timer|n[25]~82      ; |g19_note_timer|n[25]~82       ; combout          ;
+; |g19_note_timer|n[25]~82      ; |g19_note_timer|n[25]~83       ; cout             ;
+; |g19_note_timer|n[26]~84      ; |g19_note_timer|n[26]~84       ; combout          ;
+; |g19_note_timer|n[26]~84      ; |g19_note_timer|n[26]~85       ; cout             ;
+; |g19_note_timer|n[27]~86      ; |g19_note_timer|n[27]~86       ; combout          ;
+; |g19_note_timer|n[27]~86      ; |g19_note_timer|n[27]~87       ; cout             ;
+; |g19_note_timer|n[28]~88      ; |g19_note_timer|n[28]~88       ; combout          ;
+; |g19_note_timer|n[28]~88      ; |g19_note_timer|n[28]~89       ; cout             ;
+; |g19_note_timer|n[29]~90      ; |g19_note_timer|n[29]~90       ; combout          ;
+; |g19_note_timer|n[29]~90      ; |g19_note_timer|n[29]~91       ; cout             ;
+; |g19_note_timer|n[30]~92      ; |g19_note_timer|n[30]~92       ; combout          ;
+; |g19_note_timer|n[30]~92      ; |g19_note_timer|n[30]~93       ; cout             ;
+; |g19_note_timer|n[31]~94      ; |g19_note_timer|n[31]~94       ; combout          ;
+; |g19_note_timer|LessThan1~17  ; |g19_note_timer|LessThan1~17   ; combout          ;
+; |g19_note_timer|LessThan1~18  ; |g19_note_timer|LessThan1~18   ; combout          ;
+; |g19_note_timer|LessThan1~19  ; |g19_note_timer|LessThan1~19   ; combout          ;
+; |g19_note_timer|LessThan1~21  ; |g19_note_timer|LessThan1~21   ; combout          ;
+; |g19_note_timer|LessThan1~22  ; |g19_note_timer|LessThan1~22   ; combout          ;
+; |g19_note_timer|LessThan1~23  ; |g19_note_timer|LessThan1~23   ; combout          ;
+; |g19_note_timer|comb~0        ; |g19_note_timer|comb~0         ; combout          ;
+; |g19_note_timer|LessThan0~2   ; |g19_note_timer|LessThan0~2    ; combout          ;
+; |g19_note_timer|LessThan0~3   ; |g19_note_timer|LessThan0~3    ; combout          ;
+; |g19_note_timer|LessThan0~11  ; |g19_note_timer|LessThan0~11   ; combout          ;
+; |g19_note_timer|LessThan0~13  ; |g19_note_timer|LessThan0~13   ; combout          ;
+; |g19_note_timer|LessThan0~22  ; |g19_note_timer|LessThan0~22   ; combout          ;
+; |g19_note_timer|LessThan0~26  ; |g19_note_timer|LessThan0~26   ; combout          ;
+; |g19_note_timer|LessThan0~27  ; |g19_note_timer|LessThan0~27   ; combout          ;
+; |g19_note_timer|triplet       ; |g19_note_timer|triplet~corein ; combout          ;
+; |g19_note_timer|reset         ; |g19_note_timer|reset~corein   ; combout          ;
+; |g19_note_timer|reset~clkctrl ; |g19_note_timer|reset~clkctrl  ; outclk           ;
++-------------------------------+--------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Nov 15 12:09:00 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off g19_lab4 -c g19_lab4
+Info: Using vector source file "C:/Users/jleung35/Downloads/g19_lab4/noteTiming.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of noteTiming.vwf called g19_lab4.sim_ori.vwf has been created in the db folder
+Info: Inverted registers were found during simulation
+    Info: Register: |g19_note_timer|GATE~reg0
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      49.74 %
+Info: Number of transitions in simulation is 1457872
+Info: Vector file noteTiming.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 185 megabytes
+    Info: Processing ended: Fri Nov 15 12:09:07 2013
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:04
+
+
