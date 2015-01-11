@@ -1,0 +1,4 @@
+THe Lab2 Code Contain:
+ Folder Piano whcih contain the VHDL design of the music box
+ Folder Sine which contain the VHDL design of the sine function
+ Rest of the file at the top level is the sine circuit with its mif and VHDL with its circuit representation with the code for the display part.

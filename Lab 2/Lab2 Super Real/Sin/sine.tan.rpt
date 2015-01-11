@@ -1,0 +1,318 @@
+Classic Timing Analyzer report for sine
+Thu Oct 10 18:31:34 2013
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                                                                           ;
++------------------------------+-------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From                                                                                                              ; To                                                                                                                ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 2.574 ns    ; input_value[2]                                                                                                    ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.628 ns    ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[5]                                                                                                           ; clock      ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.124 ns   ; input_value[6]                                                                                                    ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; --         ; clock    ; 0            ;
+; Total number of failed paths ;       ;               ;             ;                                                                                                                   ;                                                                                                                   ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+-------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; Off                ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                                               ;
++-------+--------------+------------+----------------+-------------------------------------------------------------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From           ; To                                                                                                                ; To Clock ;
++-------+--------------+------------+----------------+-------------------------------------------------------------------------------------------------------------------+----------+
+; N/A   ; None         ; 2.574 ns   ; input_value[2] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; clock    ;
+; N/A   ; None         ; 2.573 ns   ; input_value[4] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; clock    ;
+; N/A   ; None         ; 2.572 ns   ; input_value[3] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; clock    ;
+; N/A   ; None         ; 2.572 ns   ; input_value[1] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; clock    ;
+; N/A   ; None         ; 2.558 ns   ; input_value[5] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; clock    ;
+; N/A   ; None         ; 2.520 ns   ; input_value[0] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; clock    ;
+; N/A   ; None         ; 2.349 ns   ; input_value[6] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; clock    ;
++-------+--------------+------------+----------------+-------------------------------------------------------------------------------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                                           ;
++-------+--------------+------------+-------------------------------------------------------------------------------------------------------------------+----------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                                                              ; To       ; From Clock ;
++-------+--------------+------------+-------------------------------------------------------------------------------------------------------------------+----------+------------+
+; N/A   ; None         ; 8.628 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[5]  ; clock      ;
+; N/A   ; None         ; 8.628 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[5]  ; clock      ;
+; N/A   ; None         ; 8.628 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[5]  ; clock      ;
+; N/A   ; None         ; 8.628 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[5]  ; clock      ;
+; N/A   ; None         ; 8.628 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[5]  ; clock      ;
+; N/A   ; None         ; 8.628 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[5]  ; clock      ;
+; N/A   ; None         ; 8.628 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[5]  ; clock      ;
+; N/A   ; None         ; 7.514 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[2]  ; clock      ;
+; N/A   ; None         ; 7.514 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[2]  ; clock      ;
+; N/A   ; None         ; 7.514 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[2]  ; clock      ;
+; N/A   ; None         ; 7.514 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[2]  ; clock      ;
+; N/A   ; None         ; 7.514 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[2]  ; clock      ;
+; N/A   ; None         ; 7.514 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[2]  ; clock      ;
+; N/A   ; None         ; 7.514 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[2]  ; clock      ;
+; N/A   ; None         ; 7.292 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[11] ; clock      ;
+; N/A   ; None         ; 7.292 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[11] ; clock      ;
+; N/A   ; None         ; 7.292 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[11] ; clock      ;
+; N/A   ; None         ; 7.292 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[11] ; clock      ;
+; N/A   ; None         ; 7.292 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[11] ; clock      ;
+; N/A   ; None         ; 7.292 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[11] ; clock      ;
+; N/A   ; None         ; 7.292 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[11] ; clock      ;
+; N/A   ; None         ; 7.236 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[15] ; clock      ;
+; N/A   ; None         ; 7.236 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[15] ; clock      ;
+; N/A   ; None         ; 7.236 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[15] ; clock      ;
+; N/A   ; None         ; 7.236 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[15] ; clock      ;
+; N/A   ; None         ; 7.236 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[15] ; clock      ;
+; N/A   ; None         ; 7.236 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[15] ; clock      ;
+; N/A   ; None         ; 7.236 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[15] ; clock      ;
+; N/A   ; None         ; 7.230 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[13] ; clock      ;
+; N/A   ; None         ; 7.230 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[13] ; clock      ;
+; N/A   ; None         ; 7.230 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[13] ; clock      ;
+; N/A   ; None         ; 7.230 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[13] ; clock      ;
+; N/A   ; None         ; 7.230 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[13] ; clock      ;
+; N/A   ; None         ; 7.230 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[13] ; clock      ;
+; N/A   ; None         ; 7.230 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[13] ; clock      ;
+; N/A   ; None         ; 7.219 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[14] ; clock      ;
+; N/A   ; None         ; 7.219 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[14] ; clock      ;
+; N/A   ; None         ; 7.219 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[14] ; clock      ;
+; N/A   ; None         ; 7.219 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[14] ; clock      ;
+; N/A   ; None         ; 7.219 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[14] ; clock      ;
+; N/A   ; None         ; 7.219 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[14] ; clock      ;
+; N/A   ; None         ; 7.219 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[14] ; clock      ;
+; N/A   ; None         ; 7.175 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[8]  ; clock      ;
+; N/A   ; None         ; 7.175 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[8]  ; clock      ;
+; N/A   ; None         ; 7.175 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[8]  ; clock      ;
+; N/A   ; None         ; 7.175 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[8]  ; clock      ;
+; N/A   ; None         ; 7.175 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[8]  ; clock      ;
+; N/A   ; None         ; 7.175 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[8]  ; clock      ;
+; N/A   ; None         ; 7.175 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[8]  ; clock      ;
+; N/A   ; None         ; 6.989 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[4]  ; clock      ;
+; N/A   ; None         ; 6.989 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[4]  ; clock      ;
+; N/A   ; None         ; 6.989 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[4]  ; clock      ;
+; N/A   ; None         ; 6.989 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[4]  ; clock      ;
+; N/A   ; None         ; 6.989 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[4]  ; clock      ;
+; N/A   ; None         ; 6.989 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[4]  ; clock      ;
+; N/A   ; None         ; 6.989 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[4]  ; clock      ;
+; N/A   ; None         ; 6.985 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[10] ; clock      ;
+; N/A   ; None         ; 6.985 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[10] ; clock      ;
+; N/A   ; None         ; 6.985 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[10] ; clock      ;
+; N/A   ; None         ; 6.985 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[10] ; clock      ;
+; N/A   ; None         ; 6.985 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[10] ; clock      ;
+; N/A   ; None         ; 6.985 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[10] ; clock      ;
+; N/A   ; None         ; 6.985 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[10] ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[6]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[6]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[6]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[6]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[6]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[6]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[6]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[1]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[1]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[1]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[1]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[1]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[1]  ; clock      ;
+; N/A   ; None         ; 6.952 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[1]  ; clock      ;
+; N/A   ; None         ; 6.950 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[7]  ; clock      ;
+; N/A   ; None         ; 6.950 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[7]  ; clock      ;
+; N/A   ; None         ; 6.950 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[7]  ; clock      ;
+; N/A   ; None         ; 6.950 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[7]  ; clock      ;
+; N/A   ; None         ; 6.950 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[7]  ; clock      ;
+; N/A   ; None         ; 6.950 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[7]  ; clock      ;
+; N/A   ; None         ; 6.950 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[7]  ; clock      ;
+; N/A   ; None         ; 6.939 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[3]  ; clock      ;
+; N/A   ; None         ; 6.939 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[3]  ; clock      ;
+; N/A   ; None         ; 6.939 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[3]  ; clock      ;
+; N/A   ; None         ; 6.939 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[3]  ; clock      ;
+; N/A   ; None         ; 6.939 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[3]  ; clock      ;
+; N/A   ; None         ; 6.939 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[3]  ; clock      ;
+; N/A   ; None         ; 6.939 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[3]  ; clock      ;
+; N/A   ; None         ; 6.934 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[0]  ; clock      ;
+; N/A   ; None         ; 6.934 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[0]  ; clock      ;
+; N/A   ; None         ; 6.934 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[0]  ; clock      ;
+; N/A   ; None         ; 6.934 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[0]  ; clock      ;
+; N/A   ; None         ; 6.934 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[0]  ; clock      ;
+; N/A   ; None         ; 6.934 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[0]  ; clock      ;
+; N/A   ; None         ; 6.934 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[0]  ; clock      ;
+; N/A   ; None         ; 6.895 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[9]  ; clock      ;
+; N/A   ; None         ; 6.895 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[9]  ; clock      ;
+; N/A   ; None         ; 6.895 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[9]  ; clock      ;
+; N/A   ; None         ; 6.895 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[9]  ; clock      ;
+; N/A   ; None         ; 6.895 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[9]  ; clock      ;
+; N/A   ; None         ; 6.895 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[9]  ; clock      ;
+; N/A   ; None         ; 6.895 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[9]  ; clock      ;
+; N/A   ; None         ; 6.889 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; sine[12] ; clock      ;
+; N/A   ; None         ; 6.889 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; sine[12] ; clock      ;
+; N/A   ; None         ; 6.889 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; sine[12] ; clock      ;
+; N/A   ; None         ; 6.889 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; sine[12] ; clock      ;
+; N/A   ; None         ; 6.889 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; sine[12] ; clock      ;
+; N/A   ; None         ; 6.889 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; sine[12] ; clock      ;
+; N/A   ; None         ; 6.889 ns   ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; sine[12] ; clock      ;
++-------+--------------+------------+-------------------------------------------------------------------------------------------------------------------+----------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                                                      ;
++---------------+-------------+-----------+----------------+-------------------------------------------------------------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From           ; To                                                                                                                ; To Clock ;
++---------------+-------------+-----------+----------------+-------------------------------------------------------------------------------------------------------------------+----------+
+; N/A           ; None        ; -2.124 ns ; input_value[6] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6 ; clock    ;
+; N/A           ; None        ; -2.295 ns ; input_value[0] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0 ; clock    ;
+; N/A           ; None        ; -2.333 ns ; input_value[5] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg5 ; clock    ;
+; N/A           ; None        ; -2.347 ns ; input_value[3] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg3 ; clock    ;
+; N/A           ; None        ; -2.347 ns ; input_value[1] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg1 ; clock    ;
+; N/A           ; None        ; -2.348 ns ; input_value[4] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg4 ; clock    ;
+; N/A           ; None        ; -2.349 ns ; input_value[2] ; lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2 ; clock    ;
++---------------+-------------+-----------+----------------+-------------------------------------------------------------------------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Thu Oct 10 18:31:33 2013
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off sine -c sine --timing_analysis_only
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Info: No valid register-to-register data paths exist for clock "clock"
+Info: tsu for memory "lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2" (data pin = "input_value[2]", clock pin = "clock") is 2.574 ns
+    Info: + Longest pin to memory delay is 4.913 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.847 ns) = 0.847 ns; Loc. = PIN_Y8; Fanout = 1; PIN Node = 'input_value[2]'
+        Info: 2: + IC(3.963 ns) + CELL(0.103 ns) = 4.913 ns; Loc. = M4K_X32_Y1; Fanout = 16; MEM Node = 'lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2'
+        Info: Total cell delay = 0.950 ns ( 19.34 % )
+        Info: Total interconnect delay = 3.963 ns ( 80.66 % )
+    Info: + Micro setup delay of destination is 0.022 ns
+    Info: - Shortest clock path from clock "clock" to destination memory is 2.361 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 7; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.683 ns) + CELL(0.481 ns) = 2.361 ns; Loc. = M4K_X32_Y1; Fanout = 16; MEM Node = 'lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2'
+        Info: Total cell delay = 1.335 ns ( 56.54 % )
+        Info: Total interconnect delay = 1.026 ns ( 43.46 % )
+Info: tco from clock "clock" to destination pin "sine[5]" through memory "lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0" is 8.628 ns
+    Info: + Longest clock path from clock "clock" to source memory is 2.361 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 7; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.683 ns) + CELL(0.481 ns) = 2.361 ns; Loc. = M4K_X32_Y1; Fanout = 16; MEM Node = 'lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0'
+        Info: Total cell delay = 1.335 ns ( 56.54 % )
+        Info: Total interconnect delay = 1.026 ns ( 43.46 % )
+    Info: + Micro clock to output delay of source is 0.136 ns
+    Info: + Longest memory to pin delay is 6.131 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = M4K_X32_Y1; Fanout = 16; MEM Node = 'lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg0'
+        Info: 2: + IC(0.000 ns) + CELL(1.850 ns) = 1.850 ns; Loc. = M4K_X32_Y1; Fanout = 1; MEM Node = 'lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[5]'
+        Info: 3: + IC(2.299 ns) + CELL(1.982 ns) = 6.131 ns; Loc. = PIN_B5; Fanout = 0; PIN Node = 'sine[5]'
+        Info: Total cell delay = 3.832 ns ( 62.50 % )
+        Info: Total interconnect delay = 2.299 ns ( 37.50 % )
+Info: th for memory "lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6" (data pin = "input_value[6]", clock pin = "clock") is -2.124 ns
+    Info: + Longest clock path from clock "clock" to destination memory is 2.361 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 7; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.683 ns) + CELL(0.481 ns) = 2.361 ns; Loc. = M4K_X32_Y1; Fanout = 16; MEM Node = 'lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6'
+        Info: Total cell delay = 1.335 ns ( 56.54 % )
+        Info: Total interconnect delay = 1.026 ns ( 43.46 % )
+    Info: + Micro hold delay of destination is 0.203 ns
+    Info: - Shortest pin to memory delay is 4.688 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.827 ns) = 0.827 ns; Loc. = PIN_V10; Fanout = 1; PIN Node = 'input_value[6]'
+        Info: 2: + IC(3.758 ns) + CELL(0.103 ns) = 4.688 ns; Loc. = M4K_X32_Y1; Fanout = 16; MEM Node = 'lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6'
+        Info: Total cell delay = 0.930 ns ( 19.84 % )
+        Info: Total interconnect delay = 3.758 ns ( 80.16 % )
+Info: Quartus II 64-Bit Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 219 megabytes
+    Info: Processing ended: Thu Oct 10 18:31:34 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

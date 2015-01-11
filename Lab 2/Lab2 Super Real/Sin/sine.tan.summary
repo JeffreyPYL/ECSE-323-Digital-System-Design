@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.574 ns
+From           : input_value[2]
+To             : lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg2
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.628 ns
+From           : lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6
+To             : sine[5]
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -2.124 ns
+From           : input_value[6]
+To             : lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0~porta_address_reg6
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

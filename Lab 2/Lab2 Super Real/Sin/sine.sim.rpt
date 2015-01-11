@@ -1,0 +1,208 @@
+Simulator report for sine
+Thu Oct 10 18:38:46 2013
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 26 nodes     ;
+; Simulation Coverage         ;      92.68 % ;
+; Total Number of Transitions ; 629          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++----------------------------------------------------------------------------------------------------+
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ALTSYNCRAM ;
++----------------------------------------------------------------------------------------------------+
+Please refer to fitter text-based report (*.fit.rpt) to view logical memory report content in ASCII.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      92.68 % ;
+; Total nodes checked                                 ; 26           ;
+; Total output ports checked                          ; 41           ;
+; Total output ports with complete 1/0-value coverage ; 38           ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 3            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                               ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                            ; Output Port Name                                                                                ; Output Port Type ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[0]  ; portadataout0    ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[1]  ; portadataout1    ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[2]  ; portadataout2    ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[3]  ; portadataout3    ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[4]  ; portadataout4    ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[5]  ; portadataout5    ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[6]  ; portadataout6    ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[7]  ; portadataout7    ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[8]  ; portadataout8    ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[9]  ; portadataout9    ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[10] ; portadataout10   ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[11] ; portadataout11   ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[12] ; portadataout12   ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[13] ; portadataout13   ;
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[14] ; portadataout14   ;
+; |sine|sine[0]                                                                                        ; |sine|sine[0]                                                                                   ; padio            ;
+; |sine|sine[1]                                                                                        ; |sine|sine[1]                                                                                   ; padio            ;
+; |sine|sine[2]                                                                                        ; |sine|sine[2]                                                                                   ; padio            ;
+; |sine|sine[3]                                                                                        ; |sine|sine[3]                                                                                   ; padio            ;
+; |sine|sine[4]                                                                                        ; |sine|sine[4]                                                                                   ; padio            ;
+; |sine|sine[5]                                                                                        ; |sine|sine[5]                                                                                   ; padio            ;
+; |sine|sine[6]                                                                                        ; |sine|sine[6]                                                                                   ; padio            ;
+; |sine|sine[7]                                                                                        ; |sine|sine[7]                                                                                   ; padio            ;
+; |sine|sine[8]                                                                                        ; |sine|sine[8]                                                                                   ; padio            ;
+; |sine|sine[9]                                                                                        ; |sine|sine[9]                                                                                   ; padio            ;
+; |sine|sine[10]                                                                                       ; |sine|sine[10]                                                                                  ; padio            ;
+; |sine|sine[11]                                                                                       ; |sine|sine[11]                                                                                  ; padio            ;
+; |sine|sine[12]                                                                                       ; |sine|sine[12]                                                                                  ; padio            ;
+; |sine|sine[13]                                                                                       ; |sine|sine[13]                                                                                  ; padio            ;
+; |sine|sine[14]                                                                                       ; |sine|sine[14]                                                                                  ; padio            ;
+; |sine|clock                                                                                          ; |sine|clock~corein                                                                              ; combout          ;
+; |sine|input_value[0]                                                                                 ; |sine|input_value[0]~corein                                                                     ; combout          ;
+; |sine|input_value[1]                                                                                 ; |sine|input_value[1]~corein                                                                     ; combout          ;
+; |sine|input_value[2]                                                                                 ; |sine|input_value[2]~corein                                                                     ; combout          ;
+; |sine|input_value[3]                                                                                 ; |sine|input_value[3]~corein                                                                     ; combout          ;
+; |sine|input_value[4]                                                                                 ; |sine|input_value[4]~corein                                                                     ; combout          ;
+; |sine|input_value[5]                                                                                 ; |sine|input_value[5]~corein                                                                     ; combout          ;
+; |sine|clock~clkctrl                                                                                  ; |sine|clock~clkctrl                                                                             ; outclk           ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                  ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                            ; Output Port Name                                                                                ; Output Port Type ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|ram_block1a0 ; |sine|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_c101:auto_generated|q_a[15] ; portadataout15   ;
+; |sine|sine[15]                                                                                       ; |sine|sine[15]                                                                                  ; padio            ;
+; |sine|input_value[6]                                                                                 ; |sine|input_value[6]~corein                                                                     ; combout          ;
++------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Thu Oct 10 18:38:45 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off sine -c sine
+Info: Using vector source file "E:/Lab2 Super Real/Sin/sine.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      92.68 %
+Info: Number of transitions in simulation is 629
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 186 megabytes
+    Info: Processing ended: Thu Oct 10 18:38:49 2013
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:00
+
+

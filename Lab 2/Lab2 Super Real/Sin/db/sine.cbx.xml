@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sine">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sine|LPM_ROM:crc_table|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_c101.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

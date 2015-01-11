@@ -1,0 +1,30 @@
+library ieee; 
+use ieee.std_logic_1164.all;
+
+
+
+entity g19_component is
+	port( Digit1, Digit2, Digit3,Digit4: in std_logic_vector(3 downto 0);
+		RB_In1, clk: in std_logic;
+		seg1, seg2, seg3, seg4: out std_logic_vector(6 downto 0)
+		--sinIn: in std_logic_vector(6 downto 0)
+		);
+
+	
+end g19_component;
+		
+architecture Cool of g19_component is
+signal o1,o2,o3,o4: std_logic;
+
+component g19_7_segment_decoder
+	port(code:in std_logic_vector(3 downto 0); RippleBlank_In: in std_logic; RippleBlank_Out: out std_logic; segments: out std_logic_vector(6 downto 0));
+	--port(clock:in std_logic; input_value: in std_logic_vector(6 downto 0); sine: out std_logic_vector(15 downto 0))
+end component;
+begin
+	
+	g1: g19_7_segment_decoder port map(code => Digit1, RippleBlank_In => RB_In1, RippleBlank_Out => o1, segments => seg1);
+	g2: g19_7_segment_decoder port map(code => Digit2, RippleBlank_In => o1, RippleBlank_Out => o2, segments => seg2);
+	g3: g19_7_segment_decoder port map(code => Digit3, RippleBlank_In => o2, RippleBlank_Out => o3, segments => seg3);
+	g4: g19_7_segment_decoder port map(code => Digit4, RippleBlank_In => '0', RippleBlank_Out => o4, segments => seg4);
+end Cool;
+		
