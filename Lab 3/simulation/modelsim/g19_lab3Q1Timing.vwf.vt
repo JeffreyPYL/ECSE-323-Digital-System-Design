@@ -1,0 +1,278 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/06/2013 23:40:10"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    g19_Tempo
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module g19_Tempo_vlg_sample_tst(
+	bpm,
+	clk,
+	reset,
+	sampler_tx
+);
+input [7:0] bpm;
+input  clk;
+input  reset;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(bpm or clk or reset)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module g19_Tempo_vlg_check_tst (
+	beat_gate,
+	tempo_enable,
+	sampler_rx
+);
+input [0:0] beat_gate;
+input  tempo_enable;
+input sampler_rx;
+
+reg [0:0] beat_gate_expected;
+reg  tempo_enable_expected;
+
+reg [0:0] beat_gate_prev;
+reg  tempo_enable_prev;
+
+reg [0:0] beat_gate_expected_prev;
+reg  tempo_enable_expected_prev;
+
+reg [0:0] last_beat_gate_exp;
+reg  last_tempo_enable_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:2] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 2'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	beat_gate_prev = beat_gate;
+	tempo_enable_prev = tempo_enable;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	beat_gate_expected_prev = beat_gate_expected;
+	tempo_enable_expected_prev = tempo_enable_expected;
+end
+
+
+
+// expected beat_gate
+initial
+begin
+	beat_gate_expected[0] = 1'bX;
+end 
+
+// expected beat_gate[0]
+initial
+begin
+	beat_gate_expected[0] = 1'bX;
+end 
+
+// expected tempo_enable
+initial
+begin
+	tempo_enable_expected = 1'bX;
+end 
+// generate trigger
+always @(beat_gate_expected or beat_gate or tempo_enable_expected or tempo_enable)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected beat_gate = %b | expected tempo_enable = %b | ",beat_gate_expected_prev,tempo_enable_expected_prev);
+	$display("| real beat_gate = %b | real tempo_enable = %b | ",beat_gate_prev,tempo_enable_prev);
+`endif
+	if (
+		( beat_gate_expected_prev !== 1'bx ) && ( beat_gate_prev !== beat_gate_expected_prev )
+		&& ((beat_gate_expected_prev !== last_beat_gate_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port beat_gate :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", beat_gate_expected_prev);
+		$display ("     Real value = %b", beat_gate_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_beat_gate_exp = beat_gate_expected_prev;
+	end
+	if (
+		( tempo_enable_expected_prev !== 1'bx ) && ( tempo_enable_prev !== tempo_enable_expected_prev )
+		&& ((tempo_enable_expected_prev !== last_tempo_enable_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port tempo_enable :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", tempo_enable_expected_prev);
+		$display ("     Real value = %b", tempo_enable_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_tempo_enable_exp = tempo_enable_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#100000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module g19_Tempo_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [7:0] bpm;
+reg clk;
+reg reset;
+// wires                                               
+wire [0:0] beat_gate;
+wire tempo_enable;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+g19_Tempo i1 (
+// port map - connection between master ports and signals/registers   
+	.beat_gate(beat_gate),
+	.bpm(bpm),
+	.clk(clk),
+	.reset(reset),
+	.tempo_enable(tempo_enable)
+);
+// bpm[ 7 ]
+initial
+begin
+	bpm[7] = 1'b0;
+end 
+// bpm[ 6 ]
+initial
+begin
+	bpm[6] = 1'b0;
+end 
+// bpm[ 5 ]
+initial
+begin
+	bpm[5] = 1'b1;
+end 
+// bpm[ 4 ]
+initial
+begin
+	bpm[4] = 1'b0;
+end 
+// bpm[ 3 ]
+initial
+begin
+	bpm[3] = 1'b1;
+end 
+// bpm[ 2 ]
+initial
+begin
+	bpm[2] = 1'b1;
+end 
+// bpm[ 1 ]
+initial
+begin
+	bpm[1] = 1'b0;
+end 
+// bpm[ 0 ]
+initial
+begin
+	bpm[0] = 1'b1;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+end 
+
+g19_Tempo_vlg_sample_tst tb_sample (
+	.bpm(bpm),
+	.clk(clk),
+	.reset(reset),
+	.sampler_tx(sampler)
+);
+
+g19_Tempo_vlg_check_tst tb_out(
+	.beat_gate(beat_gate),
+	.tempo_enable(tempo_enable),
+	.sampler_rx(sampler)
+);
+endmodule
+

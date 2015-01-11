@@ -1,0 +1,38 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+Library lpm;
+use lpm.lpm_components.all;
+USE ieee.std_logic_unsigned.all;
+USE ieee.numeric_std.all;
+
+
+entity g19_count is
+	port(
+
+	);
+end g19_Envelope;
+
+architecture counter of g19_count is
+
+begin 
+	lpm_counter_component : lpm_counter
+		GENERIC MAP (
+			lpm_direction => "DOWN",
+			lpm_port_updown => "PORT_UNUSED",
+			lpm_type => "LPM_COUNTER",
+			lpm_width => 11
+		)
+		PORT MAP (
+			sload => UPDATE_ENABLE1,
+			aclr => reset,
+			clock => clk,
+			data => "10000000000",
+			cnt_en => '1',
+			q => count_out
+		);
+	-- mux
+	with count_out select
+		ncount <= '0' when "00000000000",
+					'1' when others;
+	UPDATE_ENABLE1 <= not ncount;
+end counter;

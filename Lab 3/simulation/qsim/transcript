@@ -1,0 +1,132 @@
+# do g19_lab3.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module g19_Envelope
+# 
+# Top level modules:
+# 	g19_Envelope
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module g19_Envelope_vlg_sample_tst
+# -- Compiling module g19_Envelope_vlg_check_tst
+# -- Compiling module g19_Envelope_vlg_vec_tst
+# 
+# Top level modules:
+# 	g19_Envelope_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.g19_Envelope_vlg_vec_tst 
+# Loading work.g19_Envelope_vlg_vec_tst
+# Loading work.g19_Envelope
+# Loading cycloneii_ver.cycloneii_lcell_ff
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_mac_out
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading cycloneii_ver.cycloneii_mac_mult
+# Loading cycloneii_ver.cycloneii_mac_data_reg
+# Loading cycloneii_ver.cycloneii_mac_sign_reg
+# Loading cycloneii_ver.cycloneii_mac_mult_internal
+# Loading work.g19_Envelope_vlg_sample_tst
+# Loading work.g19_Envelope_vlg_check_tst
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading instances from g19_lab3_v.sdo
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# Loading timing data from g19_lab3_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g19_Envelope_vlg_vec_tst File: g19_lab3.vt
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(5351): $hold( posedge clk &&& nosloadsclr:7855 ps, datain:7959 ps, 286 ps );
+#    Time: 7959 ps  Iteration: 0  Instance: /g19_Envelope_vlg_vec_tst/i1/\lpm_add_sub_component|auto_generated|pipeline_dffe[4] 
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(5351): $hold( posedge clk &&& nosloadsclr:7855 ps, datain:7968 ps, 286 ps );
+#    Time: 7968 ps  Iteration: 0  Instance: /g19_Envelope_vlg_vec_tst/i1/\lpm_add_sub_component|auto_generated|pipeline_dffe[0] 
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(5351): $hold( posedge clk &&& nosloadsclr:7855 ps, datain:8005 ps, 286 ps );
+#    Time: 8005 ps  Iteration: 0  Instance: /g19_Envelope_vlg_vec_tst/i1/\lpm_add_sub_component|auto_generated|pipeline_dffe[3] 
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(6456): $hold( posedge clk &&& enable:8066 ps, data:8079 ps, 111 ps );
+#    Time: 8079 ps  Iteration: 0  Instance: /g19_Envelope_vlg_vec_tst/i1/\lpm_mult_component|auto_generated|mac_mult1 /datab_reg
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(6456): $hold( posedge clk &&& enable:8066 ps, data:8096 ps, 111 ps );
+#    Time: 8096 ps  Iteration: 0  Instance: /g19_Envelope_vlg_vec_tst/i1/\lpm_mult_component|auto_generated|mac_mult1 /datab_reg
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(5351): $hold( posedge clk &&& nosloadsclr:7855 ps, datain:8098 ps, 286 ps );
+#    Time: 8098 ps  Iteration: 0  Instance: /g19_Envelope_vlg_vec_tst/i1/\lpm_add_sub_component|auto_generated|pipeline_dffe[6] 
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(6456): $hold( posedge clk &&& enable:8066 ps, data:8106 ps, 111 ps );
+#    Time: 8106 ps  Iteration: 0  Instance: /g19_Envelope_vlg_vec_tst/i1/\lpm_mult_component|auto_generated|mac_mult1 /datab_reg
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/cycloneii_atoms.v(5351): $hold( posedge clk &&& nosloadsclr:7855 ps, datain:8109 ps, 286 ps );
+#    Time: 8109 ps  Iteration: 0  Instance: /g19_Envelope_vlg_vec_tst/i1/\lpm_add_sub_component|auto_generated|pipeline_dffe[8] 
+# ERROR! Vector Mismatch for output port ENVELOP[0] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[1] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[2] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[3] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[4] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[5] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[6] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[7] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[8] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[9] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[10] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[11] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[12] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[13] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[14] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[15] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[16] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[17] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[18] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[19] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[20] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[21] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[22] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+# ERROR! Vector Mismatch for output port ENVELOP[23] :: @time = 10265000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = xxxxxxxxxxxxxxxxxxxxxxxx
+#          24 mismatched vectors : Simulation failed !
+# ** Note: $finish    : g19_lab3.vt(620)
+#    Time: 100 us  Iteration: 0  Instance: /g19_Envelope_vlg_vec_tst/tb_out

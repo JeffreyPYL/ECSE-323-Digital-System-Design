@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="Rise[7]" source="Pin Planner" >
+		</pin>
+		<pin name="Rise[6]" source="Pin Planner" >
+		</pin>
+		<pin name="Rise[5]" source="Pin Planner" >
+		</pin>
+		<pin name="Rise[4]" source="Pin Planner" >
+		</pin>
+		<pin name="Fail[7]" source="Pin Planner" >
+		</pin>
+		<pin name="Fail[6]" source="Pin Planner" >
+		</pin>
+		<pin name="Fail[5]" source="Pin Planner" >
+		</pin>
+		<pin name="Fail[4]" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

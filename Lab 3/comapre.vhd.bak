@@ -1,0 +1,14 @@
+
+entity g19_Compare is
+   port (env_24: in std_logic_vector(7 downto 0);
+		 L0, L1, L2,L3,L4,L5,L6,L7,L8,L9: out std_logic);)
+end g19_Compare;
+
+architecture richard of g19_name is
+
+begin 
+
+L0 <= '1' when env_24 > "00011001" else '0';
+
+
+end richard;

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="g19_lab3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|mux3:Gate2|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_73e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_rqf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter" CBX_FILE_NAME="cntr_gui.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter" CBX_FILE_NAME="cntr_02j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|LPM_ADD_SUB:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_40i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|LPM_ADD_SUB:LPM_SUB_component" CBX_FILE_NAME="add_sub_o1j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|LPM_COUNTER:lpm_counter_component" CBX_FILE_NAME="cntr_6kk.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|LPM_MULT:lpm_mult_component" CBX_FILE_NAME="mult_tqp.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_0n14.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter" CBX_FILE_NAME="cntr_sbi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|mux3:Gate1|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_73e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_aoc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g19_Envelope|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_fai.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

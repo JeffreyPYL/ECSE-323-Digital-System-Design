@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.718 ns
+From           : Gate
+To             : g19_Envelope:inst29|lpm_add_sub:lpm_add_sub_component|add_sub_hhi:auto_generated|pipeline_dffe[23]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.784 ns
+From           : g19_Envelope:inst29|lpm_ff:lpm_ff_component|dffs[16]
+To             : l9
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.655 ns
+From           : Fail[4]
+To             : g19_Envelope:inst29|mux1:Gate2|lpm_mux:lpm_mux_component|mux_16f:auto_generated|external_latency_ffsa[4]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 179.82 MHz ( period = 5.561 ns )
+From           : g19_Envelope:inst29|lpm_mult:lpm_mult_component|mult_acq:auto_generated|result[0]
+To             : g19_Envelope:inst29|lpm_add_sub:lpm_add_sub_component|add_sub_hhi:auto_generated|pipeline_dffe[23]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
