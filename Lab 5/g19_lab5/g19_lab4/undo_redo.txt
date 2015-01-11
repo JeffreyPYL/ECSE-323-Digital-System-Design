@@ -1,0 +1,21 @@
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+
+
+WED
+
+	Undo Commands
+	     1.	Clock
+	     2.	Node or Bus Properties
+			 *** 
+	     3.	Arbitrary Value
+			 *** 
+	     4.	Arbitrary Value
+			 *** 
+	     5.	Node or Bus Properties
+			 *** 
+	     6.	Insert Node or Bus
+
+

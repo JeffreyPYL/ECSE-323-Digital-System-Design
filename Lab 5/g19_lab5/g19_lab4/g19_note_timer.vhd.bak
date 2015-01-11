@@ -1,0 +1,15 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;
+library lpm;
+use lpm.lpm_components.all;
+
+
+
+entity g19_note_timer is 
+port ( clk, reset : in std_logic;
+note_duration : in std_logic_vector(2 downto 0);
+triplet : in std_logic;
+tempo_enable : in std_logic;
+GATE : out std_logic);
+end g19_note_timer;

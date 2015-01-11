@@ -1,0 +1,155 @@
+Flow report for g19_lab4
+Wed Nov 27 14:54:56 2013
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Flow Summary                                                                       ;
++------------------------------------+-----------------------------------------------+
+; Flow Status                        ; Successful - Wed Nov 27 14:54:55 2013         ;
+; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
+; Revision Name                      ; g19_lab4                                      ;
+; Top-level Entity Name              ; lab5_block                                    ;
+; Family                             ; Cyclone II                                    ;
+; Device                             ; EP2C20F484C7                                  ;
+; Timing Models                      ; Final                                         ;
+; Met timing requirements            ; No                                            ;
+; Total logic elements               ; 1,359 / 18,752 ( 7 % )                        ;
+;     Total combinational functions  ; 958 / 18,752 ( 5 % )                          ;
+;     Dedicated logic registers      ; 979 / 18,752 ( 5 % )                          ;
+; Total registers                    ; 979                                           ;
+; Total pins                         ; 65 / 315 ( 21 % )                             ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 14,304 / 239,616 ( 6 % )                      ;
+; Embedded Multiplier 9-bit elements ; 4 / 52 ( 8 % )                                ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                 ;
++------------------------------------+-----------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/27/2013 14:54:12 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; g19_lab4            ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                       ;
++---------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                       ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++---------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                 ; 132129496014638.138558205201424 ; --            ; --          ; --             ;
+; IP_TOOL_NAME                          ; LPM_FF                          ; --            ; --          ; --             ;
+; IP_TOOL_NAME                          ; LPM_ADD_SUB                     ; --            ; --          ; --             ;
+; IP_TOOL_NAME                          ; LPM_CONSTANT                    ; --            ; --          ; --             ;
+; IP_TOOL_NAME                          ; LPM_MULT                        ; --            ; --          ; --             ;
+; IP_TOOL_NAME                          ; LPM_COUNTER                     ; --            ; --          ; --             ;
+; IP_TOOL_NAME                          ; LPM_COUNTER                     ; --            ; --          ; --             ;
+; IP_TOOL_NAME                          ; LPM_COUNTER                     ; --            ; --          ; --             ;
+; IP_TOOL_NAME                          ; LPM_MUX                         ; --            ; --          ; --             ;
+; IP_TOOL_NAME                          ; LPM_MUX                         ; --            ; --          ; --             ;
+; IP_TOOL_NAME                          ; LPM_MUX                         ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 9.1                             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 9.1                             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 9.1                             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 9.1                             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 9.1                             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 9.1                             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 9.1                             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 9.1                             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 13.0                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 13.0                            ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP                ; 85                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                ; 0                               ; --            ; --          ; --             ;
+; MISC_FILE                             ; TFlipFlop.cmp                   ; --            ; --          ; --             ;
+; MISC_FILE                             ; addition.cmp                    ; --            ; --          ; --             ;
+; MISC_FILE                             ; lpm_constant0.bsf               ; --            ; --          ; --             ;
+; MISC_FILE                             ; lpm_constant0.cmp               ; --            ; --          ; --             ;
+; MISC_FILE                             ; mult.cmp                        ; --            ; --          ; --             ;
+; MISC_FILE                             ; count.cmp                       ; --            ; --          ; --             ;
+; MISC_FILE                             ; counter0.cmp                    ; --            ; --          ; --             ;
+; MISC_FILE                             ; aa.cmp                          ; --            ; --          ; --             ;
+; MISC_FILE                             ; mif_mux.inc                     ; --            ; --          ; --             ;
+; MISC_FILE                             ; mux3.cmp                        ; --            ; --          ; --             ;
+; MISC_FILE                             ; mux7.cmp                        ; --            ; --          ; --             ;
+; MISC_FILE                             ; E:/g19_lab5/g19_lab4.dpf        ; --            ; --          ; --             ;
+; PARTITION_COLOR                       ; 16764057                        ; --            ; lab5_block  ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL   ; PLACEMENT_AND_ROUTING           ; --            ; lab5_block  ; Top            ;
+; PARTITION_NETLIST_TYPE                ; SOURCE                          ; --            ; lab5_block  ; Top            ;
+; SYNCHRONIZATION_REGISTER_CHAIN_LENGTH ; 2                               ; 3             ; --          ; --             ;
+; TOP_LEVEL_ENTITY                      ; lab5_block                      ; g19_lab4      ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS    ; Off                             ; --            ; --          ; eda_blast_fpga ;
++---------------------------------------+---------------------------------+---------------+-------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:17     ; 1.0                     ; 348 MB              ; 00:00:07                           ;
+; Fitter                  ; 00:00:10     ; 1.0                     ; 372 MB              ; 00:00:07                           ;
+; Assembler               ; 00:00:08     ; 1.0                     ; 275 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:05     ; 1.0                     ; 216 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:40     ; --                      ; --                  ; 00:00:16                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++-------------------------+------------------+---------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++-------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis    ; 156TR4060DS-14   ; Windows Vista ; 6.1        ; x86_64         ;
+; Fitter                  ; 156TR4060DS-14   ; Windows Vista ; 6.1        ; x86_64         ;
+; Assembler               ; 156TR4060DS-14   ; Windows Vista ; 6.1        ; x86_64         ;
+; Classic Timing Analyzer ; 156TR4060DS-14   ; Windows Vista ; 6.1        ; x86_64         ;
++-------------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off g19_lab4 -c g19_lab4
+quartus_fit --read_settings_files=off --write_settings_files=off g19_lab4 -c g19_lab4
+quartus_asm --read_settings_files=off --write_settings_files=off g19_lab4 -c g19_lab4
+quartus_tan --read_settings_files=off --write_settings_files=off g19_lab4 -c g19_lab4 --timing_analysis_only
+
+
+

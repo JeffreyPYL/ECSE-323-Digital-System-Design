@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.613 ns
+From           : songSwitch
+To             : g19_decimator:decimat|x[23]
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.743 ns
+From           : g19_Envelope:env|lpm_ff:lpm_ff_component|dffs[21]~_Duplicate_2
+To             : L2
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.619 ns
+From           : bpm[5]
+To             : g19_tempo:tempo|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_u501:auto_generated|ram_block1a0~porta_address_reg5
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 60.26 MHz ( period = 16.595 ns )
+From           : bird:angry_bird|lpm_rom:crc_table|altrom:srom|altsyncram:rom_block|altsyncram_di01:auto_generated|ram_block1a4~porta_address_reg7
+To             : g19_decimator:decimat|x[23]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk24'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 202.43 MHz ( period = 4.940 ns )
+From           : g19_audio_interface:audio|state.sack21
+To             : g19_audio_interface:audio|state.s2
+From Clock     : clk24
+To Clock       : clk24
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clock'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : y.D
+To             : lpm_counter:lpm_counter_component|cntr_52k:auto_generated|safe_q[0]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 24
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 24
+
+--------------------------------------------------------------------------------------
+

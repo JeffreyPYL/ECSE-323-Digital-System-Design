@@ -1,0 +1,5 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,g19_Envelope:env|lpm_mult:lpm_mult_component|mult_tqp:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,lpm_mult:lpm_mult_component|mult_9sp:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,lpm_mult:lpm_mult_component|mult_9sp:auto_generated|mac_out2,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,lpm_mult:lpm_mult_component|mult_9sp:auto_generated|mac_mult1,

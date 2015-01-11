@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.616 ns
+From           : Reset
+To             : g19_decimator:inst1|c2d2[0]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.839 ns
+From           : g19_audio_interface:inst2|AUD_DACDAT
+To             : aud_dacdat
+From Clock     : clk24
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.573 ns
+From           : volume[22]
+To             : g19_decimator:inst1|x[22]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 135.23 MHz ( period = 7.395 ns )
+From           : g19_decimator:inst1|c0[2]
+To             : g19_decimator:inst1|c1[56]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk24'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 208.12 MHz ( period = 4.805 ns )
+From           : g19_audio_interface:inst2|clk_count[0]
+To             : g19_audio_interface:inst2|clk_count[1]
+From Clock     : clk24
+To Clock       : clk24
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

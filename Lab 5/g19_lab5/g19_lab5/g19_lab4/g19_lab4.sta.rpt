@@ -1,0 +1,1704 @@
+TimeQuest Timing Analyzer report for g19_lab4
+Thu Nov 14 01:09:21 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'tempo_enable'
+ 13. Slow Model Hold: 'tempo_enable'
+ 14. Slow Model Recovery: 'tempo_enable'
+ 15. Slow Model Removal: 'tempo_enable'
+ 16. Slow Model Minimum Pulse Width: 'tempo_enable'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Fast Model Setup Summary
+ 24. Fast Model Hold Summary
+ 25. Fast Model Recovery Summary
+ 26. Fast Model Removal Summary
+ 27. Fast Model Minimum Pulse Width Summary
+ 28. Fast Model Setup: 'tempo_enable'
+ 29. Fast Model Hold: 'tempo_enable'
+ 30. Fast Model Recovery: 'tempo_enable'
+ 31. Fast Model Removal: 'tempo_enable'
+ 32. Fast Model Minimum Pulse Width: 'tempo_enable'
+ 33. Setup Times
+ 34. Hold Times
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Propagation Delay
+ 38. Minimum Propagation Delay
+ 39. Multicorner Timing Analysis Summary
+ 40. Setup Times
+ 41. Hold Times
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Progagation Delay
+ 45. Minimum Progagation Delay
+ 46. Setup Transfers
+ 47. Hold Transfers
+ 48. Recovery Transfers
+ 49. Removal Transfers
+ 50. Report TCCS
+ 51. Report RSKM
+ 52. Unconstrained Paths
+ 53. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; g19_lab4                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; g19_lab4.sdc  ; OK     ; Thu Nov 14 01:09:20 2013 ;
++---------------+--------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                     ;
++--------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------+
+; Clock Name   ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets          ;
++--------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------+
+; tempo_enable ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { tempo_enable } ;
++--------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------+
+
+
++---------------------------------------------------+
+; Slow Model Fmax Summary                           ;
++-----------+-----------------+--------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name   ; Note ;
++-----------+-----------------+--------------+------+
+; 53.16 MHz ; 53.16 MHz       ; tempo_enable ;      ;
++-----------+-----------------+--------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------+
+; Slow Model Setup Summary               ;
++--------------+---------+---------------+
+; Clock        ; Slack   ; End Point TNS ;
++--------------+---------+---------------+
+; tempo_enable ; -17.812 ; -518.904      ;
++--------------+---------+---------------+
+
+
++--------------------------------------+
+; Slow Model Hold Summary              ;
++--------------+-------+---------------+
+; Clock        ; Slack ; End Point TNS ;
++--------------+-------+---------------+
+; tempo_enable ; 1.719 ; 0.000         ;
++--------------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Recovery Summary            ;
++--------------+---------+---------------+
+; Clock        ; Slack   ; End Point TNS ;
++--------------+---------+---------------+
+; tempo_enable ; -13.966 ; -418.574      ;
++--------------+---------+---------------+
+
+
++--------------------------------------+
+; Slow Model Removal Summary           ;
++--------------+-------+---------------+
+; Clock        ; Slack ; End Point TNS ;
++--------------+-------+---------------+
+; tempo_enable ; 1.797 ; 0.000         ;
++--------------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------------+--------+----------------+
+; Clock        ; Slack  ; End Point TNS  ;
++--------------+--------+----------------+
+; tempo_enable ; -1.631 ; -1.631         ;
++--------------+--------+----------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'tempo_enable'                                                                     ;
++---------+-----------+---------+--------------+--------------+--------------+------------+------------+
+; Slack   ; From Node ; To Node ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------+---------+--------------+--------------+--------------+------------+------------+
+; -17.812 ; n[1]      ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.025      ; 17.156     ;
+; -17.628 ; n[1]      ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.029      ; 17.249     ;
+; -17.622 ; n[1]      ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.207      ; 17.515     ;
+; -17.525 ; n[1]      ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.225      ; 17.410     ;
+; -17.454 ; n[1]      ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.204      ; 17.323     ;
+; -17.399 ; n[1]      ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.205      ; 17.266     ;
+; -17.372 ; n[1]      ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.166      ; 17.167     ;
+; -17.336 ; n[1]      ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.026      ; 16.963     ;
+; -17.313 ; n[1]      ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.029      ; 17.200     ;
+; -17.221 ; n[1]      ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.222      ; 17.089     ;
+; -17.220 ; n[1]      ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.019      ; 16.872     ;
+; -17.197 ; n[2]      ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.027      ; 16.543     ;
+; -17.180 ; n[1]      ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.127     ; 16.481     ;
+; -17.135 ; n[1]      ; n[10]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.042      ; 16.262     ;
+; -17.053 ; n[1]      ; n[17]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.127     ; 16.872     ;
+; -17.042 ; n[1]      ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.017      ; 16.668     ;
+; -17.013 ; n[2]      ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.031      ; 16.636     ;
+; -17.007 ; n[2]      ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.209      ; 16.902     ;
+; -16.974 ; n[1]      ; n[16]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.128     ; 16.792     ;
+; -16.910 ; n[2]      ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.227      ; 16.797     ;
+; -16.883 ; n[1]      ; n[20]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.018      ; 16.791     ;
+; -16.875 ; n[3]      ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.026      ; 16.220     ;
+; -16.839 ; n[2]      ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.206      ; 16.710     ;
+; -16.784 ; n[2]      ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.207      ; 16.653     ;
+; -16.782 ; n[1]      ; n[14]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.135     ; 16.593     ;
+; -16.757 ; n[2]      ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.168      ; 16.554     ;
+; -16.750 ; n[1]      ; n[18]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.015      ; 16.601     ;
+; -16.721 ; n[2]      ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.028      ; 16.350     ;
+; -16.698 ; n[2]      ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.031      ; 16.587     ;
+; -16.691 ; n[3]      ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.030      ; 16.313     ;
+; -16.685 ; n[3]      ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.208      ; 16.579     ;
+; -16.628 ; n[1]      ; n[13]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.021      ; 16.504     ;
+; -16.606 ; n[2]      ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.224      ; 16.476     ;
+; -16.605 ; n[2]      ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.021      ; 16.259     ;
+; -16.588 ; n[3]      ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.226      ; 16.474     ;
+; -16.565 ; n[2]      ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.125     ; 15.868     ;
+; -16.520 ; n[2]      ; n[10]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.044      ; 15.649     ;
+; -16.517 ; n[3]      ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.205      ; 16.387     ;
+; -16.512 ; n[1]      ; n[12]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.040      ; 16.426     ;
+; -16.462 ; n[3]      ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.206      ; 16.330     ;
+; -16.438 ; n[2]      ; n[17]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.125     ; 16.259     ;
+; -16.435 ; n[3]      ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.167      ; 16.231     ;
+; -16.427 ; n[2]      ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.019      ; 16.055     ;
+; -16.410 ; n[1]      ; n[11]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.043      ; 16.297     ;
+; -16.399 ; n[3]      ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.027      ; 16.027     ;
+; -16.376 ; n[3]      ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.030      ; 16.264     ;
+; -16.359 ; n[2]      ; n[16]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.126     ; 16.179     ;
+; -16.305 ; n[1]      ; n[8]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.135     ; 16.347     ;
+; -16.284 ; n[3]      ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.223      ; 16.153     ;
+; -16.283 ; n[3]      ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.020      ; 15.936     ;
+; -16.268 ; n[2]      ; n[20]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.020      ; 16.178     ;
+; -16.243 ; n[3]      ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.126     ; 15.545     ;
+; -16.198 ; n[3]      ; n[10]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.043      ; 15.326     ;
+; -16.167 ; n[2]      ; n[14]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.133     ; 15.980     ;
+; -16.135 ; n[2]      ; n[18]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.017      ; 15.988     ;
+; -16.116 ; n[3]      ; n[17]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.126     ; 15.936     ;
+; -16.105 ; n[3]      ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.018      ; 15.732     ;
+; -16.037 ; n[3]      ; n[16]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.127     ; 15.856     ;
+; -16.013 ; n[2]      ; n[13]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.023      ; 15.891     ;
+; -15.953 ; n[1]      ; n[9]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.226      ; 15.826     ;
+; -15.946 ; n[3]      ; n[20]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.019      ; 15.855     ;
+; -15.897 ; n[2]      ; n[12]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.042      ; 15.813     ;
+; -15.845 ; n[3]      ; n[14]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.134     ; 15.657     ;
+; -15.822 ; n[1]      ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.152     ; 15.432     ;
+; -15.813 ; n[3]      ; n[18]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.016      ; 15.665     ;
+; -15.795 ; n[2]      ; n[11]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.045      ; 15.684     ;
+; -15.785 ; n[1]      ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.153     ; 15.608     ;
+; -15.780 ; n[1]      ; n[4]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.041      ; 15.694     ;
+; -15.697 ; n[1]      ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.153     ; 15.520     ;
+; -15.691 ; n[3]      ; n[13]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.022      ; 15.568     ;
+; -15.690 ; n[2]      ; n[8]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.133     ; 15.734     ;
+; -15.575 ; n[3]      ; n[12]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.041      ; 15.490     ;
+; -15.568 ; n[1]      ; n[2]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.002     ; 15.444     ;
+; -15.473 ; n[3]      ; n[11]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.044      ; 15.361     ;
+; -15.377 ; n[1]      ; n[1]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.000      ; 15.220     ;
+; -15.368 ; n[3]      ; n[8]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.134     ; 15.411     ;
+; -15.366 ; n[1]      ; n[3]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.001     ; 15.248     ;
+; -15.358 ; n[4]      ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.016     ; 14.661     ;
+; -15.338 ; n[2]      ; n[9]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.228      ; 15.213     ;
+; -15.207 ; n[2]      ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.150     ; 14.819     ;
+; -15.174 ; n[4]      ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.012     ; 14.754     ;
+; -15.170 ; n[2]      ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.151     ; 14.995     ;
+; -15.168 ; n[4]      ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.166      ; 15.020     ;
+; -15.165 ; n[2]      ; n[4]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.043      ; 15.081     ;
+; -15.082 ; n[2]      ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.151     ; 14.907     ;
+; -15.071 ; n[4]      ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.184      ; 14.915     ;
+; -15.016 ; n[3]      ; n[9]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.227      ; 14.890     ;
+; -15.000 ; n[4]      ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.163      ; 14.828     ;
+; -14.953 ; n[2]      ; n[2]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.000      ; 14.831     ;
+; -14.945 ; n[4]      ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.164      ; 14.771     ;
+; -14.918 ; n[4]      ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.125      ; 14.672     ;
+; -14.885 ; n[3]      ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.151     ; 14.496     ;
+; -14.882 ; n[4]      ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.015     ; 14.468     ;
+; -14.859 ; n[4]      ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.012     ; 14.705     ;
+; -14.848 ; n[3]      ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.152     ; 14.672     ;
+; -14.843 ; n[3]      ; n[4]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.042      ; 14.758     ;
+; -14.767 ; n[4]      ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.181      ; 14.594     ;
+; -14.766 ; n[4]      ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.022     ; 14.377     ;
+; -14.762 ; n[2]      ; n[1]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.002      ; 14.607     ;
+; -14.760 ; n[3]      ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.152     ; 14.584     ;
++---------+-----------+---------+--------------+--------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'tempo_enable'                                                                       ;
++-------+--------------+---------+--------------+--------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+---------+--------------+--------------+--------------+------------+------------+
+; 1.719 ; n[30]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 1.719      ;
+; 1.745 ; n[27]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 1.745      ;
+; 1.915 ; n[31]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 1.915      ;
+; 2.029 ; n[28]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.029      ;
+; 2.065 ; n[23]        ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.065      ;
+; 2.068 ; n[29]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.068      ;
+; 2.082 ; n[19]        ; n[19]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.082      ;
+; 2.098 ; n[7]         ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.098      ;
+; 2.108 ; n[25]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.193      ; 2.301      ;
+; 2.109 ; n[25]        ; n[25]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.109      ;
+; 2.119 ; n[20]        ; n[20]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.119      ;
+; 2.124 ; tempo_enable ; n[1]    ; tempo_enable ; tempo_enable ; 0.000        ; 2.985      ; 5.109      ;
+; 2.140 ; n[5]         ; n[5]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.140      ;
+; 2.141 ; n[6]         ; n[6]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.141      ;
+; 2.153 ; tempo_enable ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; 2.984      ; 5.137      ;
+; 2.159 ; n[3]         ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.159      ;
+; 2.172 ; n[26]        ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.172      ;
+; 2.177 ; n[21]        ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.177      ;
+; 2.206 ; n[26]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.003     ; 2.203      ;
+; 2.232 ; n[27]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.056     ; 2.176      ;
+; 2.242 ; n[25]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.137      ; 2.379      ;
+; 2.260 ; n[30]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.003      ; 2.263      ;
+; 2.292 ; n[27]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.017     ; 2.275      ;
+; 2.296 ; n[7]         ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.379      ; 2.675      ;
+; 2.302 ; n[25]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.176      ; 2.478      ;
+; 2.315 ; n[22]        ; n[22]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.315      ;
+; 2.340 ; n[26]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.059     ; 2.281      ;
+; 2.350 ; tempo_enable ; n[2]    ; tempo_enable ; tempo_enable ; 0.000        ; 2.983      ; 5.333      ;
+; 2.350 ; n[27]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.018     ; 2.332      ;
+; 2.354 ; n[23]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.196      ; 2.550      ;
+; 2.355 ; n[18]        ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.355      ;
+; 2.360 ; n[25]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.175      ; 2.535      ;
+; 2.396 ; n[2]         ; n[2]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.396      ;
+; 2.400 ; n[26]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.020     ; 2.380      ;
+; 2.404 ; n[22]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.197      ; 2.601      ;
+; 2.420 ; n[6]         ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.379      ; 2.799      ;
+; 2.426 ; n[25]        ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.196      ; 2.622      ;
+; 2.427 ; n[24]        ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.427      ;
+; 2.441 ; n[28]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.039      ; 2.480      ;
+; 2.458 ; n[26]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.021     ; 2.437      ;
+; 2.474 ; n[22]        ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 2.475      ;
+; 2.476 ; n[24]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.193      ; 2.669      ;
+; 2.478 ; n[29]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.001     ; 2.477      ;
+; 2.488 ; tempo_enable ; n[5]    ; tempo_enable ; tempo_enable ; 0.000        ; 2.833      ; 5.321      ;
+; 2.488 ; n[23]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.140      ; 2.628      ;
+; 2.499 ; n[28]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.038      ; 2.537      ;
+; 2.504 ; tempo_enable ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 3.211      ; 5.715      ;
+; 2.508 ; n[5]         ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.378      ; 2.886      ;
+; 2.538 ; n[22]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.141      ; 2.679      ;
+; 2.539 ; n[27]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.015     ; 2.524      ;
+; 2.542 ; n[8]         ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.361      ; 2.903      ;
+; 2.544 ; n[21]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.203      ; 2.747      ;
+; 2.548 ; n[23]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.179      ; 2.727      ;
+; 2.549 ; n[25]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.178      ; 2.727      ;
+; 2.551 ; n[2]         ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 2.552      ;
+; 2.551 ; n[20]        ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 2.552      ;
+; 2.556 ; n[19]        ; n[20]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 2.557      ;
+; 2.557 ; tempo_enable ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; 3.026      ; 5.583      ;
+; 2.565 ; n[20]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.204      ; 2.769      ;
+; 2.577 ; tempo_enable ; n[6]    ; tempo_enable ; tempo_enable ; 0.000        ; 2.832      ; 5.409      ;
+; 2.581 ; n[6]         ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.581      ;
+; 2.581 ; n[5]         ; n[6]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.001     ; 2.580      ;
+; 2.598 ; n[22]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.180      ; 2.778      ;
+; 2.606 ; n[23]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.178      ; 2.784      ;
+; 2.610 ; n[24]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.137      ; 2.747      ;
+; 2.614 ; n[21]        ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.007      ; 2.621      ;
+; 2.624 ; tempo_enable ; n[1]    ; tempo_enable ; tempo_enable ; -0.500       ; 2.985      ; 5.109      ;
+; 2.635 ; n[20]        ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.008      ; 2.643      ;
+; 2.636 ; n[19]        ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.002      ; 2.638      ;
+; 2.647 ; n[26]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.018     ; 2.629      ;
+; 2.650 ; n[15]        ; n[15]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.650      ;
+; 2.650 ; n[19]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.205      ; 2.855      ;
+; 2.653 ; tempo_enable ; n[3]    ; tempo_enable ; tempo_enable ; -0.500       ; 2.984      ; 5.137      ;
+; 2.656 ; n[22]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.179      ; 2.835      ;
+; 2.658 ; n[23]        ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.003      ; 2.661      ;
+; 2.665 ; tempo_enable ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; 2.832      ; 5.497      ;
+; 2.667 ; n[29]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.002      ; 2.669      ;
+; 2.669 ; n[5]         ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.001     ; 2.668      ;
+; 2.670 ; n[24]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.176      ; 2.846      ;
+; 2.672 ; n[23]        ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.199      ; 2.871      ;
+; 2.678 ; n[21]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.147      ; 2.825      ;
+; 2.688 ; n[28]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.041      ; 2.729      ;
+; 2.699 ; n[20]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.148      ; 2.847      ;
+; 2.707 ; n[23]        ; n[25]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.003      ; 2.710      ;
+; 2.708 ; n[22]        ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.004      ; 2.712      ;
+; 2.720 ; n[19]        ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.009      ; 2.729      ;
+; 2.722 ; n[22]        ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.200      ; 2.922      ;
+; 2.728 ; n[24]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.175      ; 2.903      ;
+; 2.738 ; n[21]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.186      ; 2.924      ;
+; 2.757 ; n[22]        ; n[25]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.004      ; 2.761      ;
+; 2.759 ; n[20]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.187      ; 2.946      ;
+; 2.764 ; n[17]        ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.142      ; 2.906      ;
+; 2.772 ; n[18]        ; n[19]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.002      ; 2.774      ;
+; 2.777 ; n[16]        ; n[16]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.777      ;
+; 2.784 ; n[19]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.149      ; 2.933      ;
+; 2.794 ; n[24]        ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.196      ; 2.990      ;
+; 2.795 ; n[23]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.181      ; 2.976      ;
+; 2.795 ; n[16]        ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.143      ; 2.938      ;
+; 2.796 ; n[21]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.185      ; 2.981      ;
+; 2.808 ; n[21]        ; n[22]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.006      ; 2.814      ;
++-------+--------------+---------+--------------+--------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'tempo_enable'                                                                     ;
++---------+--------------+---------+--------------+--------------+--------------+------------+------------+
+; Slack   ; From Node    ; To Node ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++---------+--------------+---------+--------------+--------------+--------------+------------+------------+
+; -13.966 ; tempo_enable ; n[22]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.010      ; 15.795     ;
+; -13.898 ; tempo_enable ; n[5]    ; tempo_enable ; tempo_enable ; 0.500        ; 2.833      ; 15.993     ;
+; -13.830 ; tempo_enable ; n[15]   ; tempo_enable ; tempo_enable ; 0.500        ; 2.858      ; 15.616     ;
+; -13.730 ; tempo_enable ; n[28]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.151      ; 16.010     ;
+; -13.695 ; tempo_enable ; n[19]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.002      ; 15.806     ;
+; -13.691 ; tempo_enable ; n[25]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.014      ; 15.797     ;
+; -13.686 ; tempo_enable ; n[6]    ; tempo_enable ; tempo_enable ; 0.500        ; 2.832      ; 15.994     ;
+; -13.686 ; tempo_enable ; n[7]    ; tempo_enable ; tempo_enable ; 0.500        ; 2.832      ; 15.994     ;
+; -13.681 ; tempo_enable ; n[23]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.011      ; 15.793     ;
+; -13.665 ; tempo_enable ; n[21]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.004      ; 15.802     ;
+; -13.657 ; tempo_enable ; n[10]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.027      ; 15.269     ;
+; -13.656 ; tempo_enable ; n[27]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.207      ; 16.009     ;
+; -13.589 ; tempo_enable ; n[14]   ; tempo_enable ; tempo_enable ; 0.500        ; 2.850      ; 15.885     ;
+; -13.565 ; tempo_enable ; n[29]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.190      ; 15.917     ;
+; -13.562 ; tempo_enable ; n[30]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.189      ; 15.916     ;
+; -13.517 ; tempo_enable ; n[1]    ; tempo_enable ; tempo_enable ; 0.500        ; 2.985      ; 15.845     ;
+; -13.484 ; tempo_enable ; n[2]    ; tempo_enable ; tempo_enable ; 0.500        ; 2.983      ; 15.845     ;
+; -13.479 ; tempo_enable ; n[3]    ; tempo_enable ; tempo_enable ; 0.500        ; 2.984      ; 15.846     ;
+; -13.472 ; tempo_enable ; n[18]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.000      ; 15.808     ;
+; -13.466 ; tempo_enable ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.010      ; 15.795     ;
+; -13.428 ; tempo_enable ; n[31]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.192      ; 15.806     ;
+; -13.425 ; tempo_enable ; n[24]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.014      ; 15.797     ;
+; -13.422 ; tempo_enable ; n[26]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.210      ; 15.792     ;
+; -13.410 ; tempo_enable ; n[20]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.003      ; 15.803     ;
+; -13.401 ; tempo_enable ; n[13]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.006      ; 15.762     ;
+; -13.398 ; tempo_enable ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; 2.833      ; 15.993     ;
+; -13.358 ; tempo_enable ; n[8]    ; tempo_enable ; tempo_enable ; 0.500        ; 2.850      ; 15.885     ;
+; -13.351 ; tempo_enable ; n[16]   ; tempo_enable ; tempo_enable ; 0.500        ; 2.857      ; 15.654     ;
+; -13.350 ; tempo_enable ; n[17]   ; tempo_enable ; tempo_enable ; 0.500        ; 2.858      ; 15.654     ;
+; -13.330 ; tempo_enable ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; 2.858      ; 15.616     ;
+; -13.287 ; tempo_enable ; n[9]    ; tempo_enable ; tempo_enable ; 0.500        ; 3.211      ; 15.645     ;
+; -13.230 ; tempo_enable ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.151      ; 16.010     ;
+; -13.195 ; tempo_enable ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.002      ; 15.806     ;
+; -13.191 ; tempo_enable ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.014      ; 15.797     ;
+; -13.186 ; tempo_enable ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; 2.832      ; 15.994     ;
+; -13.186 ; tempo_enable ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; 2.832      ; 15.994     ;
+; -13.181 ; tempo_enable ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.011      ; 15.793     ;
+; -13.165 ; tempo_enable ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.004      ; 15.802     ;
+; -13.157 ; tempo_enable ; n[10]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.027      ; 15.269     ;
+; -13.156 ; tempo_enable ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.207      ; 16.009     ;
+; -13.129 ; n[1]         ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.025      ; 12.473     ;
+; -13.089 ; tempo_enable ; n[14]   ; tempo_enable ; tempo_enable ; 1.000        ; 2.850      ; 15.885     ;
+; -13.065 ; tempo_enable ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.190      ; 15.917     ;
+; -13.062 ; tempo_enable ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.189      ; 15.916     ;
+; -13.061 ; n[1]         ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.152     ; 12.671     ;
+; -13.017 ; tempo_enable ; n[1]    ; tempo_enable ; tempo_enable ; 1.000        ; 2.985      ; 15.845     ;
+; -12.993 ; n[1]         ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.127     ; 12.294     ;
+; -12.984 ; tempo_enable ; n[2]    ; tempo_enable ; tempo_enable ; 1.000        ; 2.983      ; 15.845     ;
+; -12.979 ; tempo_enable ; n[3]    ; tempo_enable ; tempo_enable ; 1.000        ; 2.984      ; 15.846     ;
+; -12.972 ; tempo_enable ; n[18]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.000      ; 15.808     ;
+; -12.928 ; tempo_enable ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.192      ; 15.806     ;
+; -12.925 ; tempo_enable ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.014      ; 15.797     ;
+; -12.922 ; tempo_enable ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.210      ; 15.792     ;
+; -12.910 ; tempo_enable ; n[20]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.003      ; 15.803     ;
+; -12.901 ; tempo_enable ; n[13]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.006      ; 15.762     ;
+; -12.898 ; tempo_enable ; n[11]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.028      ; 15.270     ;
+; -12.893 ; n[1]         ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.166      ; 12.688     ;
+; -12.868 ; tempo_enable ; n[4]    ; tempo_enable ; tempo_enable ; 0.500        ; 3.026      ; 15.267     ;
+; -12.867 ; tempo_enable ; n[12]   ; tempo_enable ; tempo_enable ; 0.500        ; 3.025      ; 15.266     ;
+; -12.858 ; tempo_enable ; n[8]    ; tempo_enable ; tempo_enable ; 1.000        ; 2.850      ; 15.885     ;
+; -12.858 ; n[1]         ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.017      ; 12.484     ;
+; -12.854 ; n[1]         ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.029      ; 12.475     ;
+; -12.851 ; tempo_enable ; n[16]   ; tempo_enable ; tempo_enable ; 1.000        ; 2.857      ; 15.654     ;
+; -12.850 ; tempo_enable ; n[17]   ; tempo_enable ; tempo_enable ; 1.000        ; 2.858      ; 15.654     ;
+; -12.849 ; n[1]         ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.153     ; 12.672     ;
+; -12.849 ; n[1]         ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.153     ; 12.672     ;
+; -12.844 ; n[1]         ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.026      ; 12.471     ;
+; -12.828 ; n[1]         ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.019      ; 12.480     ;
+; -12.820 ; n[1]         ; n[10]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.042      ; 11.947     ;
+; -12.819 ; n[1]         ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.222      ; 12.687     ;
+; -12.787 ; tempo_enable ; n[9]    ; tempo_enable ; tempo_enable ; 1.000        ; 3.211      ; 15.645     ;
+; -12.752 ; n[1]         ; n[14]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.135     ; 12.563     ;
+; -12.728 ; n[1]         ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.205      ; 12.595     ;
+; -12.725 ; n[1]         ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.204      ; 12.594     ;
+; -12.680 ; n[1]         ; n[1]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.000      ; 12.523     ;
+; -12.647 ; n[1]         ; n[2]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.002     ; 12.523     ;
+; -12.642 ; n[1]         ; n[3]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.001     ; 12.524     ;
+; -12.635 ; n[1]         ; n[18]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.015      ; 12.486     ;
+; -12.591 ; n[1]         ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.207      ; 12.484     ;
+; -12.588 ; n[1]         ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.029      ; 12.475     ;
+; -12.585 ; n[1]         ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.225      ; 12.470     ;
+; -12.573 ; n[1]         ; n[20]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.018      ; 12.481     ;
+; -12.564 ; n[1]         ; n[13]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.021      ; 12.440     ;
+; -12.521 ; n[1]         ; n[8]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.135     ; 12.563     ;
+; -12.514 ; n[2]         ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.027      ; 11.860     ;
+; -12.514 ; n[1]         ; n[16]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.128     ; 12.332     ;
+; -12.513 ; n[1]         ; n[17]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.127     ; 12.332     ;
+; -12.450 ; n[1]         ; n[9]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.226      ; 12.323     ;
+; -12.446 ; n[2]         ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.150     ; 12.058     ;
+; -12.398 ; tempo_enable ; n[11]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.028      ; 15.270     ;
+; -12.378 ; n[2]         ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.125     ; 11.681     ;
+; -12.368 ; tempo_enable ; n[4]    ; tempo_enable ; tempo_enable ; 1.000        ; 3.026      ; 15.267     ;
+; -12.367 ; tempo_enable ; n[12]   ; tempo_enable ; tempo_enable ; 1.000        ; 3.025      ; 15.266     ;
+; -12.278 ; n[2]         ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.168      ; 12.075     ;
+; -12.243 ; n[2]         ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.019      ; 11.871     ;
+; -12.239 ; n[2]         ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.031      ; 11.862     ;
+; -12.234 ; n[2]         ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.151     ; 12.059     ;
+; -12.234 ; n[2]         ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.151     ; 12.059     ;
+; -12.229 ; n[2]         ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.028      ; 11.858     ;
+; -12.213 ; n[2]         ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.021      ; 11.867     ;
++---------+--------------+---------+--------------+--------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'tempo_enable'                                                                 ;
++-------+-----------+---------+--------------+--------------+--------------+------------+------------+
+; Slack ; From Node ; To Node ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------+--------------+--------------+--------------+------------+------------+
+; 1.797 ; n[30]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.163     ; 1.634      ;
+; 1.797 ; n[30]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.164     ; 1.633      ;
+; 1.798 ; n[30]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.162     ; 1.636      ;
+; 1.798 ; n[30]     ; n[11]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.161     ; 1.637      ;
+; 1.990 ; n[30]     ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.022      ; 2.012      ;
+; 2.138 ; n[30]     ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.021      ; 2.159      ;
+; 2.170 ; n[30]     ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.003      ; 2.173      ;
+; 2.173 ; n[31]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.166     ; 2.007      ;
+; 2.173 ; n[31]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.167     ; 2.006      ;
+; 2.174 ; n[31]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.165     ; 2.009      ;
+; 2.174 ; n[31]     ; n[11]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.164     ; 2.010      ;
+; 2.283 ; n[30]     ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 2.284      ;
+; 2.283 ; n[30]     ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.283      ;
+; 2.312 ; n[30]     ; n[13]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.183     ; 2.129      ;
+; 2.314 ; n[30]     ; n[15]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.331     ; 1.983      ;
+; 2.338 ; n[30]     ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.178     ; 2.160      ;
+; 2.339 ; n[30]     ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.175     ; 2.164      ;
+; 2.339 ; n[30]     ; n[25]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.175     ; 2.164      ;
+; 2.341 ; n[30]     ; n[22]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.179     ; 2.162      ;
+; 2.352 ; n[30]     ; n[17]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.331     ; 2.021      ;
+; 2.353 ; n[30]     ; n[16]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.332     ; 2.021      ;
+; 2.354 ; n[30]     ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.185     ; 2.169      ;
+; 2.356 ; n[30]     ; n[20]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.186     ; 2.170      ;
+; 2.358 ; n[30]     ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.018      ; 2.376      ;
+; 2.360 ; n[30]     ; n[19]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.187     ; 2.173      ;
+; 2.364 ; n[30]     ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.189     ; 2.175      ;
+; 2.366 ; n[31]     ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.019      ; 2.385      ;
+; 2.415 ; n[30]     ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.038     ; 2.377      ;
+; 2.416 ; n[30]     ; n[1]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.204     ; 2.212      ;
+; 2.418 ; n[30]     ; n[2]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.206     ; 2.212      ;
+; 2.418 ; n[30]     ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.205     ; 2.213      ;
+; 2.514 ; n[31]     ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.018      ; 2.532      ;
+; 2.546 ; n[31]     ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 2.546      ;
+; 2.591 ; n[30]     ; n[8]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.339     ; 2.252      ;
+; 2.591 ; n[30]     ; n[14]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.339     ; 2.252      ;
+; 2.659 ; n[31]     ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.002     ; 2.657      ;
+; 2.659 ; n[31]     ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.003     ; 2.656      ;
+; 2.688 ; n[31]     ; n[13]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.186     ; 2.502      ;
+; 2.690 ; n[31]     ; n[15]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.334     ; 2.356      ;
+; 2.714 ; n[31]     ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.181     ; 2.533      ;
+; 2.715 ; n[31]     ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.178     ; 2.537      ;
+; 2.715 ; n[31]     ; n[25]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.178     ; 2.537      ;
+; 2.716 ; n[30]     ; n[5]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.356     ; 2.360      ;
+; 2.717 ; n[31]     ; n[22]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.182     ; 2.535      ;
+; 2.718 ; n[30]     ; n[6]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.357     ; 2.361      ;
+; 2.718 ; n[30]     ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.357     ; 2.361      ;
+; 2.728 ; n[31]     ; n[17]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.334     ; 2.394      ;
+; 2.729 ; n[31]     ; n[16]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.335     ; 2.394      ;
+; 2.730 ; n[31]     ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.188     ; 2.542      ;
+; 2.732 ; n[31]     ; n[20]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.189     ; 2.543      ;
+; 2.734 ; n[31]     ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.015      ; 2.749      ;
+; 2.736 ; n[31]     ; n[19]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.190     ; 2.546      ;
+; 2.740 ; n[31]     ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.192     ; 2.548      ;
+; 2.791 ; n[31]     ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.041     ; 2.750      ;
+; 2.792 ; n[31]     ; n[1]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.207     ; 2.585      ;
+; 2.794 ; n[31]     ; n[2]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.209     ; 2.585      ;
+; 2.794 ; n[31]     ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.208     ; 2.586      ;
+; 2.967 ; n[31]     ; n[8]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.342     ; 2.625      ;
+; 2.967 ; n[31]     ; n[14]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.342     ; 2.625      ;
+; 3.087 ; n[29]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.164     ; 2.923      ;
+; 3.087 ; n[29]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.165     ; 2.922      ;
+; 3.088 ; n[29]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.163     ; 2.925      ;
+; 3.088 ; n[29]     ; n[11]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.162     ; 2.926      ;
+; 3.092 ; n[31]     ; n[5]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.359     ; 2.733      ;
+; 3.094 ; n[31]     ; n[6]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.360     ; 2.734      ;
+; 3.094 ; n[31]     ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.360     ; 2.734      ;
+; 3.280 ; n[29]     ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.021      ; 3.301      ;
+; 3.428 ; n[29]     ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.020      ; 3.448      ;
+; 3.460 ; n[29]     ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.002      ; 3.462      ;
+; 3.508 ; n[24]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.012      ; 3.520      ;
+; 3.508 ; n[24]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.011      ; 3.519      ;
+; 3.509 ; n[24]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.013      ; 3.522      ;
+; 3.509 ; n[24]     ; n[11]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.014      ; 3.523      ;
+; 3.573 ; n[29]     ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 3.573      ;
+; 3.573 ; n[29]     ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.001     ; 3.572      ;
+; 3.602 ; n[29]     ; n[13]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.184     ; 3.418      ;
+; 3.604 ; n[29]     ; n[15]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.332     ; 3.272      ;
+; 3.628 ; n[29]     ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.179     ; 3.449      ;
+; 3.629 ; n[29]     ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.176     ; 3.453      ;
+; 3.629 ; n[29]     ; n[25]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.176     ; 3.453      ;
+; 3.631 ; n[29]     ; n[22]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.180     ; 3.451      ;
+; 3.642 ; n[29]     ; n[17]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.332     ; 3.310      ;
+; 3.643 ; n[29]     ; n[16]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.333     ; 3.310      ;
+; 3.644 ; n[29]     ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.186     ; 3.458      ;
+; 3.646 ; n[29]     ; n[20]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.187     ; 3.459      ;
+; 3.648 ; n[29]     ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.017      ; 3.665      ;
+; 3.650 ; n[29]     ; n[19]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.188     ; 3.462      ;
+; 3.652 ; n[25]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.012      ; 3.664      ;
+; 3.652 ; n[25]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.011      ; 3.663      ;
+; 3.653 ; n[25]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.013      ; 3.666      ;
+; 3.653 ; n[25]     ; n[11]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.014      ; 3.667      ;
+; 3.654 ; n[29]     ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.190     ; 3.464      ;
+; 3.701 ; n[24]     ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.197      ; 3.898      ;
+; 3.705 ; n[29]     ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.039     ; 3.666      ;
+; 3.706 ; n[29]     ; n[1]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.205     ; 3.501      ;
+; 3.708 ; n[29]     ; n[2]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.207     ; 3.501      ;
+; 3.708 ; n[29]     ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.206     ; 3.502      ;
+; 3.843 ; n[22]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.016      ; 3.859      ;
+; 3.843 ; n[22]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.015      ; 3.858      ;
+; 3.844 ; n[22]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.017      ; 3.861      ;
++-------+-----------+---------+--------------+--------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'tempo_enable'                                                       ;
++--------+--------------+----------------+------------------+--------------+------------+--------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock        ; Clock Edge ; Target       ;
++--------+--------------+----------------+------------------+--------------+------------+--------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; tempo_enable ; Rise       ; tempo_enable ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[10]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[10]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[10]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[10]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[11]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[11]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[11]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[11]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[12]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[12]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[12]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[12]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[13]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[13]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[13]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[13]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[14]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[14]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[14]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[14]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[15]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[15]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[15]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[15]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[16]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[16]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[16]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[16]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[17]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[17]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[17]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[17]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[18]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[18]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[18]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[18]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[19]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[19]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[19]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[19]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[1]         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[1]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[1]|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[1]|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[20]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[20]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[20]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[20]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[21]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[21]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[21]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[21]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[22]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[22]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[22]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[22]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[23]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[23]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[23]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[23]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[24]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[24]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[24]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[24]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[25]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[25]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[25]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[25]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[26]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[26]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[26]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[26]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[27]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[27]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[27]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[27]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[28]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[28]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[28]|datab  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[28]|datab  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[29]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[29]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[29]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[29]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[2]         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[2]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[2]|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[2]|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[30]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[30]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[30]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[30]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[31]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[31]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[31]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[31]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[3]         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[3]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[3]|datac   ;
++--------+--------------+----------------+------------------+--------------+------------+--------------+
+
+
++-----------------------------------------------------------------------------------+
+; Setup Times                                                                       ;
++-------------------+--------------+--------+--------+------------+-----------------+
+; Data Port         ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------+--------------+--------+--------+------------+-----------------+
+; note_duration[*]  ; tempo_enable ; 25.068 ; 25.068 ; Fall       ; tempo_enable    ;
+;  note_duration[0] ; tempo_enable ; 24.783 ; 24.783 ; Fall       ; tempo_enable    ;
+;  note_duration[1] ; tempo_enable ; 25.068 ; 25.068 ; Fall       ; tempo_enable    ;
+;  note_duration[2] ; tempo_enable ; 24.974 ; 24.974 ; Fall       ; tempo_enable    ;
+; tempo_enable      ; tempo_enable ; 5.716  ; 5.716  ; Fall       ; tempo_enable    ;
+; triplet           ; tempo_enable ; 24.952 ; 24.952 ; Fall       ; tempo_enable    ;
++-------------------+--------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------+
+; Hold Times                                                                          ;
++-------------------+--------------+---------+---------+------------+-----------------+
+; Data Port         ; Clock Port   ; Rise    ; Fall    ; Clock Edge ; Clock Reference ;
++-------------------+--------------+---------+---------+------------+-----------------+
+; note_duration[*]  ; tempo_enable ; -10.964 ; -10.964 ; Fall       ; tempo_enable    ;
+;  note_duration[0] ; tempo_enable ; -10.964 ; -10.964 ; Fall       ; tempo_enable    ;
+;  note_duration[1] ; tempo_enable ; -11.015 ; -11.015 ; Fall       ; tempo_enable    ;
+;  note_duration[2] ; tempo_enable ; -11.154 ; -11.154 ; Fall       ; tempo_enable    ;
+; tempo_enable      ; tempo_enable ; -2.124  ; -2.124  ; Fall       ; tempo_enable    ;
+; triplet           ; tempo_enable ; -11.329 ; -11.329 ; Fall       ; tempo_enable    ;
++-------------------+--------------+---------+---------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-----------+--------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+--------------+--------+--------+------------+-----------------+
+; GATE      ; tempo_enable ; 20.368 ; 20.368 ; Rise       ; tempo_enable    ;
+; GATE      ; tempo_enable ; 25.132 ; 25.132 ; Fall       ; tempo_enable    ;
++-----------+--------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++-----------+--------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+--------------+--------+--------+------------+-----------------+
+; GATE      ; tempo_enable ; 12.036 ; 12.036 ; Rise       ; tempo_enable    ;
+; GATE      ; tempo_enable ; 9.391  ; 9.391  ; Fall       ; tempo_enable    ;
++-----------+--------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------+
+; Propagation Delay                                                  ;
++------------------+-------------+--------+--------+--------+--------+
+; Input Port       ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------------+-------------+--------+--------+--------+--------+
+; note_duration[0] ; GATE        ; 31.103 ; 31.103 ; 31.103 ; 31.103 ;
+; note_duration[1] ; GATE        ; 31.388 ; 31.388 ; 31.388 ; 31.388 ;
+; note_duration[2] ; GATE        ; 31.294 ; 31.294 ; 31.294 ; 31.294 ;
+; triplet          ; GATE        ; 31.272 ; 31.272 ; 31.272 ; 31.272 ;
++------------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------------+
+; Minimum Propagation Delay                                          ;
++------------------+-------------+--------+--------+--------+--------+
+; Input Port       ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------------+-------------+--------+--------+--------+--------+
+; note_duration[0] ; GATE        ; 15.036 ; 15.775 ; 15.775 ; 15.036 ;
+; note_duration[1] ; GATE        ; 15.378 ; 15.826 ; 15.826 ; 15.378 ;
+; note_duration[2] ; GATE        ; 15.226 ; 15.965 ; 15.965 ; 15.226 ;
+; triplet          ; GATE        ; 16.140 ; 16.108 ; 16.108 ; 16.140 ;
++------------------+-------------+--------+--------+--------+--------+
+
+
++---------------------------------------+
+; Fast Model Setup Summary              ;
++--------------+--------+---------------+
+; Clock        ; Slack  ; End Point TNS ;
++--------------+--------+---------------+
+; tempo_enable ; -5.906 ; -168.817      ;
++--------------+--------+---------------+
+
+
++--------------------------------------+
+; Fast Model Hold Summary              ;
++--------------+-------+---------------+
+; Clock        ; Slack ; End Point TNS ;
++--------------+-------+---------------+
+; tempo_enable ; 0.317 ; 0.000         ;
++--------------+-------+---------------+
+
+
++---------------------------------------+
+; Fast Model Recovery Summary           ;
++--------------+--------+---------------+
+; Clock        ; Slack  ; End Point TNS ;
++--------------+--------+---------------+
+; tempo_enable ; -4.248 ; -126.405      ;
++--------------+--------+---------------+
+
+
++--------------------------------------+
+; Fast Model Removal Summary           ;
++--------------+-------+---------------+
+; Clock        ; Slack ; End Point TNS ;
++--------------+-------+---------------+
+; tempo_enable ; 0.648 ; 0.000         ;
++--------------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------------+--------+----------------+
+; Clock        ; Slack  ; End Point TNS  ;
++--------------+--------+----------------+
+; tempo_enable ; -1.380 ; -1.380         ;
++--------------+--------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'tempo_enable'                                                                    ;
++--------+-----------+---------+--------------+--------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+---------+--------------+--------------+--------------+------------+------------+
+; -5.906 ; n[1]      ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.078      ; 6.514      ;
+; -5.877 ; n[1]      ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.017      ; 6.301      ;
+; -5.855 ; n[1]      ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.020      ; 6.382      ;
+; -5.821 ; n[1]      ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.091      ; 6.431      ;
+; -5.818 ; n[1]      ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.077      ; 6.427      ;
+; -5.799 ; n[1]      ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.077      ; 6.407      ;
+; -5.769 ; n[1]      ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.072      ; 6.361      ;
+; -5.735 ; n[1]      ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.021      ; 6.349      ;
+; -5.728 ; n[1]      ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.018      ; 6.256      ;
+; -5.720 ; n[1]      ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.088      ; 6.328      ;
+; -5.690 ; n[2]      ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.080      ; 6.300      ;
+; -5.661 ; n[2]      ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.019      ; 6.087      ;
+; -5.660 ; n[1]      ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.014      ; 6.188      ;
+; -5.639 ; n[2]      ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.022      ; 6.168      ;
+; -5.605 ; n[2]      ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.093      ; 6.217      ;
+; -5.602 ; n[2]      ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.079      ; 6.213      ;
+; -5.586 ; n[1]      ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.033     ; 6.006      ;
+; -5.583 ; n[2]      ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.079      ; 6.193      ;
+; -5.579 ; n[1]      ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.013      ; 6.108      ;
+; -5.574 ; n[3]      ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.079      ; 6.183      ;
+; -5.557 ; n[1]      ; n[17]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.034     ; 6.165      ;
+; -5.553 ; n[2]      ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.074      ; 6.147      ;
+; -5.545 ; n[1]      ; n[10]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.029      ; 5.890      ;
+; -5.545 ; n[3]      ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.018      ; 5.970      ;
+; -5.528 ; n[1]      ; n[20]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.014      ; 6.152      ;
+; -5.523 ; n[3]      ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.021      ; 6.051      ;
+; -5.522 ; n[1]      ; n[16]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.034     ; 6.129      ;
+; -5.519 ; n[2]      ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.023      ; 6.135      ;
+; -5.512 ; n[2]      ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.020      ; 6.042      ;
+; -5.504 ; n[2]      ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.090      ; 6.114      ;
+; -5.489 ; n[3]      ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.092      ; 6.100      ;
+; -5.486 ; n[3]      ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.078      ; 6.096      ;
+; -5.476 ; n[1]      ; n[18]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.010      ; 6.080      ;
+; -5.467 ; n[3]      ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.078      ; 6.076      ;
+; -5.444 ; n[2]      ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.016      ; 5.974      ;
+; -5.438 ; n[1]      ; n[14]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.040     ; 6.031      ;
+; -5.437 ; n[3]      ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.073      ; 6.030      ;
+; -5.403 ; n[3]      ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.022      ; 6.018      ;
+; -5.396 ; n[3]      ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.019      ; 5.925      ;
+; -5.391 ; n[1]      ; n[13]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.015      ; 5.997      ;
+; -5.388 ; n[3]      ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.089      ; 5.997      ;
+; -5.370 ; n[2]      ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.031     ; 5.792      ;
+; -5.363 ; n[2]      ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.015      ; 5.894      ;
+; -5.341 ; n[2]      ; n[17]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.032     ; 5.951      ;
+; -5.336 ; n[1]      ; n[12]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.027      ; 5.964      ;
+; -5.329 ; n[2]      ; n[10]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.031      ; 5.676      ;
+; -5.328 ; n[3]      ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.015      ; 5.857      ;
+; -5.312 ; n[2]      ; n[20]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.016      ; 5.938      ;
+; -5.306 ; n[2]      ; n[16]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.032     ; 5.915      ;
+; -5.285 ; n[1]      ; n[11]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.030      ; 5.914      ;
+; -5.260 ; n[2]      ; n[18]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.012      ; 5.866      ;
+; -5.254 ; n[3]      ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.032     ; 5.675      ;
+; -5.247 ; n[3]      ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.014      ; 5.777      ;
+; -5.225 ; n[3]      ; n[17]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.033     ; 5.834      ;
+; -5.222 ; n[2]      ; n[14]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.038     ; 5.817      ;
+; -5.217 ; n[1]      ; n[8]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.040     ; 5.893      ;
+; -5.213 ; n[3]      ; n[10]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.030      ; 5.559      ;
+; -5.196 ; n[3]      ; n[20]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.015      ; 5.821      ;
+; -5.190 ; n[3]      ; n[16]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.033     ; 5.798      ;
+; -5.175 ; n[2]      ; n[13]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.017      ; 5.783      ;
+; -5.144 ; n[3]      ; n[18]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.011      ; 5.749      ;
+; -5.120 ; n[2]      ; n[12]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.029      ; 5.750      ;
+; -5.111 ; n[1]      ; n[9]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.093      ; 5.725      ;
+; -5.106 ; n[3]      ; n[14]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.039     ; 5.700      ;
+; -5.069 ; n[2]      ; n[11]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.032      ; 5.700      ;
+; -5.059 ; n[3]      ; n[13]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.016      ; 5.666      ;
+; -5.043 ; n[4]      ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.049      ; 5.622      ;
+; -5.014 ; n[4]      ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.012     ; 5.409      ;
+; -5.004 ; n[1]      ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.054     ; 5.593      ;
+; -5.004 ; n[3]      ; n[12]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.028      ; 5.633      ;
+; -5.001 ; n[1]      ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.053     ; 5.514      ;
+; -5.001 ; n[2]      ; n[8]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.038     ; 5.679      ;
+; -4.998 ; n[1]      ; n[4]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.029      ; 5.628      ;
+; -4.992 ; n[4]      ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.009     ; 5.490      ;
+; -4.963 ; n[1]      ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.053     ; 5.553      ;
+; -4.958 ; n[4]      ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.062      ; 5.539      ;
+; -4.955 ; n[4]      ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.048      ; 5.535      ;
+; -4.953 ; n[3]      ; n[11]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.031      ; 5.583      ;
+; -4.936 ; n[4]      ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.048      ; 5.515      ;
+; -4.906 ; n[1]      ; n[2]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.002     ; 5.507      ;
+; -4.906 ; n[4]      ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.043      ; 5.469      ;
+; -4.895 ; n[2]      ; n[9]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.095      ; 5.511      ;
+; -4.885 ; n[3]      ; n[8]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.039     ; 5.562      ;
+; -4.872 ; n[4]      ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.008     ; 5.457      ;
+; -4.865 ; n[4]      ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.011     ; 5.364      ;
+; -4.857 ; n[4]      ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.059      ; 5.436      ;
+; -4.849 ; n[1]      ; n[1]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.000      ; 5.448      ;
+; -4.837 ; n[1]      ; n[3]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.001     ; 5.442      ;
+; -4.797 ; n[4]      ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.015     ; 5.296      ;
+; -4.788 ; n[2]      ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.052     ; 5.379      ;
+; -4.785 ; n[2]      ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.051     ; 5.300      ;
+; -4.782 ; n[2]      ; n[4]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.031      ; 5.414      ;
+; -4.779 ; n[3]      ; n[9]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.094      ; 5.394      ;
+; -4.747 ; n[2]      ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.051     ; 5.339      ;
+; -4.723 ; n[4]      ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.062     ; 5.114      ;
+; -4.716 ; n[4]      ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.016     ; 5.216      ;
+; -4.694 ; n[4]      ; n[17]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.063     ; 5.273      ;
+; -4.690 ; n[2]      ; n[2]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.000      ; 5.293      ;
+; -4.682 ; n[4]      ; n[10]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.000      ; 4.998      ;
+; -4.672 ; n[3]      ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.053     ; 5.262      ;
++--------+-----------+---------+--------------+--------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'tempo_enable'                                                                       ;
++-------+--------------+---------+--------------+--------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+---------+--------------+--------------+--------------+------------+------------+
+; 0.317 ; tempo_enable ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; 1.753      ; 2.070      ;
+; 0.322 ; tempo_enable ; n[1]    ; tempo_enable ; tempo_enable ; 0.000        ; 1.754      ; 2.076      ;
+; 0.383 ; tempo_enable ; n[2]    ; tempo_enable ; tempo_enable ; 0.000        ; 1.752      ; 2.135      ;
+; 0.441 ; tempo_enable ; n[5]    ; tempo_enable ; tempo_enable ; 0.000        ; 1.701      ; 2.142      ;
+; 0.473 ; tempo_enable ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; 1.783      ; 2.256      ;
+; 0.480 ; tempo_enable ; n[6]    ; tempo_enable ; tempo_enable ; 0.000        ; 1.701      ; 2.181      ;
+; 0.506 ; tempo_enable ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 1.847      ; 2.353      ;
+; 0.521 ; tempo_enable ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; 1.700      ; 2.221      ;
+; 0.612 ; n[30]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.612      ;
+; 0.617 ; n[27]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.617      ;
+; 0.677 ; n[31]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.677      ;
+; 0.711 ; n[28]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.711      ;
+; 0.734 ; n[29]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.734      ;
+; 0.735 ; tempo_enable ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; 1.783      ; 2.518      ;
+; 0.736 ; n[25]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.068      ; 0.804      ;
+; 0.738 ; n[19]        ; n[19]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.738      ;
+; 0.744 ; n[7]         ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.744      ;
+; 0.746 ; n[20]        ; n[20]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.746      ;
+; 0.746 ; n[5]         ; n[5]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.746      ;
+; 0.746 ; n[6]         ; n[6]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.746      ;
+; 0.751 ; n[23]        ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.751      ;
+; 0.755 ; n[25]        ; n[25]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.755      ;
+; 0.756 ; n[26]        ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.756      ;
+; 0.756 ; n[3]         ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.756      ;
+; 0.758 ; tempo_enable ; n[11]   ; tempo_enable ; tempo_enable ; 0.000        ; 1.784      ; 2.542      ;
+; 0.759 ; n[26]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.003     ; 0.756      ;
+; 0.768 ; n[21]        ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.768      ;
+; 0.771 ; n[27]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.016     ; 0.755      ;
+; 0.785 ; n[25]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.052      ; 0.837      ;
+; 0.801 ; n[30]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 0.802      ;
+; 0.807 ; tempo_enable ; n[8]    ; tempo_enable ; tempo_enable ; 0.000        ; 1.714      ; 2.521      ;
+; 0.808 ; n[26]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.019     ; 0.789      ;
+; 0.811 ; tempo_enable ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; 1.781      ; 2.592      ;
+; 0.812 ; n[27]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.011     ; 0.801      ;
+; 0.817 ; tempo_enable ; n[3]    ; tempo_enable ; tempo_enable ; -0.500       ; 1.753      ; 2.070      ;
+; 0.822 ; tempo_enable ; n[1]    ; tempo_enable ; tempo_enable ; -0.500       ; 1.754      ; 2.076      ;
+; 0.826 ; n[25]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.057      ; 0.883      ;
+; 0.828 ; n[22]        ; n[22]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.828      ;
+; 0.828 ; n[7]         ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.147      ; 0.975      ;
+; 0.832 ; n[27]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.011     ; 0.821      ;
+; 0.836 ; n[25]        ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.071      ; 0.907      ;
+; 0.841 ; n[18]        ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.841      ;
+; 0.845 ; n[2]         ; n[2]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.845      ;
+; 0.846 ; n[25]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.057      ; 0.903      ;
+; 0.849 ; n[26]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.014     ; 0.835      ;
+; 0.852 ; n[24]        ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.852      ;
+; 0.852 ; n[23]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.070      ; 0.922      ;
+; 0.855 ; n[28]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.005      ; 0.860      ;
+; 0.856 ; tempo_enable ; n[13]   ; tempo_enable ; tempo_enable ; 0.000        ; 1.769      ; 2.625      ;
+; 0.857 ; n[29]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.857      ;
+; 0.869 ; n[26]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.014     ; 0.855      ;
+; 0.869 ; n[24]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.067      ; 0.936      ;
+; 0.875 ; n[6]         ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.146      ; 1.021      ;
+; 0.875 ; n[28]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.005      ; 0.880      ;
+; 0.882 ; n[2]         ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 0.883      ;
+; 0.883 ; tempo_enable ; n[2]    ; tempo_enable ; tempo_enable ; -0.500       ; 1.752      ; 2.135      ;
+; 0.884 ; n[19]        ; n[20]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 0.885      ;
+; 0.885 ; n[20]        ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.885      ;
+; 0.887 ; n[22]        ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 0.888      ;
+; 0.888 ; n[5]         ; n[6]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.888      ;
+; 0.889 ; n[22]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.071      ; 0.960      ;
+; 0.890 ; n[6]         ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.001     ; 0.889      ;
+; 0.901 ; n[23]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.054      ; 0.955      ;
+; 0.903 ; n[8]         ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.133      ; 1.036      ;
+; 0.913 ; tempo_enable ; n[15]   ; tempo_enable ; tempo_enable ; 0.000        ; 1.721      ; 2.634      ;
+; 0.914 ; n[5]         ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.146      ; 1.060      ;
+; 0.918 ; n[27]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.010     ; 0.908      ;
+; 0.918 ; n[24]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.051      ; 0.969      ;
+; 0.920 ; n[19]        ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 0.921      ;
+; 0.929 ; n[5]         ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.001     ; 0.928      ;
+; 0.932 ; n[25]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.058      ; 0.990      ;
+; 0.937 ; n[21]        ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.004      ; 0.941      ;
+; 0.938 ; n[22]        ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.055      ; 0.993      ;
+; 0.939 ; n[21]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.074      ; 1.013      ;
+; 0.940 ; n[23]        ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.003      ; 0.943      ;
+; 0.941 ; tempo_enable ; n[5]    ; tempo_enable ; tempo_enable ; -0.500       ; 1.701      ; 2.142      ;
+; 0.942 ; n[23]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.059      ; 1.001      ;
+; 0.943 ; n[29]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 0.944      ;
+; 0.944 ; tempo_enable ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; 1.764      ; 2.708      ;
+; 0.945 ; tempo_enable ; n[14]   ; tempo_enable ; tempo_enable ; 0.000        ; 1.714      ; 2.659      ;
+; 0.949 ; n[20]        ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.004      ; 0.953      ;
+; 0.951 ; n[20]        ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.074      ; 1.025      ;
+; 0.952 ; n[23]        ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.073      ; 1.025      ;
+; 0.955 ; n[26]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.013     ; 0.942      ;
+; 0.959 ; n[24]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.056      ; 1.015      ;
+; 0.961 ; n[28]        ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.006      ; 0.967      ;
+; 0.962 ; n[23]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.059      ; 1.021      ;
+; 0.969 ; n[18]        ; n[19]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.003      ; 0.972      ;
+; 0.969 ; n[24]        ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.070      ; 1.039      ;
+; 0.969 ; tempo_enable ; n[19]   ; tempo_enable ; tempo_enable ; 0.000        ; 1.767      ; 2.736      ;
+; 0.970 ; n[15]        ; n[15]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.970      ;
+; 0.973 ; tempo_enable ; n[4]    ; tempo_enable ; tempo_enable ; -0.500       ; 1.783      ; 2.256      ;
+; 0.974 ; n[23]        ; n[25]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.002      ; 0.976      ;
+; 0.977 ; n[22]        ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.004      ; 0.981      ;
+; 0.979 ; n[22]        ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.060      ; 1.039      ;
+; 0.979 ; n[24]        ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.056      ; 1.035      ;
+; 0.980 ; tempo_enable ; n[6]    ; tempo_enable ; tempo_enable ; -0.500       ; 1.701      ; 2.181      ;
+; 0.981 ; n[17]        ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.044      ; 1.025      ;
+; 0.983 ; n[21]        ; n[22]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.003      ; 0.986      ;
+; 0.984 ; n[19]        ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.005      ; 0.989      ;
++-------+--------------+---------+--------------+--------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'tempo_enable'                                                                    ;
++--------+--------------+---------+--------------+--------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+---------+--------------+--------------+--------------+------------+------------+
+; -4.248 ; tempo_enable ; n[5]    ; tempo_enable ; tempo_enable ; 0.500        ; 1.701      ; 6.015      ;
+; -4.235 ; tempo_enable ; n[22]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.771      ; 5.913      ;
+; -4.174 ; tempo_enable ; n[28]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.826      ; 6.020      ;
+; -4.173 ; tempo_enable ; n[15]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.721      ; 5.847      ;
+; -4.172 ; tempo_enable ; n[7]    ; tempo_enable ; tempo_enable ; 0.500        ; 1.700      ; 6.015      ;
+; -4.171 ; tempo_enable ; n[6]    ; tempo_enable ; tempo_enable ; 0.500        ; 1.701      ; 6.015      ;
+; -4.156 ; tempo_enable ; n[27]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.842      ; 6.018      ;
+; -4.135 ; tempo_enable ; n[19]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.767      ; 5.918      ;
+; -4.134 ; tempo_enable ; n[25]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.774      ; 5.915      ;
+; -4.132 ; tempo_enable ; n[21]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.768      ; 5.914      ;
+; -4.130 ; tempo_enable ; n[23]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.772      ; 5.912      ;
+; -4.125 ; tempo_enable ; n[10]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.783      ; 5.724      ;
+; -4.114 ; tempo_enable ; n[29]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.831      ; 5.976      ;
+; -4.112 ; tempo_enable ; n[30]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.831      ; 5.975      ;
+; -4.092 ; tempo_enable ; n[14]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.714      ; 5.939      ;
+; -4.084 ; tempo_enable ; n[1]    ; tempo_enable ; tempo_enable ; 0.500        ; 1.754      ; 5.937      ;
+; -4.081 ; tempo_enable ; n[2]    ; tempo_enable ; tempo_enable ; 0.500        ; 1.752      ; 5.936      ;
+; -4.078 ; tempo_enable ; n[3]    ; tempo_enable ; tempo_enable ; 0.500        ; 1.753      ; 5.937      ;
+; -4.062 ; tempo_enable ; n[18]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.764      ; 5.920      ;
+; -4.060 ; n[1]         ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.053     ; 4.573      ;
+; -4.055 ; tempo_enable ; n[31]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.832      ; 5.917      ;
+; -4.047 ; tempo_enable ; n[24]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.775      ; 5.915      ;
+; -4.047 ; n[1]         ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.017      ; 4.471      ;
+; -4.045 ; tempo_enable ; n[26]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.845      ; 5.909      ;
+; -4.037 ; tempo_enable ; n[20]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.768      ; 5.915      ;
+; -4.035 ; tempo_enable ; n[13]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.769      ; 5.895      ;
+; -4.022 ; tempo_enable ; n[16]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.720      ; 5.883      ;
+; -4.021 ; tempo_enable ; n[17]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.720      ; 5.883      ;
+; -4.009 ; tempo_enable ; n[8]    ; tempo_enable ; tempo_enable ; 0.500        ; 1.714      ; 5.939      ;
+; -4.007 ; tempo_enable ; n[9]    ; tempo_enable ; tempo_enable ; 0.500        ; 1.847      ; 5.875      ;
+; -3.986 ; n[1]         ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.072      ; 4.578      ;
+; -3.985 ; n[1]         ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.033     ; 4.405      ;
+; -3.984 ; n[1]         ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.054     ; 4.573      ;
+; -3.983 ; n[1]         ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.053     ; 4.573      ;
+; -3.968 ; n[1]         ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.088      ; 4.576      ;
+; -3.947 ; n[1]         ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.013      ; 4.476      ;
+; -3.946 ; n[1]         ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.020      ; 4.473      ;
+; -3.944 ; n[1]         ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.014      ; 4.472      ;
+; -3.942 ; n[1]         ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.018      ; 4.470      ;
+; -3.937 ; n[1]         ; n[10]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.029      ; 4.282      ;
+; -3.926 ; n[1]         ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.077      ; 4.534      ;
+; -3.924 ; n[1]         ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.077      ; 4.533      ;
+; -3.904 ; n[1]         ; n[14]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.040     ; 4.497      ;
+; -3.896 ; n[1]         ; n[1]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.000      ; 4.495      ;
+; -3.893 ; n[1]         ; n[2]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.002     ; 4.494      ;
+; -3.890 ; n[1]         ; n[3]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.001     ; 4.495      ;
+; -3.874 ; n[1]         ; n[18]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.010      ; 4.478      ;
+; -3.867 ; n[1]         ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.078      ; 4.475      ;
+; -3.859 ; n[1]         ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.021      ; 4.473      ;
+; -3.857 ; n[1]         ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.091      ; 4.467      ;
+; -3.849 ; n[1]         ; n[20]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.014      ; 4.473      ;
+; -3.847 ; n[1]         ; n[13]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.015      ; 4.453      ;
+; -3.844 ; n[2]         ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.051     ; 4.359      ;
+; -3.842 ; tempo_enable ; n[11]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.784      ; 5.725      ;
+; -3.839 ; tempo_enable ; n[12]   ; tempo_enable ; tempo_enable ; 0.500        ; 1.781      ; 5.721      ;
+; -3.838 ; tempo_enable ; n[4]    ; tempo_enable ; tempo_enable ; 0.500        ; 1.783      ; 5.722      ;
+; -3.834 ; n[1]         ; n[16]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.034     ; 4.441      ;
+; -3.833 ; n[1]         ; n[17]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.034     ; 4.441      ;
+; -3.831 ; n[2]         ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.019      ; 4.257      ;
+; -3.821 ; n[1]         ; n[8]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.040     ; 4.497      ;
+; -3.819 ; n[1]         ; n[9]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.093      ; 4.433      ;
+; -3.770 ; n[2]         ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.074      ; 4.364      ;
+; -3.769 ; n[2]         ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.031     ; 4.191      ;
+; -3.768 ; n[2]         ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.052     ; 4.359      ;
+; -3.767 ; n[2]         ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.051     ; 4.359      ;
+; -3.752 ; n[2]         ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.090      ; 4.362      ;
+; -3.748 ; tempo_enable ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; 1.701      ; 6.015      ;
+; -3.735 ; tempo_enable ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 1.771      ; 5.913      ;
+; -3.731 ; n[2]         ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.015      ; 4.262      ;
+; -3.730 ; n[2]         ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.022      ; 4.259      ;
+; -3.728 ; n[3]         ; n[5]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.052     ; 4.242      ;
+; -3.728 ; n[2]         ; n[21]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.016      ; 4.258      ;
+; -3.726 ; n[2]         ; n[23]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.020      ; 4.256      ;
+; -3.721 ; n[2]         ; n[10]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.031      ; 4.068      ;
+; -3.715 ; n[3]         ; n[22]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.018      ; 4.140      ;
+; -3.710 ; n[2]         ; n[29]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.079      ; 4.320      ;
+; -3.708 ; n[2]         ; n[30]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.079      ; 4.319      ;
+; -3.688 ; n[2]         ; n[14]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.038     ; 4.283      ;
+; -3.680 ; n[2]         ; n[1]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.002      ; 4.281      ;
+; -3.677 ; n[2]         ; n[2]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.000      ; 4.280      ;
+; -3.674 ; tempo_enable ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 1.826      ; 6.020      ;
+; -3.674 ; n[2]         ; n[3]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.001      ; 4.281      ;
+; -3.673 ; tempo_enable ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; 1.721      ; 5.847      ;
+; -3.672 ; tempo_enable ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; 1.700      ; 6.015      ;
+; -3.671 ; tempo_enable ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; 1.701      ; 6.015      ;
+; -3.658 ; n[2]         ; n[18]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.012      ; 4.264      ;
+; -3.656 ; tempo_enable ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 1.842      ; 6.018      ;
+; -3.654 ; n[1]         ; n[11]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.030      ; 4.283      ;
+; -3.654 ; n[3]         ; n[28]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.073      ; 4.247      ;
+; -3.653 ; n[3]         ; n[15]   ; tempo_enable ; tempo_enable ; 1.000        ; -0.032     ; 4.074      ;
+; -3.652 ; n[3]         ; n[7]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.053     ; 4.242      ;
+; -3.651 ; n[1]         ; n[12]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.027      ; 4.279      ;
+; -3.651 ; n[3]         ; n[6]    ; tempo_enable ; tempo_enable ; 1.000        ; -0.052     ; 4.242      ;
+; -3.651 ; n[2]         ; n[31]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.080      ; 4.261      ;
+; -3.650 ; n[1]         ; n[4]    ; tempo_enable ; tempo_enable ; 1.000        ; 0.029      ; 4.280      ;
+; -3.643 ; n[2]         ; n[24]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.023      ; 4.259      ;
+; -3.641 ; n[2]         ; n[26]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.093      ; 4.253      ;
+; -3.636 ; n[3]         ; n[27]   ; tempo_enable ; tempo_enable ; 1.000        ; 0.089      ; 4.245      ;
+; -3.635 ; tempo_enable ; n[19]   ; tempo_enable ; tempo_enable ; 1.000        ; 1.767      ; 5.918      ;
+; -3.634 ; tempo_enable ; n[25]   ; tempo_enable ; tempo_enable ; 1.000        ; 1.774      ; 5.915      ;
++--------+--------------+---------+--------------+--------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'tempo_enable'                                                                 ;
++-------+-----------+---------+--------------+--------------+--------------+------------+------------+
+; Slack ; From Node ; To Node ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------+--------------+--------------+--------------+------------+------------+
+; 0.648 ; n[30]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.048     ; 0.600      ;
+; 0.649 ; n[30]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.050     ; 0.599      ;
+; 0.650 ; n[30]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.048     ; 0.602      ;
+; 0.650 ; n[30]     ; n[11]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.047     ; 0.603      ;
+; 0.737 ; n[30]     ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.016      ; 0.753      ;
+; 0.773 ; n[30]     ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.014      ; 0.787      ;
+; 0.778 ; n[31]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.049     ; 0.729      ;
+; 0.779 ; n[31]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.051     ; 0.728      ;
+; 0.780 ; n[31]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.049     ; 0.731      ;
+; 0.780 ; n[31]     ; n[11]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.048     ; 0.732      ;
+; 0.794 ; n[30]     ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 0.795      ;
+; 0.835 ; n[30]     ; n[13]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.062     ; 0.773      ;
+; 0.835 ; n[30]     ; n[15]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.110     ; 0.725      ;
+; 0.849 ; n[30]     ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.059     ; 0.790      ;
+; 0.849 ; n[30]     ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.056     ; 0.793      ;
+; 0.850 ; n[30]     ; n[25]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.057     ; 0.793      ;
+; 0.851 ; n[30]     ; n[22]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.060     ; 0.791      ;
+; 0.853 ; n[30]     ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.853      ;
+; 0.854 ; n[30]     ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.854      ;
+; 0.855 ; n[30]     ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.063     ; 0.792      ;
+; 0.856 ; n[30]     ; n[20]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.063     ; 0.793      ;
+; 0.860 ; n[30]     ; n[19]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.064     ; 0.796      ;
+; 0.865 ; n[30]     ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.067     ; 0.798      ;
+; 0.867 ; n[31]     ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.015      ; 0.882      ;
+; 0.872 ; n[30]     ; n[16]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.111     ; 0.761      ;
+; 0.872 ; n[30]     ; n[17]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.111     ; 0.761      ;
+; 0.885 ; n[30]     ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.011      ; 0.896      ;
+; 0.892 ; n[30]     ; n[1]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.077     ; 0.815      ;
+; 0.893 ; n[30]     ; n[2]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.079     ; 0.814      ;
+; 0.893 ; n[30]     ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.078     ; 0.815      ;
+; 0.903 ; n[30]     ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.005     ; 0.898      ;
+; 0.903 ; n[31]     ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.013      ; 0.916      ;
+; 0.924 ; n[31]     ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 0.924      ;
+; 0.934 ; n[30]     ; n[8]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.117     ; 0.817      ;
+; 0.934 ; n[30]     ; n[14]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.117     ; 0.817      ;
+; 0.965 ; n[31]     ; n[13]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.063     ; 0.902      ;
+; 0.965 ; n[31]     ; n[15]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.111     ; 0.854      ;
+; 0.979 ; n[31]     ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.060     ; 0.919      ;
+; 0.979 ; n[31]     ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.057     ; 0.922      ;
+; 0.980 ; n[31]     ; n[25]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.058     ; 0.922      ;
+; 0.981 ; n[31]     ; n[22]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.061     ; 0.920      ;
+; 0.983 ; n[31]     ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.001     ; 0.982      ;
+; 0.984 ; n[31]     ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.001     ; 0.983      ;
+; 0.985 ; n[31]     ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.064     ; 0.921      ;
+; 0.986 ; n[31]     ; n[20]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.064     ; 0.922      ;
+; 0.990 ; n[31]     ; n[19]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.065     ; 0.925      ;
+; 0.995 ; n[31]     ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.068     ; 0.927      ;
+; 1.002 ; n[31]     ; n[16]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.112     ; 0.890      ;
+; 1.002 ; n[31]     ; n[17]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.112     ; 0.890      ;
+; 1.015 ; n[31]     ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.010      ; 1.025      ;
+; 1.022 ; n[31]     ; n[1]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.078     ; 0.944      ;
+; 1.023 ; n[30]     ; n[5]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.130     ; 0.893      ;
+; 1.023 ; n[30]     ; n[6]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.130     ; 0.893      ;
+; 1.023 ; n[31]     ; n[2]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.080     ; 0.943      ;
+; 1.023 ; n[31]     ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.079     ; 0.944      ;
+; 1.024 ; n[30]     ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.131     ; 0.893      ;
+; 1.033 ; n[31]     ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.006     ; 1.027      ;
+; 1.064 ; n[31]     ; n[8]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.118     ; 0.946      ;
+; 1.064 ; n[31]     ; n[14]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.118     ; 0.946      ;
+; 1.105 ; n[29]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.048     ; 1.057      ;
+; 1.106 ; n[29]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.050     ; 1.056      ;
+; 1.107 ; n[29]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.048     ; 1.059      ;
+; 1.107 ; n[29]     ; n[11]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.047     ; 1.060      ;
+; 1.153 ; n[31]     ; n[5]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.131     ; 1.022      ;
+; 1.153 ; n[31]     ; n[6]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.131     ; 1.022      ;
+; 1.154 ; n[31]     ; n[7]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.132     ; 1.022      ;
+; 1.194 ; n[29]     ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.016      ; 1.210      ;
+; 1.230 ; n[29]     ; n[26]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.014      ; 1.244      ;
+; 1.251 ; n[29]     ; n[31]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.001      ; 1.252      ;
+; 1.273 ; n[24]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.008      ; 1.281      ;
+; 1.274 ; n[24]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.006      ; 1.280      ;
+; 1.275 ; n[24]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.008      ; 1.283      ;
+; 1.275 ; n[24]     ; n[11]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.009      ; 1.284      ;
+; 1.292 ; n[29]     ; n[13]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.062     ; 1.230      ;
+; 1.292 ; n[29]     ; n[15]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.110     ; 1.182      ;
+; 1.298 ; n[25]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.009      ; 1.307      ;
+; 1.299 ; n[25]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.007      ; 1.306      ;
+; 1.300 ; n[25]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.009      ; 1.309      ;
+; 1.300 ; n[25]     ; n[11]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.010      ; 1.310      ;
+; 1.306 ; n[29]     ; n[23]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.059     ; 1.247      ;
+; 1.306 ; n[29]     ; n[24]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.056     ; 1.250      ;
+; 1.307 ; n[29]     ; n[25]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.057     ; 1.250      ;
+; 1.308 ; n[29]     ; n[22]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.060     ; 1.248      ;
+; 1.310 ; n[29]     ; n[30]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 1.310      ;
+; 1.311 ; n[29]     ; n[29]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.000      ; 1.311      ;
+; 1.312 ; n[29]     ; n[21]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.063     ; 1.249      ;
+; 1.313 ; n[29]     ; n[20]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.063     ; 1.250      ;
+; 1.317 ; n[29]     ; n[19]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.064     ; 1.253      ;
+; 1.322 ; n[29]     ; n[18]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.067     ; 1.255      ;
+; 1.329 ; n[29]     ; n[16]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.111     ; 1.218      ;
+; 1.329 ; n[29]     ; n[17]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.111     ; 1.218      ;
+; 1.342 ; n[29]     ; n[27]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.011      ; 1.353      ;
+; 1.349 ; n[29]     ; n[1]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.077     ; 1.272      ;
+; 1.350 ; n[29]     ; n[2]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.079     ; 1.271      ;
+; 1.350 ; n[29]     ; n[3]    ; tempo_enable ; tempo_enable ; 0.000        ; -0.078     ; 1.272      ;
+; 1.360 ; n[29]     ; n[28]   ; tempo_enable ; tempo_enable ; 0.000        ; -0.005     ; 1.355      ;
+; 1.362 ; n[24]     ; n[9]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.072      ; 1.434      ;
+; 1.382 ; n[22]     ; n[4]    ; tempo_enable ; tempo_enable ; 0.000        ; 0.012      ; 1.394      ;
+; 1.383 ; n[22]     ; n[12]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.010      ; 1.393      ;
+; 1.384 ; n[22]     ; n[10]   ; tempo_enable ; tempo_enable ; 0.000        ; 0.012      ; 1.396      ;
++-------+-----------+---------+--------------+--------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'tempo_enable'                                                       ;
++--------+--------------+----------------+------------------+--------------+------------+--------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock        ; Clock Edge ; Target       ;
++--------+--------------+----------------+------------------+--------------+------------+--------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; tempo_enable ; Rise       ; tempo_enable ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[10]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[10]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[10]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[10]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[11]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[11]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[11]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[11]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[12]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[12]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[12]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[12]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[13]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[13]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[13]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[13]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[14]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[14]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[14]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[14]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[15]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[15]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[15]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[15]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[16]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[16]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[16]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[16]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[17]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[17]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[17]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[17]|datad  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[18]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[18]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[18]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[18]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[19]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[19]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[19]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[19]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[1]         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[1]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[1]|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[1]|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[20]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[20]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[20]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[20]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[21]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[21]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[21]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[21]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[22]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[22]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[22]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[22]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[23]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[23]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[23]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[23]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[24]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[24]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[24]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[24]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[25]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[25]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[25]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[25]|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[26]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[26]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[26]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[26]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[27]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[27]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[27]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[27]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[28]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[28]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[28]|datab  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[28]|datab  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[29]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[29]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[29]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[29]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[2]         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[2]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[2]|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[2]|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[30]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[30]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[30]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[30]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[31]        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[31]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[31]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Rise       ; n[31]|dataa  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Fall       ; n[3]         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; tempo_enable ; Fall       ; n[3]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; tempo_enable ; Rise       ; n[3]|datac   ;
++--------+--------------+----------------+------------------+--------------+------------+--------------+
+
+
++---------------------------------------------------------------------------------+
+; Setup Times                                                                     ;
++-------------------+--------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+--------------+-------+-------+------------+-----------------+
+; note_duration[*]  ; tempo_enable ; 9.630 ; 9.630 ; Fall       ; tempo_enable    ;
+;  note_duration[0] ; tempo_enable ; 9.511 ; 9.511 ; Fall       ; tempo_enable    ;
+;  note_duration[1] ; tempo_enable ; 9.630 ; 9.630 ; Fall       ; tempo_enable    ;
+;  note_duration[2] ; tempo_enable ; 9.620 ; 9.620 ; Fall       ; tempo_enable    ;
+; tempo_enable      ; tempo_enable ; 1.780 ; 1.780 ; Fall       ; tempo_enable    ;
+; triplet           ; tempo_enable ; 9.569 ; 9.569 ; Fall       ; tempo_enable    ;
++-------------------+--------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Hold Times                                                                        ;
++-------------------+--------------+--------+--------+------------+-----------------+
+; Data Port         ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------+--------------+--------+--------+------------+-----------------+
+; note_duration[*]  ; tempo_enable ; -4.415 ; -4.415 ; Fall       ; tempo_enable    ;
+;  note_duration[0] ; tempo_enable ; -4.415 ; -4.415 ; Fall       ; tempo_enable    ;
+;  note_duration[1] ; tempo_enable ; -4.423 ; -4.423 ; Fall       ; tempo_enable    ;
+;  note_duration[2] ; tempo_enable ; -4.546 ; -4.546 ; Fall       ; tempo_enable    ;
+; tempo_enable      ; tempo_enable ; -0.317 ; -0.317 ; Fall       ; tempo_enable    ;
+; triplet           ; tempo_enable ; -4.518 ; -4.518 ; Fall       ; tempo_enable    ;
++-------------------+--------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-----------+--------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+--------------+--------+--------+------------+-----------------+
+; GATE      ; tempo_enable ; 8.058  ; 8.058  ; Rise       ; tempo_enable    ;
+; GATE      ; tempo_enable ; 10.267 ; 10.267 ; Fall       ; tempo_enable    ;
++-----------+--------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+--------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+--------------+-------+-------+------------+-----------------+
+; GATE      ; tempo_enable ; 5.141 ; 5.141 ; Rise       ; tempo_enable    ;
+; GATE      ; tempo_enable ; 4.590 ; 4.590 ; Fall       ; tempo_enable    ;
++-----------+--------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------+
+; Propagation Delay                                                  ;
++------------------+-------------+--------+--------+--------+--------+
+; Input Port       ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------------+-------------+--------+--------+--------+--------+
+; note_duration[0] ; GATE        ; 12.872 ; 12.872 ; 12.872 ; 12.872 ;
+; note_duration[1] ; GATE        ; 12.991 ; 12.991 ; 12.991 ; 12.991 ;
+; note_duration[2] ; GATE        ; 12.981 ; 12.981 ; 12.981 ; 12.981 ;
+; triplet          ; GATE        ; 12.930 ; 12.930 ; 12.930 ; 12.930 ;
++------------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------------+
+; Minimum Propagation Delay                                      ;
++------------------+-------------+-------+-------+-------+-------+
+; Input Port       ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------------+-------------+-------+-------+-------+-------+
+; note_duration[0] ; GATE        ; 7.108 ; 7.342 ; 7.342 ; 7.108 ;
+; note_duration[1] ; GATE        ; 7.226 ; 7.350 ; 7.350 ; 7.226 ;
+; note_duration[2] ; GATE        ; 7.239 ; 7.473 ; 7.473 ; 7.239 ;
+; triplet          ; GATE        ; 7.445 ; 7.455 ; 7.455 ; 7.445 ;
++------------------+-------------+-------+-------+-------+-------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -17.812  ; 0.317 ; -13.966  ; 0.648   ; -1.631              ;
+;  tempo_enable    ; -17.812  ; 0.317 ; -13.966  ; 0.648   ; -1.631              ;
+; Design-wide TNS  ; -518.904 ; 0.0   ; -418.574 ; 0.0     ; -1.631              ;
+;  tempo_enable    ; -518.904 ; 0.000 ; -418.574 ; 0.000   ; -1.631              ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Setup Times                                                                       ;
++-------------------+--------------+--------+--------+------------+-----------------+
+; Data Port         ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------+--------------+--------+--------+------------+-----------------+
+; note_duration[*]  ; tempo_enable ; 25.068 ; 25.068 ; Fall       ; tempo_enable    ;
+;  note_duration[0] ; tempo_enable ; 24.783 ; 24.783 ; Fall       ; tempo_enable    ;
+;  note_duration[1] ; tempo_enable ; 25.068 ; 25.068 ; Fall       ; tempo_enable    ;
+;  note_duration[2] ; tempo_enable ; 24.974 ; 24.974 ; Fall       ; tempo_enable    ;
+; tempo_enable      ; tempo_enable ; 5.716  ; 5.716  ; Fall       ; tempo_enable    ;
+; triplet           ; tempo_enable ; 24.952 ; 24.952 ; Fall       ; tempo_enable    ;
++-------------------+--------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Hold Times                                                                        ;
++-------------------+--------------+--------+--------+------------+-----------------+
+; Data Port         ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------+--------------+--------+--------+------------+-----------------+
+; note_duration[*]  ; tempo_enable ; -4.415 ; -4.415 ; Fall       ; tempo_enable    ;
+;  note_duration[0] ; tempo_enable ; -4.415 ; -4.415 ; Fall       ; tempo_enable    ;
+;  note_duration[1] ; tempo_enable ; -4.423 ; -4.423 ; Fall       ; tempo_enable    ;
+;  note_duration[2] ; tempo_enable ; -4.546 ; -4.546 ; Fall       ; tempo_enable    ;
+; tempo_enable      ; tempo_enable ; -0.317 ; -0.317 ; Fall       ; tempo_enable    ;
+; triplet           ; tempo_enable ; -4.518 ; -4.518 ; Fall       ; tempo_enable    ;
++-------------------+--------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-----------+--------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+--------------+--------+--------+------------+-----------------+
+; GATE      ; tempo_enable ; 20.368 ; 20.368 ; Rise       ; tempo_enable    ;
+; GATE      ; tempo_enable ; 25.132 ; 25.132 ; Fall       ; tempo_enable    ;
++-----------+--------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+--------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+--------------+-------+-------+------------+-----------------+
+; GATE      ; tempo_enable ; 5.141 ; 5.141 ; Rise       ; tempo_enable    ;
+; GATE      ; tempo_enable ; 4.590 ; 4.590 ; Fall       ; tempo_enable    ;
++-----------+--------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------+
+; Progagation Delay                                                  ;
++------------------+-------------+--------+--------+--------+--------+
+; Input Port       ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------------+-------------+--------+--------+--------+--------+
+; note_duration[0] ; GATE        ; 31.103 ; 31.103 ; 31.103 ; 31.103 ;
+; note_duration[1] ; GATE        ; 31.388 ; 31.388 ; 31.388 ; 31.388 ;
+; note_duration[2] ; GATE        ; 31.294 ; 31.294 ; 31.294 ; 31.294 ;
+; triplet          ; GATE        ; 31.272 ; 31.272 ; 31.272 ; 31.272 ;
++------------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------------+
+; Minimum Progagation Delay                                      ;
++------------------+-------------+-------+-------+-------+-------+
+; Input Port       ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------------+-------------+-------+-------+-------+-------+
+; note_duration[0] ; GATE        ; 7.108 ; 7.342 ; 7.342 ; 7.108 ;
+; note_duration[1] ; GATE        ; 7.226 ; 7.350 ; 7.350 ; 7.226 ;
+; note_duration[2] ; GATE        ; 7.239 ; 7.473 ; 7.473 ; 7.239 ;
+; triplet          ; GATE        ; 7.445 ; 7.455 ; 7.455 ; 7.445 ;
++------------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------------+
+; Setup Transfers                                                         ;
++--------------+--------------+----------+----------+----------+----------+
+; From Clock   ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------+--------------+----------+----------+----------+----------+
+; tempo_enable ; tempo_enable ; 0        ; 0        ; 31       ; 2170     ;
++--------------+--------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------+
+; Hold Transfers                                                          ;
++--------------+--------------+----------+----------+----------+----------+
+; From Clock   ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------+--------------+----------+----------+----------+----------+
+; tempo_enable ; tempo_enable ; 0        ; 0        ; 31       ; 2170     ;
++--------------+--------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------+
+; Recovery Transfers                                                      ;
++--------------+--------------+----------+----------+----------+----------+
+; From Clock   ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------+--------------+----------+----------+----------+----------+
+; tempo_enable ; tempo_enable ; 0        ; 0        ; 31       ; 1674     ;
++--------------+--------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------+
+; Removal Transfers                                                       ;
++--------------+--------------+----------+----------+----------+----------+
+; From Clock   ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------+--------------+----------+----------+----------+----------+
+; tempo_enable ; tempo_enable ; 0        ; 0        ; 31       ; 1674     ;
++--------------+--------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 129   ; 129  ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 36    ; 36   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Nov 14 01:09:19 2013
+Info: Command: quartus_sta g19_lab4 -c g19_lab4
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 31 combinational loops as latches.
+Info (332104): Reading SDC File: 'g19_lab4.sdc'
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name tempo_enable tempo_enable
+Warning (332125): Found combinational loop of 25 nodes
+    Warning (332126): Node "n[0]~0|combout"
+    Warning (332126): Node "LessThan0~15|datab"
+    Warning (332126): Node "LessThan0~15|combout"
+    Warning (332126): Node "LessThan0~16|datac"
+    Warning (332126): Node "LessThan0~16|combout"
+    Warning (332126): Node "LessThan0~17|datad"
+    Warning (332126): Node "LessThan0~17|combout"
+    Warning (332126): Node "LessThan0~29|datab"
+    Warning (332126): Node "LessThan0~29|combout"
+    Warning (332126): Node "LessThan0~18|datac"
+    Warning (332126): Node "LessThan0~18|combout"
+    Warning (332126): Node "LessThan0~19|datab"
+    Warning (332126): Node "LessThan0~19|combout"
+    Warning (332126): Node "LessThan0~20|datab"
+    Warning (332126): Node "LessThan0~20|combout"
+    Warning (332126): Node "LessThan0~25|dataa"
+    Warning (332126): Node "LessThan0~25|combout"
+    Warning (332126): Node "LessThan0~28|dataa"
+    Warning (332126): Node "LessThan0~28|combout"
+    Warning (332126): Node "LessThan0~30|dataa"
+    Warning (332126): Node "LessThan0~30|combout"
+    Warning (332126): Node "LessThan0~31|dataa"
+    Warning (332126): Node "LessThan0~31|combout"
+    Warning (332126): Node "n[0]~0|datab"
+    Warning (332126): Node "n[0]~0|datac"
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -17.812
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -17.812      -518.904 tempo_enable 
+Info (332146): Worst-case hold slack is 1.719
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.719         0.000 tempo_enable 
+Info (332146): Worst-case recovery slack is -13.966
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -13.966      -418.574 tempo_enable 
+Info (332146): Worst-case removal slack is 1.797
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.797         0.000 tempo_enable 
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631        -1.631 tempo_enable 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.906
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.906      -168.817 tempo_enable 
+Info (332146): Worst-case hold slack is 0.317
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.317         0.000 tempo_enable 
+Info (332146): Worst-case recovery slack is -4.248
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.248      -126.405 tempo_enable 
+Info (332146): Worst-case removal slack is 0.648
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.648         0.000 tempo_enable 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -1.380 tempo_enable 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 480 megabytes
+    Info: Processing ended: Thu Nov 14 01:09:21 2013
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
